@@ -1,19 +1,20 @@
-BeginPackage["WSLink`", {
-	"WSLink`PackageScope`"
+BeginPackage["WebSocketLink`", {
+	"WebSocketLink`",
+	"WebSocketLink`PackageScope`"
 }];
 
 Begin["`Private`"];
 
-(* -----------------------WSFrameCreate------------------------------
+(* -----------------------WebSocketFrameCreate------------------------------
  * Description:  Create a frame ByteArray
  * Return:       _ByteArray
  *)
-WSFrameCreate // ClearAll
-WSFrameCreate // Options = {
-	"Masking" -> True
+WebSocketFrameCreate // ClearAll
+WebSocketFrameCreate // Options = {
+	"Masking" -> False
 };
-WSFrameCreate[ data: (_String | _ByteArray), OptionsPattern[] ] := Module[{
-		payloadLength,bitList,
+WebSocketFrameCreate[ data: (_String | _ByteArray), OptionsPattern[] ] := Module[{
+		payloadLength, payloadBitList,
 		opcode = intToBitList[
 			Switch[Head[data],
 				String, 1,(* 0x1 *)
@@ -29,7 +30,7 @@ WSFrameCreate[ data: (_String | _ByteArray), OptionsPattern[] ] := Module[{
 		]
 	},
 	
-	bitList = ResourceFunction["ByteArrayToBitList"][
+	payloadBitList = ResourceFunction["ByteArrayToBitList"][
 		If[MatchQ[data, _String],
 			ByteArray[ ToCharacterCode[data, "UTF-8"] ],
 			data
@@ -38,55 +39,58 @@ WSFrameCreate[ data: (_String | _ByteArray), OptionsPattern[] ] := Module[{
 
 	
 	If[OptionValue["Masking"],
-		bitList = Flatten @ Map[Function[block,
+		payloadBitList = Flatten @ Map[Function[block,
 				BitXor[ block, Take[maskingKey, Length @ block] ]
 			],
-			Partition[bitList, UpTo[32]](* Partition into 32 bit blocks *)
+			(* Partition payload into 32 bit blocks *)
+			Partition[payloadBitList, UpTo[32]]
 		]
 	];
 	
-	payloadLength = With[{ byteCount =  (Length @ bitList)/8 },
+	(* Determine payload length according to RFC-6455.
+	 * 
+	 * This follows the WebSocket framing where if payload byte length is:
+	 * - 0-125: The payload length field is the value of the length
+	 * - 126: The following 2 bytes interpret as a 16-bit unsigned integer for payload length
+	 * - 127: The following 8 bytes interpret as a 64-bit unsigned integer for payload length
+	 *)
+	payloadLength = With[{ byteCount = Length[payloadBitList]/8 },
 		Which[
-				byteCount < 126,
-					intToBitList[ byteCount, 7 ],
-				126 <= byteCount <= 65535,
-					{
-						intToBitList[ 126 ],
-						intToBitList[ byteCount, 16]
-					},
-				True,
-					{
-						intToBitList[ 127 ],
-						intToBitList[ byteCount, 64]
-					}
-			]
+			byteCount < 126,
+				intToBitList[ byteCount, 7 ],
+			126 <= byteCount <= 65535,
+				{
+					intToBitList[ 126 ],
+					intToBitList[ byteCount, 16]
+				},
+			True,
+				{
+					intToBitList[ 127 ],
+					intToBitList[ byteCount, 64]
+				}
+		]
 	];
-		
-	(* Make payload ByteArray as per RFC-6455 *)
-	 
+
 	ResourceFunction["BitListToByteArray"] @ Flatten @ {
-		(*FIN - No benefit from multipart in this implementation *)
-		1 ,
-		(* RSV1-3 - Inert and used for extensions *)
-		0, 0, 0,
+		1,       (* FIN - No benefit from multipart in this implementation *)
+		0, 0, 0, (* RSV1-3 - Inert and used for extensions *)
 		opcode,
 		mask,
 		payloadLength,
 		maskingKey,
-		(* Payload *)
-		bitList
+		payloadBitList
 	}
 ];
 
-(* -----------------------WSFrameImport------------------------------
+(* -----------------------WebSocketFrameImport------------------------------
  * Description:  Import a frame ByteArray
  * Return:       _String | _ByteArray
  *)
-WSFrameImport // ClearAll
-WSFrameImport // Options = {
+WebSocketFrameImport // ClearAll
+WebSocketFrameImport // Options = {
 	"Masking" -> True
 };
-WSFrameImport[ frame_ByteArray, OptionsPattern[] ]:= Module[{
+WebSocketFrameImport[ frame_ByteArray, OptionsPattern[] ]:= Module[{
 		fin, rsv, opcode, isMasked,payloadByteCount, mask,offset,payload,
 		bitList = ResourceFunction["ByteArrayToBitList"] @ frame
 	},
@@ -122,7 +126,20 @@ WSFrameImport[ frame_ByteArray, OptionsPattern[] ]:= Module[{
 		1 /; fin,
 			ByteArrayToString[payload, "UTF-8"],
 		2,
-			payload
+			payload,
+		8,
+			(* Close frame *)
+			Null,
+		9,
+			(* Ping frame *)
+			"Ping",
+		10,
+			(* Pong frame *)
+			"Pong",
+		_,
+			(* Unknown frame *)
+			$Failed
+
 	]
 ];
 

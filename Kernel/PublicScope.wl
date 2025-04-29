@@ -1,14 +1,15 @@
-BeginPackage["WSLink`"];
+BeginPackage["WebSocketLink`"];
+
+WebSocketObject::usage = "Represents a WebSocket connection";
 
 $WebSocketClients::usage = "List of active WebSocket client objects";
+$WebSocketServers::usage = "List of active WebSocket server objects";
 
-WSServerStart::usage = "Start the server";
-WSServerStop::usage = "Stop the server";
-IsWSServerRunning::usage = "Check if the server is running";
+WebSocketServerStart::usage = "Start the server";
+WebSocketServerStop::usage = "Stop the server";
+IsWebSocketServerRunning::usage = "Check if the server is running";
 
-WSFrameCreate::usage = "Create a frame ByteArray";
-WSFrameImport::usage = "Import a frame ByteArray";
-
-testFunction;
+WebSocketFrameCreate::usage = "Create a frame ByteArray";
+WebSocketFrameImport::usage = "Import a frame ByteArray";
 
 EndPackage[];
