@@ -1,11 +1,17 @@
-BeginPackage["WebSocketLink`Objects`", {
-	"WebSocketLink`",
-	"WebSocketLink`PackageScope`"
+BeginPackage["TonyAristeidou`WebSocketLink`Objects`", {
+	"TonyAristeidou`WebSocketLink`",
+	"TonyAristeidou`WebSocketLink`PackageScope`"
 }];
 
 Begin["`Private`"];
 
-keys = {"Type", "Listener", "Socket", "UUID", "Port", "ConnectedClients", "HandlerFunctions"};
+serverKeys = {
+	"Type", "Listener", "Socket", "UUID",
+	"Port", "ConnectedClients", "HandlerFunctions"
+};
+connectedClientKeys = {
+	"Type", "UUID", "Socket", "Messages", "GetMessage", "SendMessage"
+}
 
 $icon = Graphics[
 	GeometricTransformation[{Thickness[0.00125], FaceForm[
@@ -41,21 +47,59 @@ $icon = Graphics[
 	 PlotRangePadding -> None
 ];
 
-webSocketObjectQ = Function[asc, AllTrue[keys, KeyExistsQ[asc, #]&]];
+webSocketObjectQ = Function[asc, Or[
+	AllTrue[serverKeys, KeyExistsQ[asc, #]&],
+	AllTrue[connectedClientKeys, KeyExistsQ[asc, #]&]
+]];
 
-WebSocketObject /: MakeBoxes[	
+WebSocketObject /: MakeBoxes[
 		obj:( WebSocketObject[asc: _Association]),
 		form: (StandardForm | TraditionalForm )
 	] := Module[{above, below},
-		above = {
-			{BoxForm`SummaryItem[{"UUID: ",       asc["UUID"]}]},
-			{BoxForm`SummaryItem[{"Local Port: ", asc["Port"]}]},
-			{BoxForm`SummaryItem[{"Clients connected: ", Dynamic @ Length[asc["ConnectedClients"]]}]}
-		};
-		below = {
-			BoxForm`SummaryItem[{"Socket: ",   asc["Socket"]}],
-			BoxForm`SummaryItem[{"Listener: ", asc["Listener"]}]
-		};
+		above = Switch[asc["Type"],
+			"WebSocketServer",
+			{
+				{BoxForm`SummaryItem[{"Type: ", asc["Type"]}]},
+				{BoxForm`SummaryItem[{"UUID: ", asc["UUID"]}]},
+				{BoxForm`SummaryItem[{"Local Port: ", asc["Port"]}]},
+				{BoxForm`SummaryItem[{"Clients connected: ",
+					Dynamic[
+						If[FailureQ @ asc["Socket"]["InprocQ"],
+							$WebSocketServers = Select[$WebSocketServers,
+								Function[wso,
+									wso["UUID"] =!= asc["UUID"]
+								]
+							];
+							"Inactive",
+							Length[asc["ConnectedClients"]]
+						],
+						TrackedSymbols :> {asc["Socket"]}
+					]
+				}]}
+			},
+			"WebSocketClientConnection",
+			{
+				{BoxForm`SummaryItem[{"Type: ", asc["Type"]}]},
+				{BoxForm`SummaryItem[{"UUID: ", asc["UUID"]}]},
+				{BoxForm`SummaryItem[{"Messages: ",
+					Dynamic[asc["Messages"]["Length"],
+						TrackedSymbols :> { asc["Messages"] }
+					]
+				}]}
+			}
+		];
+		below = Switch[asc["Type"],
+			"WebSocketServer",
+			{
+				BoxForm`SummaryItem[{"Socket: ",   asc["Socket"]}],
+				BoxForm`SummaryItem[{"Listener: ", asc["Listener"]}]
+			},
+			"WebSocketClientConnection",
+			{
+				BoxForm`SummaryItem[{"Socket: ",   asc["Socket"]}],
+				BoxForm`SummaryItem[{"Messages: ", asc["Messages"]}]
+			}
+		];
 
 		BoxForm`ArrangeSummaryBox[
 			WebSocketObject, (* head *)
@@ -68,18 +112,24 @@ WebSocketObject /: MakeBoxes[
 		]
 	];
 
-	WebSocketObject[asc: _Association?webSocketObjectQ][prop_] :=
-		Lookup[asc, prop, Missing["NotFound", prop]];
-	WebSocketObject[asc: _Association?webSocketObjectQ]["Properties"] :=
-		Keys[asc];
+WebSocketObject[asc: _Association?webSocketObjectQ][prop_] :=
+	Lookup[asc, prop, Missing["NotFound", prop]];
+WebSocketObject[asc: _Association?webSocketObjectQ]["Properties"] :=
+	Keys[asc];
 
-	WebSocketObject /: (Close|DeleteObject)[
-		dep:WebSocketObject[assoc : _Association?webSocketObjectQ]
-	] := (
-		Close[assoc["Socket"]]
-	);
+WebSocketObject /: (Close|DeleteObject)[
+	dep:WebSocketObject[assoc : _Association?webSocketObjectQ]
+] := (
+	$WebSocketServers = Select[$WebSocketServers, Function[wso,
+		wso["UUID"] =!= assoc["UUID"]
+	]];
+	Close[assoc["Socket"]]
+);
 
-	WebSocketObject /: Normal[obj : WebSocketObject[asc: _Association?webSocketObjectQ]] := asc;
+
+
+WebSocketObject /: Normal[obj : WebSocketObject[asc: _Association?webSocketObjectQ]] := asc;
+
 
 End[];
 EndPackage[];

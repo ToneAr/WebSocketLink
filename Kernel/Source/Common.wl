@@ -1,6 +1,6 @@
-BeginPackage["WebSocketLink`Common`", {
-	"WebSocketLink`",
-	"WebSocketLink`PackageScope`"
+BeginPackage["TonyAristeidou`WebSocketLink`Common`", {
+	"TonyAristeidou`WebSocketLink`",
+	"TonyAristeidou`WebSocketLink`PackageScope`"
 }];
 Begin["`Private`"];
 

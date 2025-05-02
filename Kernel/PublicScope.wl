@@ -1,4 +1,4 @@
-BeginPackage["WebSocketLink`"];
+BeginPackage["TonyAristeidou`WebSocketLink`"];
 
 WebSocketObject::usage = "Represents a WebSocket connection";
 

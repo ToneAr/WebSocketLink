@@ -1,13 +1,13 @@
 (
 	Get[#]
 )& /@ {
-	"WebSocketLink`PublicScope`",
-	"WebSocketLink`PackageScope`",
+	"TonyAristeidou`WebSocketLink`PublicScope`",
+	"TonyAristeidou`WebSocketLink`PackageScope`",
 
-	"WebSocketLink`Source`Common`",
-	"WebSocketLink`Source`Frames`",
-	"WebSocketLink`Source`Server`",
-	"WebSocketLink`Source`Objects`"
+	"TonyAristeidou`WebSocketLink`Source`Common`",
+	"TonyAristeidou`WebSocketLink`Source`Frames`",
+	"TonyAristeidou`WebSocketLink`Source`Server`",
+	"TonyAristeidou`WebSocketLink`Source`Objects`"
 };
 
-$ContextPath = DeleteCases[$ContextPath, "WebSocketLink`PackageScope`"];
+$ContextPath = DeleteCases[$ContextPath, "TonyAristeidou`WebSocketLink`PackageScope`"];

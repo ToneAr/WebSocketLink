@@ -1,8 +1,8 @@
 (* :!CodeAnalysis::BeginBlock:: *)
 (* :!CodeAnalysis::Disable::SuspiciousSessionSymbol:: *)
-BeginPackage["WebSocketLink`Server`", {
-	"WebSocketLink`",
-	"WebSocketLink`PackageScope`"
+BeginPackage["TonyAristeidou`WebSocketLink`Server`", {
+	"TonyAristeidou`WebSocketLink`",
+	"TonyAristeidou`WebSocketLink`PackageScope`"
 }];
 
 Begin["`Private`"];
