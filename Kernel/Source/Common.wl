@@ -1,8 +1,8 @@
-BeginPackage["TonyAristeidou`WebSocketLink`Common`", {
-	"TonyAristeidou`WebSocketLink`",
-	"TonyAristeidou`WebSocketLink`PackageScope`"
+BeginPackage["ToneAr`WebSocketLink`", {
+	"ToneAr`WebSocketLink`Private`"
 }];
-Begin["`Private`"];
+
+Begin["`FileScope`Common`Private`"];
 
 intToBitList[ int_Integer, block_Integer : Nothing ] :=
 	IntegerDigits @@ { int, 2, block }

@@ -1,13 +1,13 @@
+
 (
-	Get[#]
+	Get["ToneAr`WebSocketLink`"<>#]
 )& /@ {
-	"TonyAristeidou`WebSocketLink`PublicScope`",
-	"TonyAristeidou`WebSocketLink`PackageScope`",
+	"Public`",
+	"Private`",
 
-	"TonyAristeidou`WebSocketLink`Source`Common`",
-	"TonyAristeidou`WebSocketLink`Source`Frames`",
-	"TonyAristeidou`WebSocketLink`Source`Server`",
-	"TonyAristeidou`WebSocketLink`Source`Objects`"
+	"Source`Common`",
+	"Source`Frames`",
+	"Source`Client`",
+	"Source`Server`",
+	"Source`Objects`"
 };
-
-$ContextPath = DeleteCases[$ContextPath, "TonyAristeidou`WebSocketLink`PackageScope`"];
