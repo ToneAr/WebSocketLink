@@ -2,7 +2,7 @@ PacletObject[
 	<|
 		"Name" -> "ToneAr/WebSocketLink",
 		"PublisherID" -> "ToneAr",
-		"Version" -> "0.5.0",
+		"Version" -> "0.5.1",
 		"WolframVersion" -> "12.2+",
 		"Creator" -> "Antonis Aristeidou",
 		"Publisher" -> "ToneAr",
@@ -15,7 +15,8 @@ PacletObject[
 			{"Asset",
 				"Root" -> "Resources",
 				"Assets" -> {
-					{ "logo.svg", "Icons/logo.svg" }
+					{ "logo.svg", "Icons/logo.svg" },
+					{ "WebSocketTLS.jar", "Java/WebSocketTLS.jar" }
 				}
 			}
 		}

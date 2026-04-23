@@ -17,5 +17,4 @@ WebSocketFrameImport::usage = "Import a frame ByteArray";
 Ping::usage = "Inert symbol used to create a Ping frame";
 Pong::usage = "Inert symbol used to create a Pong frame";
 
-
 EndPackage[];

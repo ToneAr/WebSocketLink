@@ -1,8 +1,9 @@
-BeginPackage["ToneAr`WebSocketLink`", {
+BeginPackage["ToneAr`WebSocketLink`FileScope`Frames`", {
+	"ToneAr`WebSocketLink`",
 	"ToneAr`WebSocketLink`Private`"
 }];
 
-Begin["`FileScope`Frames`Private`"];
+Begin["`Private`"];
 
 (* -----------------------WebSocketFrameCreate------------------------------
  * Description:  Create a frame ByteArray

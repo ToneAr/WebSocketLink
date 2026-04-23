@@ -1,11 +1,17 @@
-BeginPackage["ToneAr`WebSocketLink`", {
+BeginPackage["ToneAr`WebSocketLink`FileScope`Objects`", {
+	"ToneAr`WebSocketLink`",
 	"ToneAr`WebSocketLink`Private`"
 }];
-Begin["`FileScope`Objects`Private`"];
+Begin["`Private`"];
 
 serverKeys = {
-	"Type", "Listener", "Socket", "UUID",
-	"Port", "ConnectedClients", "HandlerFunctions"
+	"Type",
+	"Listener",
+	"Socket",
+	"UUID",
+	"Port",
+	"ConnectedClients",
+	"HandlerFunctions"
 };
 connectedClientKeys = {
 	"Type",
@@ -16,8 +22,13 @@ connectedClientKeys = {
 	"SendMessage"
 };
 clientKeys = {
-	"Type", "UUID", "Socket", "Address", "Messages",
-	"GetMessage", "SendMessage"
+	"Type",
+	"UUID",
+	"Socket",
+	"Address",
+	"Messages",
+	"GetMessage",
+	"SendMessage"
 };
 
 $icon = Import[
@@ -120,6 +131,9 @@ WebSocketObject /: (Close|DeleteObject)[
 			$WebSocketServers = Select[$WebSocketServers, Function[wso,
 				wso["UUID"] =!= assoc["UUID"]
 			]];
+			If[TrueQ[assoc["TLS"]] && assoc["SSLServerSocket"] =!= None,
+				Quiet[assoc["SSLServerSocket"]@close[]]
+			];
 	];
 	Close @ assoc["Socket"]
 );
