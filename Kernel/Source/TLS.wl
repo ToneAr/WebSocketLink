@@ -27,12 +27,16 @@ $keytoolPath := With[{
 initializeTLS[] := If[!TrueQ[$tlsInitialized],
 	Needs["JLink`"];
 	InstallJava[
-		"JVMArguments" -> {
+		JVMArguments -> {
 			"--add-opens=java.base/sun.security.ssl=ALL-UNNAMED",
 			"--add-opens=java.base/sun.security.pkcs12=ALL-UNNAMED",
 			"--add-opens=java.base/sun.security.util=ALL-UNNAMED"
 		}
 	];
+	AddToClassPath @ FileNameJoin[{
+		PacletObject["ToneAr/WebSocketLink"]["Location"],
+		"Java", "WebSocketTLS.jar"
+	}];
 	LoadJavaClass["websocketlink.WebSocketTLS"];
 	$tlsInitialized = True
 ];
