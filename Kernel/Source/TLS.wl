@@ -13,20 +13,25 @@ $tlsInitialized = False;
 $tlsDefaultKeyStore = None;
 $tlsDefaultPassword = "";
 
+(* Prefer WL's bundled keytool; fall back to system PATH *)
 $keytoolPath := With[{
-		javaHome = JavaSystemProperty["java.home"],
-		ext = If[$OperatingSystem === "Windows", ".exe", ""]
+		ext = If[$OperatingSystem === "Windows", ".exe", ""],
+		wlKeytool = FileNameJoin[{
+			$InstallationDirectory, "SystemFiles", "Java",
+			$SystemID, "bin", "keytool"
+		}]
 	},
-	FileNameJoin[{javaHome, "bin", "keytool" <> ext}]
+	If[FileExistsQ[wlKeytool <> ext], wlKeytool <> ext, "keytool" <> ext]
 ];
 
 initializeTLS[] := If[!TrueQ[$tlsInitialized],
 	Needs["JLink`"];
-	InstallJava[];
-	With[{
-		jarPath = PacletObject["ToneAr/WebSocketLink"]["AssetLocation", "WebSocketTLS.jar"]
-	},
-		AddToClassPath[jarPath]
+	InstallJava[
+		"JVMArguments" -> {
+			"--add-opens=java.base/sun.security.ssl=ALL-UNNAMED",
+			"--add-opens=java.base/sun.security.pkcs12=ALL-UNNAMED",
+			"--add-opens=java.base/sun.security.util=ALL-UNNAMED"
+		}
 	];
 	LoadJavaClass["websocketlink.WebSocketTLS"];
 	$tlsInitialized = True
