@@ -16,7 +16,7 @@ WebSocketConnect // Options = {
 WebSocketConnect[address_String, OptionsPattern[]] := Module[{
 		server, upgradeRequest, handshakeResp, handshakeHeaders, messages, wsObj,
 		parsedUrl, upgradeRequestString, sendMessage, waitForMessage, readMessage,
-		getMessage,
+		getMessage, parsedPort, readBuffer = {},
 		uuid = CreateUUID[],
 		key = BaseEncode[
 			ByteArray @ RandomInteger[255,16],
@@ -36,16 +36,17 @@ WebSocketConnect[address_String, OptionsPattern[]] := Module[{
 							"https://",
 							"http://"
 						] <> a
-				]
-			];
+			]
+		];
+		parsedPort = Replace[parsedUrl["Port"],
+			None :> If[parsedUrl["Scheme"] === "https", 443, 80]
+		];
 
 		upgradeRequest = HTTPRequest[
 			<|
 				"Domain" -> parsedUrl["Domain"],
 				"Scheme" -> parsedUrl["Scheme"],
-				"Port" -> Replace[parsedUrl["Port"],
-					None :> If[parsedUrl["Scheme"] === "https", 443, 80]
-				],
+				"Port" -> parsedPort,
 				"Path" -> Replace[parsedUrl["Path"], {
 					{} :> "/",
 					p: {__String} :> StringRiffle[p, "/"]
@@ -66,9 +67,7 @@ WebSocketConnect[address_String, OptionsPattern[]] := Module[{
 					loopbackPort = Confirm[
 						StartTLSClientProxy[
 							parsedUrl["Domain"],
-							Replace[parsedUrl["Port"],
-								None :> If[parsedUrl["Scheme"] === "https", 443, 80]
-							],
+							parsedPort,
 							Automatic,
 							OptionValue["VerifyPeer"]
 						],
@@ -82,7 +81,9 @@ WebSocketConnect[address_String, OptionsPattern[]] := Module[{
 				]
 			],
 			ConfirmMatch[
-				SocketConnect[address],
+				SocketConnect[
+					parsedUrl["Domain"] <> ":" <> ToString[parsedPort]
+				],
 				_SocketObject,
 				StringTemplate["Failed to connect to WebSocket server at '``'."][address]
 			]
@@ -97,8 +98,16 @@ WebSocketConnect[address_String, OptionsPattern[]] := Module[{
 		];
 		WriteString[server, upgradeRequestString];
 
-		While[!SocketReadyQ[server],
-			Pause[0.00001]
+		With[{deadline = AbsoluteTime[] + OptionValue["ReadTimeout"]},
+			While[!SocketReadyQ[server] && AbsoluteTime[] < deadline,
+				Pause[OptionValue["ReadPollInterval"]]
+			];
+			ConfirmAssert[
+				SocketReadyQ[server],
+				StringTemplate[
+					"Timed out waiting for WebSocket handshake response from '``'."
+				][address]
+			]
 		];
 		handshakeResp = ImportString[ReadString[server], "HTTPResponse"];
 
@@ -147,13 +156,23 @@ WebSocketConnect[address_String, OptionsPattern[]] := Module[{
 			SocketReadyQ[server]
 		];
 
-		readMessage[] := WebSocketFrameImport[ByteArray @ BinaryReadList @ server];
+		readMessage[] := Module[{frameByteCount, frameBytes},
+			While[
+				MissingQ[frameByteCount = webSocketFrameByteCount[readBuffer]],
+				readBuffer = Join[readBuffer, BinaryReadList[server]]
+			];
+			frameBytes = Take[readBuffer, frameByteCount];
+			readBuffer = Drop[readBuffer, frameByteCount];
+			WebSocketFrameImport[ByteArray @ frameBytes]
+		];
 
 		getMessage[] := Module[{msg},
 			If[messages["Length"] > 0,
 				Return[messages["PopFront"]]
 			];
-			If[!waitForMessage[],
+			If[
+				MissingQ[webSocketFrameByteCount[readBuffer]] &&
+					!waitForMessage[],
 				Return[Null]
 			];
 			msg = readMessage[];
@@ -176,8 +195,8 @@ WebSocketConnect[address_String, OptionsPattern[]] := Module[{
 				"Socket"      -> server,
 				"Address"     -> address,
 				"Messages"    -> messages,
-				"GetMessage"  :> getMessage[],
-				"SendMessage" :> sendMessage
+				"GetMessage"  -> Function[{}, getMessage[]],
+				"SendMessage" -> sendMessage
 			|>
 		];
 		$WebSocketClients[uuid] = wsObj;

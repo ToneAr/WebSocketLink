@@ -4,5 +4,6 @@
 	"tabWidth": 4,
 	"printWidth": 80,
 	"wolframMaxBlankLinesBetweenCode": 2,
-	"wolframNewlinesBetweenDefinitions": 2
+	"wolframNewlinesBetweenDefinitions": 2,
+	"wolframAlignRuleValues": true
 }
