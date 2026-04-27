@@ -9,7 +9,7 @@ WebSocketConnect::usage = "Connect to a WebSocket server";
 
 WebSocketServerStart::usage = "Start the server";
 WebSocketServerStop::usage = "Stop the server";
-IsWebSocketServerRunning::usage = "Check if the server is running";
+WebSocketRunningQ::usage = "Check if the server is running";
 
 WebSocketFrameCreate::usage = "Create a frame ByteArray";
 WebSocketFrameImport::usage = "Import a frame ByteArray";

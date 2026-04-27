@@ -9,11 +9,14 @@ Begin["`Private`"];
 WebSocketConnect // Options = {
 	"GUID" -> "258EAFA5-E914-47DA-95CA-C5AB0DC85B11",
 	"MaxStoredMessages" -> 1000,
-	"VerifyPeer" -> True
+	"VerifyPeer" -> True,
+	"ReadTimeout" -> 5.,
+	"ReadPollInterval" -> 0.01
 };
 WebSocketConnect[address_String, OptionsPattern[]] := Module[{
-		server, upgradeRequest, handshakeResp, handshakeHeaders, messages,
-		parsedUrl, upgradeRequestString, sendMessage,
+		server, upgradeRequest, handshakeResp, handshakeHeaders, messages, wsObj,
+		parsedUrl, upgradeRequestString, sendMessage, waitForMessage, readMessage,
+		getMessage,
 		uuid = CreateUUID[],
 		key = BaseEncode[
 			ByteArray @ RandomInteger[255,16],
@@ -60,18 +63,18 @@ WebSocketConnect[address_String, OptionsPattern[]] := Module[{
 
 		server = If[parsedUrl["Scheme"] === "https",
 			With[{
-				loopbackPort = Confirm[
-					StartTLSClientProxy[
-						parsedUrl["Domain"],
-						Replace[parsedUrl["Port"],
-							None :> If[parsedUrl["Scheme"] === "https", 443, 80]
+					loopbackPort = Confirm[
+						StartTLSClientProxy[
+							parsedUrl["Domain"],
+							Replace[parsedUrl["Port"],
+								None :> If[parsedUrl["Scheme"] === "https", 443, 80]
+							],
+							Automatic,
+							OptionValue["VerifyPeer"]
 						],
-						Automatic,
-						OptionValue["VerifyPeer"]
-					],
-					StringTemplate["Failed to start TLS proxy for '``'."][address]
-				]
-			},
+						StringTemplate["Failed to start TLS proxy for '``'."][address]
+					]
+				},
 				ConfirmMatch[
 					SocketConnect["localhost:" <> ToString[loopbackPort]],
 					_SocketObject,
@@ -136,21 +139,49 @@ WebSocketConnect[address_String, OptionsPattern[]] := Module[{
 		sendMessage[msg_] :=
 			sendMessage[ ToString @ msg ];
 
+		waitForMessage[] := Module[{deadline},
+			deadline = AbsoluteTime[] + OptionValue["ReadTimeout"];
+			While[!SocketReadyQ[server] && AbsoluteTime[] < deadline,
+				Pause[OptionValue["ReadPollInterval"]]
+			];
+			SocketReadyQ[server]
+		];
+
+		readMessage[] := WebSocketFrameImport[ByteArray @ BinaryReadList @ server];
+
+		getMessage[] := Module[{msg},
+			If[messages["Length"] > 0,
+				Return[messages["PopFront"]]
+			];
+			If[!waitForMessage[],
+				Return[Null]
+			];
+			msg = readMessage[];
+			Which[
+				msg === "Ping",
+					BinaryWrite[server, WebSocketFrameCreate[Pong, Masking -> True]];
+					getMessage[],
+				msg === "Pong",
+					getMessage[],
+				True,
+					msg
+			]
+		];
+
 		(* Return a WebSocketObject *)
-		WebSocketObject[
+		wsObj = WebSocketObject[
 			<|
-				"Type"    -> "WebSocketClient",
-				"UUID"    -> uuid["UUID"],
-				"Socket"  -> server,
-				"Address" -> address,
-				"Messages" -> messages,
-				"GetMessage" :> If[SocketReadyQ[server],
-					WebSocketFrameImport[ByteArray @* BinaryReadList @ server],
-					Null
-				],
+				"Type"        -> "WebSocketClient",
+				"UUID"        -> uuid,
+				"Socket"      -> server,
+				"Address"     -> address,
+				"Messages"    -> messages,
+				"GetMessage"  :> getMessage[],
 				"SendMessage" :> sendMessage
 			|>
-		]
+		];
+		$WebSocketClients[uuid] = wsObj;
+		wsObj
 		,
 		(* OnError *)
 		Function[er,

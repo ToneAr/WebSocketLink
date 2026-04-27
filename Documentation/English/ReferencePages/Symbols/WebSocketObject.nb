@@ -1,0 +1,345 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 15.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     13896,        336]
+NotebookOptionsPosition[     10024,        272]
+NotebookOutlinePosition[     10521,        290]
+CellTagsIndexPosition[     10478,        287]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["WebSocketObject", "ObjectName",ExpressionUUID->"c6879cb6-287f-4d15-9b17-d55f1a9633e7"],
+
+Cell[TextData[{
+ Cell["   ", "ModInfo",ExpressionUUID->"a6436e07-9a7f-434e-add8-79a375fd5751"],
+ Cell[BoxData[
+  TagBox[
+   RowBox[{"WebSocketObject", "[", "assoc", "]"}],
+   HoldForm]], "InlineFormula",ExpressionUUID->
+  "739b361a-1c07-4d42-8aa0-ff0869366cb9"],
+ "\[LineSeparator]represents a WebSocket client, server, or server-side \
+client connection.\n",
+ Cell["   ", "ModInfo",ExpressionUUID->"0df83b8a-ef55-480c-a613-8724c7dd7f98"],
+ Cell[BoxData[
+  TagBox[
+   RowBox[{"obj", "[", "\"\<prop\>\"", "]"}],
+   HoldForm]], "InlineFormula",ExpressionUUID->
+  "ba5250d3-46a1-4fb3-8ed2-90b79a20d241"],
+ "\[LineSeparator]returns property ",
+ Cell[BoxData[
+  TagBox["\"\<prop\>\"",
+   HoldForm]], "InlineFormula",ExpressionUUID->
+  "528f5b8a-dca0-4fa5-a532-08edaf96c953"],
+ " from a WebSocket object.\n",
+ Cell["   ", "ModInfo",ExpressionUUID->"ba96fafc-e269-4823-8596-54548489ee3a"],
+ Cell[BoxData[
+  TagBox[
+   RowBox[{"obj", "[", "\"\<Properties\>\"", "]"}],
+   HoldForm]], "InlineFormula",ExpressionUUID->
+  "c681ce8f-d14e-462f-b7e4-2988f23a9a5e"],
+ "\[LineSeparator]lists the available properties for ",
+ Cell[BoxData[
+  TagBox["obj",
+   HoldForm]], "InlineFormula",ExpressionUUID->
+  "85fcc158-431e-43fd-9ace-a20c810dfb2e"],
+ "."
+}], "Usage",ExpressionUUID->"918b4dc9-1f8f-4524-b591-851ea487b0ca"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TagBox["WebSocketServerStart",
+   HoldForm]], "InlineFormula",ExpressionUUID->
+  "f534824a-0736-427a-8c08-aa3ecaf00fda"],
+ " returns a server ",
+ Cell[BoxData[
+  TagBox["WebSocketObject",
+   HoldForm]], "InlineFormula",ExpressionUUID->
+  "f72a2925-302b-4f6e-874f-d5aa6b432402"],
+ "."
+}], "Notes",ExpressionUUID->"6a3e16cf-3dfa-4e68-b668-bf760c6a9b9d"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TagBox["WebSocketConnect",
+   HoldForm]], "InlineFormula",ExpressionUUID->
+  "1c704189-7ac6-4e1f-ba6a-f4ec1e9b5192"],
+ " returns a client ",
+ Cell[BoxData[
+  TagBox["WebSocketObject",
+   HoldForm]], "InlineFormula",ExpressionUUID->
+  "7f67fbc6-8e01-4fcd-ae66-6331bca909c5"],
+ "."
+}], "Notes",ExpressionUUID->"59aa550f-5d0e-4ea3-b1c4-587d56b499c2"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TagBox[
+   RowBox[{"Close", "[", "obj", "]"}],
+   HoldForm]], "InlineFormula",ExpressionUUID->
+  "a19d2923-ace3-4c26-a39e-5868093e87d4"],
+ " or ",
+ Cell[BoxData[
+  TagBox[
+   RowBox[{"DeleteObject", "[", "obj", "]"}],
+   HoldForm]], "InlineFormula",ExpressionUUID->
+  "09ca8369-7f00-46de-be67-8a597c2eb9be"],
+ " closes the underlying socket resources."
+}], "Notes",ExpressionUUID->"f36db4ab-531d-4aef-8d5f-4850a95437d2"],
+
+Cell["Common properties include:", "Notes",ExpressionUUID->"716192ff-5e1e-4db3-9e67-be3e5ad6c2eb"],
+
+Cell[BoxData[GridBox[{
+   {Cell["   ", "ModInfo",ExpressionUUID->
+     "73150b73-ec12-49c8-8c4b-68c2f5edd30d"], "\"\<Type\>\"", Cell["\<\
+Object type, such as \"WebSocketServer\", \"WebSocketClient\", or \
+\"WebSocketClientConnection\".\
+\>", "TableText",ExpressionUUID->"663afa5b-fe73-4f0f-ba7b-22c231a0e089"]},
+   {Cell["   ", "ModInfo",ExpressionUUID->
+     "780c3801-df07-4357-a910-5f6009b3aaf5"], "\"\<UUID\>\"", Cell[
+    "Unique identifier for the object.", "TableText",ExpressionUUID->
+     "59486028-4e9d-4210-ab06-86f0d093167b"]},
+   {Cell["   ", "ModInfo",ExpressionUUID->
+     "7ae50319-b65c-4c95-8214-1e8a6ca16ab7"], "\"\<Socket\>\"", Cell[
+    "Underlying socket object.", "TableText",ExpressionUUID->
+     "995efb3c-55b8-4e1e-a502-eff78f66f23b"]},
+   {Cell["   ", "ModInfo",ExpressionUUID->
+     "0afd22f0-2770-438d-b946-b17dfc676fd3"], "\"\<Address\>\"", Cell[
+    "Original client address for client objects.", "TableText",ExpressionUUID->
+     "1e2edb57-a7a5-4883-b51c-eb568e0e2168"]},
+   {Cell["   ", "ModInfo",ExpressionUUID->
+     "2ec14ba8-ca5f-4458-b3e1-f4170543d927"], "\"\<Port\>\"", Cell[
+    "External listening port for server objects.", "TableText",ExpressionUUID->
+     "9f5201db-45dd-4b89-8fec-1ac99dd7d2a8"]},
+   {Cell["   ", "ModInfo",ExpressionUUID->
+     "1eb3c334-8605-4591-b8f6-75a84dad43d1"], "\"\<TLS\>\"", Cell[
+    "Whether the server object was started as a TLS/WSS endpoint.", 
+     "TableText",ExpressionUUID->"3071eb11-bc8c-42e3-9593-45d81b6e5d63"]},
+   {Cell["   ", "ModInfo",ExpressionUUID->
+     "dfd627ba-ffd8-415f-a0c0-55c61f04bb1a"], "\"\<ConnectedClients\>\"", 
+    Cell["\<\
+Association of active server-side client connections for server objects.\
+\>", "TableText",ExpressionUUID->"1fcd6d35-32b1-43fd-b588-a4e4ba5b4966"]},
+   {Cell["   ", "ModInfo",ExpressionUUID->
+     "874b7a80-03c6-4c44-96bf-ec95492d22e6"], "\"\<Messages\>\"", Cell["\<\
+Message buffer for client objects and server-side client connections.\
+\>", "TableText",ExpressionUUID->"0cef28e0-0978-4972-b2fd-d9b8e313819d"]},
+   {Cell["   ", "ModInfo",ExpressionUUID->
+     "ed40217c-bf49-4eb7-9129-f1c9c350456f"], "\"\<SendMessage\>\"", Cell[
+    "Function used internally to send WebSocket messages.", "TableText",
+     ExpressionUUID->"ecc88717-fbdd-4805-b935-2774735b04e9"]},
+   {Cell["   ", "ModInfo",ExpressionUUID->
+     "1358c78d-d4c8-4fe8-933f-d5e9dd3517d2"], "\"\<GetMessage\>\"", Cell[
+    "Function used internally to read WebSocket messages.", "TableText",
+     ExpressionUUID->"07dd6ad9-7d39-4bcf-b8fc-7a584ac3292c"]}
+  }]], "2ColumnTableMod",ExpressionUUID->"2baa749a-7f36-4022-8ba4-\
+99a1f3fb4c6e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["See Also", "SeeAlsoSection",ExpressionUUID->"6800c14b-4a57-4947-aba3-b6e771514090"],
+
+Cell[TextData[{
+ ButtonBox["WebSocketConnect",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ToneAr/WebSocketLink/ref/WebSocketConnect"],
+ " \[FilledVerySmallSquare] ",
+ ButtonBox["WebSocketServerStart",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ToneAr/WebSocketLink/ref/WebSocketServerStart"]
+}], "SeeAlso",ExpressionUUID->"526f1344-7fad-47e9-8c90-3be9f97e8494"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Examples Initialization", "ExamplesInitializationSection",ExpressionUUID->"db694cbe-b519-4402-94e3-d6da6ab42b9b"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"Needs", "[", "\"\<ToneAr`WebSocketLink`\>\"", "]"}],
+  HoldForm]], "Input",ExpressionUUID->"7c740aff-e554-4dfb-afdd-a2ca3d668c8a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Basic Examples", "PrimaryExamplesSection",ExpressionUUID->"39e40320-267a-4cb6-85a2-8814fbdb5046"],
+
+Cell["Start a server and inspect its available properties:", "ExampleText",ExpressionUUID->"dc12a040-5ab4-41fc-95a6-770218c0e650"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"server", "=", 
+   RowBox[{"WebSocketServerStart", "[", "30000", "]"}]}],
+  HoldForm]], "Input",ExpressionUUID->"4a8410c2-00ed-4121-8687-e3af78fd72f6"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"server", "[", "\"\<Properties\>\"", "]"}],
+  HoldForm]], "Input",ExpressionUUID->"de6e7ec0-21d7-439e-ab64-0f3aef77bd5d"],
+
+Cell["Read a property:", "ExampleText",ExpressionUUID->"cad432a6-5b77-4a97-9f9f-b5da3c573233"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"server", "[", "\"\<Port\>\"", "]"}],
+  HoldForm]], "Input",ExpressionUUID->"de0dc8e2-0870-46f6-bb97-0eb469ae1939"],
+
+Cell["Close the object when finished:", "ExampleText",ExpressionUUID->"6bd9a1f7-1b63-40bb-b863-2c0a90c26bf9"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"Close", "[", "server", "]"}],
+  HoldForm]], "Input",ExpressionUUID->"f0927521-9313-4124-96ce-4698512efd32"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Metadata", "MetadataSection",ExpressionUUID->"d977dedd-1a2d-4c65-b607-91164f15b9d2"],
+
+Cell[TextData[{
+ "New in: ",
+ Cell["0.9.0", "HistoryData",
+  CellTags->"New",ExpressionUUID->"dab5c622-a2b2-4b16-8e14-99ae6d5105c9"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified",ExpressionUUID->"0f6fe900-0c2b-4cc2-a615-f611f240cca2"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete",ExpressionUUID->
+  "4409a09d-f6bc-42d5-a6d1-01ab6a7e7300"]
+}], "History",ExpressionUUID->"4f16c9b6-18b3-498a-8320-bfd4c2b5abf6"],
+
+Cell[CellGroupData[{
+
+Cell["Categorization", "CategorizationSection",ExpressionUUID->"15c3c6b7-d43a-4c6e-9a33-16afd5a74d17"],
+
+Cell["Symbol", "Categorization",
+ CellLabel->
+  "Entity Type",ExpressionUUID->"cf62f83f-f0db-4949-97ad-1dab2cb1cffb"],
+
+Cell["ToneAr/WebSocketLink", "Categorization",
+ CellLabel->
+  "Paclet Name",ExpressionUUID->"fea7635f-958b-4784-b8b3-e1baa79378ff"],
+
+Cell["ToneAr`WebSocketLink`", "Categorization",
+ CellLabel->"Context",ExpressionUUID->"6d9fa6fc-17d8-420a-8544-9a76b64e2396"],
+
+Cell["ToneAr/WebSocketLink/ref/WebSocketObject", "Categorization",
+ CellLabel->"URI",ExpressionUUID->"d533f124-2029-4407-ba5c-99700ca9ad60"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",ExpressionUUID->"1787b852-8e57-482e-940b-d944701dd44b"],
+
+Cell["websocket, object, client, server, connection", "Keywords",ExpressionUUID->"bff990fe-769a-4285-884e-c6aa38fb135e"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Syntax Templates", "TemplatesSection",ExpressionUUID->"8547ea3d-5505-49eb-b472-575e3ceabb4e"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->
+  "Additional Function \
+Template",ExpressionUUID->"e5070375-f39e-4aaf-a49e-8d9337ad73fd"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->
+  "Arguments Pattern",ExpressionUUID->"e8a8bb0b-eaf9-4e85-8dea-1d6b54289d51"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->
+  "Local Variables",ExpressionUUID->"815009b1-bac2-4ab5-807f-dd17f257c3b4"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->
+  "Color Equal Signs",ExpressionUUID->"6e1d8d66-0908-4b64-8461-ed0bb3dcaae9"]
+}, Closed]]
+}, Open  ]]
+},
+WindowSize->{900, 700},
+TaggingRules-><|"Paclet" -> "ToneAr/WebSocketLink"|>,
+CellContext->"Global`",
+FrontEndVersion->"15.1 for Linux x86 (64-bit) (April 22, 2026)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStylesExt.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"8f3b7820-8106-414d-affd-e47f08bd7535"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 92, 0, 70, "ObjectName",ExpressionUUID->"c6879cb6-287f-4d15-9b17-d55f1a9633e7"],
+Cell[671, 24, 1301, 33, 70, "Usage",ExpressionUUID->"918b4dc9-1f8f-4524-b591-851ea487b0ca"],
+Cell[1975, 59, 384, 11, 70, "Notes",ExpressionUUID->"6a3e16cf-3dfa-4e68-b668-bf760c6a9b9d"],
+Cell[2362, 72, 380, 11, 70, "Notes",ExpressionUUID->"59aa550f-5d0e-4ea3-b1c4-587d56b499c2"],
+Cell[2745, 85, 453, 13, 70, "Notes",ExpressionUUID->"f36db4ab-531d-4aef-8d5f-4850a95437d2"],
+Cell[3201, 100, 98, 0, 70, "Notes",ExpressionUUID->"716192ff-5e1e-4db3-9e67-be3e5ad6c2eb"],
+Cell[3302, 102, 2630, 44, 70, "2ColumnTableMod",ExpressionUUID->"2baa749a-7f36-4022-8ba4-99a1f3fb4c6e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5969, 151, 89, 0, 70, "SeeAlsoSection",ExpressionUUID->"6800c14b-4a57-4947-aba3-b6e771514090"],
+Cell[6061, 153, 361, 8, 70, "SeeAlso",ExpressionUUID->"526f1344-7fad-47e9-8c90-3be9f97e8494"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6459, 166, 119, 0, 70, "ExamplesInitializationSection",ExpressionUUID->"db694cbe-b519-4402-94e3-d6da6ab42b9b"],
+Cell[6581, 168, 164, 3, 70, "Input",ExpressionUUID->"7c740aff-e554-4dfb-afdd-a2ca3d668c8a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6782, 176, 103, 0, 70, "PrimaryExamplesSection",ExpressionUUID->"39e40320-267a-4cb6-85a2-8814fbdb5046"],
+Cell[6888, 178, 130, 0, 70, "ExampleText",ExpressionUUID->"dc12a040-5ab4-41fc-95a6-770218c0e650"],
+Cell[7021, 180, 184, 4, 70, "Input",ExpressionUUID->"4a8410c2-00ed-4121-8687-e3af78fd72f6"],
+Cell[7208, 186, 154, 3, 70, "Input",ExpressionUUID->"de6e7ec0-21d7-439e-ab64-0f3aef77bd5d"],
+Cell[7365, 191, 94, 0, 70, "ExampleText",ExpressionUUID->"cad432a6-5b77-4a97-9f9f-b5da3c573233"],
+Cell[7462, 193, 148, 3, 70, "Input",ExpressionUUID->"de0dc8e2-0870-46f6-bb97-0eb469ae1939"],
+Cell[7613, 198, 109, 0, 70, "ExampleText",ExpressionUUID->"6bd9a1f7-1b63-40bb-b863-2c0a90c26bf9"],
+Cell[7725, 200, 141, 3, 70, "Input",ExpressionUUID->"f0927521-9313-4124-96ce-4698512efd32"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7903, 208, 90, 0, 70, "MetadataSection",ExpressionUUID->"d977dedd-1a2d-4c65-b607-91164f15b9d2"],
+Cell[7996, 210, 459, 11, 70, "History",ExpressionUUID->"4f16c9b6-18b3-498a-8320-bfd4c2b5abf6"],
+Cell[CellGroupData[{
+Cell[8480, 225, 102, 0, 70, "CategorizationSection",ExpressionUUID->"15c3c6b7-d43a-4c6e-9a33-16afd5a74d17"],
+Cell[8585, 227, 117, 2, 70, "Categorization",ExpressionUUID->"cf62f83f-f0db-4949-97ad-1dab2cb1cffb"],
+Cell[8705, 231, 131, 2, 70, "Categorization",ExpressionUUID->"fea7635f-958b-4784-b8b3-e1baa79378ff"],
+Cell[8839, 235, 125, 1, 70, "Categorization",ExpressionUUID->"6d9fa6fc-17d8-420a-8544-9a76b64e2396"],
+Cell[8967, 238, 140, 1, 70, "Categorization",ExpressionUUID->"d533f124-2029-4407-ba5c-99700ca9ad60"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[9144, 244, 90, 0, 70, "KeywordsSection",ExpressionUUID->"1787b852-8e57-482e-940b-d944701dd44b"],
+Cell[9237, 246, 120, 0, 70, "Keywords",ExpressionUUID->"bff990fe-769a-4285-884e-c6aa38fb135e"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[9394, 251, 99, 0, 70, "TemplatesSection",ExpressionUUID->"8547ea3d-5505-49eb-b472-575e3ceabb4e"],
+Cell[9496, 253, 133, 3, 70, "Template",ExpressionUUID->"e5070375-f39e-4aaf-a49e-8d9337ad73fd"],
+Cell[9632, 258, 120, 2, 70, "Template",ExpressionUUID->"e8a8bb0b-eaf9-4e85-8dea-1d6b54289d51"],
+Cell[9755, 262, 118, 2, 70, "Template",ExpressionUUID->"815009b1-bac2-4ab5-807f-dd17f257c3b4"],
+Cell[9876, 266, 120, 2, 70, "Template",ExpressionUUID->"6e1d8d66-0908-4b64-8461-ed0bb3dcaae9"]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

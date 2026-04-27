@@ -41,11 +41,11 @@ WebSocketServerStart[port_Integer : Automatic, OptionsPattern[]] := Module[{
 		listenPort = port;
 		If[TrueQ @ OptionValue["TLS"],
 			With[{
-				certConfig = Replace[OptionValue["Certificate"], {
-					p_String /; OptionValue["CertificatePassword"] =!= "" :>
-						{p, OptionValue["CertificatePassword"]}
-				}]
-			},
+					certConfig = Replace[OptionValue["Certificate"], {
+						p_String /; OptionValue["CertificatePassword"] =!= "" :>
+							{p, OptionValue["CertificatePassword"]}
+					}]
+				},
 				{sslServerSocket, listenPort} = Confirm[
 					StartTLSServerProxy[port, certConfig],
 					"Failed to start TLS server proxy"
@@ -193,15 +193,16 @@ WebSocketServerStart[port_Integer : Automatic, OptionsPattern[]] := Module[{
 
 
 		serverObj = <|
-			"Type"            -> "WebSocketServer",
-			"Listener"        -> listener,
-			"Socket"          -> listener["Socket"],
-			"UUID"            -> serverUUID,
-			"Port"            -> If[TrueQ @ OptionValue["TLS"],
-			                       port,
-			                       listener["Socket"]["DestinationPort"]],
-			"TLS"             -> TrueQ @ OptionValue["TLS"],
-			"SSLServerSocket" -> sslServerSocket,
+			"Type"     -> "WebSocketServer",
+			"Listener" -> listener,
+			"Socket"   -> listener["Socket"],
+			"UUID"     -> serverUUID,
+			"TLS"      -> TrueQ @ OptionValue["TLS"],
+			"Port"     -> If[TrueQ @ OptionValue["TLS"],
+				port,
+				listener["Socket"]["DestinationPort"]
+			],
+			"SSLServerSocket"  -> sslServerSocket,
 			"ConnectedClients" :> connectedClients,
 			"HandlerFunctions" -> OptionValue["HandlerFunctions"]
 		|>;

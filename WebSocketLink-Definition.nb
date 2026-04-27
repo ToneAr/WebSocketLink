@@ -634,54 +634,30 @@ image from a local file, use notebook-relative paths when possible (e.g. ",
  CellTags->{"Headline Image", "HeroImage", "TemplateCellGroup"},
  CellID->509724307,ExpressionUUID->"f1d03adc-954d-47ea-aff7-5864fc5e2276"],
 
-Cell[CellGroupData[{
-
 Cell[BoxData[
- RowBox[{"Import", "[", "\"\<ToneAr/WebSocketLink\>\"", "]"}]], "Input",
- CellLabel->"In[1]:=",
- CellID->437211028,ExpressionUUID->"eed33408-b8e0-4b5a-a500-0808e2dff00b"],
-
-Cell[BoxData[
- TemplateBox[{
-  "Import", "nffil", 
-   "\"File \\!\\(\\*RowBox[{\\\"\\\\\\\"ToneAr/WebSocketLink\\\\\\\"\\\"}]\\) \
-not found during \\!\\(\\*RowBox[{\\\"Import\\\"}]\\).\"", 2, 1, 1, 
-   20009418158379353843, "Local"},
-  "MessageTemplate",
-  BaseStyle->"MSG"]], "Message",
- CellLabel->"During evaluation of In[1]:=",
- CellID->1212220295,ExpressionUUID->"f9dba841-1b96-42a6-82d4-31b5c9a18f6d"],
-
-Cell[BoxData["$Failed"], "Output",
- CellLabel->"Out[1]=",
- CellID->833208801,ExpressionUUID->"cdb2778a-5994-411c-994f-71b1fbfb6ac0"]
-}, Open  ]],
-
-Cell[BoxData[
- TagBox[
-  GraphicsBox[
-   {EdgeForm[GrayLevel[0]], FaceForm[GrayLevel[1]], RectangleBox[{0, 0}], 
-    InsetBox[
-     StyleBox[
-      TagBox["\<\"Image Placeholder\"\>",
-       Annotation[#, "PlaceholderImage"]& ],
-      StripOnInput->False,
-      FontFamily->"Source Sans Pro",
-      FontSize->16], {0.5, 0.6}], InsetBox[
-     StyleBox["\<\"Replace this with an image\\nthat you would like to \
-display\\non the landing page for your paclet.\"\>",
-      StripOnInput->False,
-      TextAlignment->Center,
-      FontFamily->"Source Sans Pro",
-      FontSize->10,
-      FontColor->GrayLevel[0.5]], {0.5, 0.4}]},
-   ImageSize->250],
-  #& ,
-  TaggingRules -> {"DefaultContentBoxes" -> True},
-  AutoDelete->True]], "Input",
- TaggingRules->{},
- CellTags->"DefaultContent",
- CellID->445097320,ExpressionUUID->"8731c4d9-8e3e-48f4-bde9-b5ef0702b310"]
+ GraphicsBox[GeometricTransformationBox[
+   {Thickness[0.025], 
+    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+      0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+      0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+      0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+      0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+      0, 1, 0}}}, {{{29.7734375, 24.6328125}, {34.6953125, 24.6328125}, {
+      34.6953125, 12.15234375}, {29.1484375, 6.296875}, {25.66796875, 
+      9.97265625}, {29.7734375, 14.304688453674316`}}, CompressedData["
+1:eJxTTMoPSmViYGCQBmIQDQINUY4OYIatNYTuNETmKzDc0YLwX5hB6Ag9CC1o
+CqEnGEHopRYQussSlb8KKp8INTfbBELz6UNob6i9J8xQ+deg9rwyB9EP/m9W
+h/CXQM3nU4HQ0hBz/9u/t4f4aMl+JL4CQ40wRP9iCQcU/mYoX0YPmc/AsBzq
+3k/KUHdpobp3mjJEfbE6Mh8YDorI5qPzH/w/rI1q3kOof29A9XdZQegPEH83
+GDlA+Oed4XwANQpGjA==
+      "]}]}, {{{1, 0}, {0, -1}}, {0, 0}}],
+  AspectRatio->Automatic,
+  ImageSize->{298.75, 253.93750000000009`},
+  PlotRange->{{0., 40.}, {0., -33.333333333333336`}}]], "Output",
+ CellChangeTimes->{{3.977772714858592*^9, 3.977772734523978*^9}, {
+  3.977775379834818*^9, 3.977775508228278*^9}},
+ CellLabel->"Out[142]=",
+ CellID->1035710288,ExpressionUUID->"1357b7a4-8a6f-46d8-81e8-a20d9de525cd"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -957,10 +933,8 @@ excluded using ",
 
 Cell[BoxData["Quit"], "Input",
  TaggingRules->{},
- CellLabel->"In[29]:=",
+ CellLabel->"In[1]:=",
  CellID->870223144,ExpressionUUID->"659a185f-ecbc-4e33-aa6a-4cb71a7dee3c"],
-
-Cell[CellGroupData[{
 
 Cell[BoxData[{
  RowBox[{
@@ -969,39 +943,8 @@ Cell[BoxData[{
  RowBox[{"<<", "ToneAr`WebSocketLink`"}]}], "Input", "Excluded",
  TaggingRules->{},
  InitializationCell->True,
- CellLabel->"In[60]:=",
- CellID->996717066,ExpressionUUID->"432ae6ab-1b66-4d5c-bdee-cc1dcd6b7473"],
-
-Cell[BoxData[
- TemplateBox[{
-  "$RecursionLimit", "reclim", 
-   "\"Recursion depth of \\!\\(\\*RowBox[{\\\"1024\\\"}]\\) exceeded.\"", 2, 
-   61, 35, 20009419554694351725, "Local"},
-  "MessageTemplate",
-  BaseStyle->"MSG"]], "Message", "MSG", "Excluded",
- CellLabel->"During evaluation of In[60]:=",
- CellID->1816799819,ExpressionUUID->"b7448a56-fb5e-4674-8730-298c4dff11ab"],
-
-Cell[BoxData[
- TemplateBox[{
-  "Get", "bebal", 
-   "\"Unterminated uses of BeginPackage or Begin in \\!\\(\\*RowBox[{\\\"<<\\\
-\", \\\"\\\\\\\"ToneAr`WebSocketLink`\\\\\\\"\\\"}]\\).\"", 2, 61, 36, 
-   20009419554694351725, "Local"},
-  "MessageTemplate",
-  BaseStyle->"MSG"]], "Message", "MSG", "Excluded",
- CellLabel->"During evaluation of In[60]:=",
- CellID->30694103,ExpressionUUID->"6e60e7f6-0e2a-4e30-a8b3-80e24a5020fa"],
-
-Cell[BoxData[
- RowBox[{"TerminatedEvaluation", "[", "\<\"RecursionLimit\"\>", 
-  "]"}]], "Output", "Excluded",
- CellLabel->"Out[61]=",
- CellID->1568742339,ExpressionUUID->"1af2ef9e-d65a-40e2-9161-93814d26b618"]
-}, Open  ]],
-
-Cell[BoxData[" "], "Input",
- CellID->1415217121,ExpressionUUID->"fc76c9cd-3cd5-4249-b664-15a7230324a8"]
+ CellLabel->"In[81]:=",
+ CellID->996717066,ExpressionUUID->"432ae6ab-1b66-4d5c-bdee-cc1dcd6b7473"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1014,22 +957,30 @@ Cell["Start a WebSocket server:", "Text",
  TaggingRules->{},
  CellID->196857296,ExpressionUUID->"4a64483b-0409-4263-aea0-40feb46efc88"],
 
+Cell[BoxData[
+ RowBox[{"WebSocketConnect", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.9777756765130043`*^9, 3.977775677828101*^9}},
+ CellID->518075136,ExpressionUUID->"9dfb8cb1-28a8-4035-8b9c-0b42c5f00dcf"],
+
 Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"server", "=", 
   RowBox[{"WebSocketServerStart", "[", 
-   RowBox[{"30000", ",", " ", 
-    RowBox[{"\"\<Debug\>\"", "->", "True"}], ",", " ", 
+   RowBox[{"30000", ",", "\[IndentingNewLine]", 
+    RowBox[{"\"\<Debug\>\"", "->", "True"}], ",", "\[IndentingNewLine]", 
     RowBox[{"HandlerFunctions", "->", 
-     RowBox[{"<|", 
+     RowBox[{"<|", "\[IndentingNewLine]", 
       RowBox[{"\"\<DataReceived\>\"", " ", "->", " ", 
        RowBox[{"(", 
         RowBox[{
-         RowBox[{"Echo", "[", "#Data", "]"}], "&"}], ")"}]}], "|>"}]}]}], 
+         RowBox[{"Echo", "[", "#Data", "]"}], "&"}], ")"}]}], 
+      "\[IndentingNewLine]", "|>"}]}]}], "\[IndentingNewLine]", 
    "]"}]}]], "Input",
  TaggingRules->{},
- CellLabel->"In[83]:=",
+ CellChangeTimes->{{3.9761631715801992`*^9, 3.976163188591379*^9}, 
+   3.9776615745578747`*^9},
+ CellLabel->"In[3]:=",
  CellID->182767860,ExpressionUUID->"482a914d-e85c-44d5-bdbc-cd1d8c23918d"],
 
 Cell[BoxData[
@@ -1045,8 +996,9 @@ Cell[BoxData[
              ButtonBox[
               DynamicBox[
                FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"], 
-               ImageSizeCache -> {10.624921875, {0., 10.624921875}}], 
-              Appearance -> None, BaseStyle -> {}, 
+               ImageSizeCache -> {
+                9.375937500000001, {0., 9.375937500000001}}], Appearance -> 
+              None, BaseStyle -> {}, 
               ButtonFunction :> (Typeset`open$$ = True), Evaluator -> 
               Automatic, Method -> "Preemptive"], 
              Alignment -> {Center, Center}, ImageSize -> 
@@ -1056,7 +1008,7 @@ Cell[BoxData[
                  Magnification])}]], 
             GraphicsBox[
              GeometricTransformationBox[{
-               Thickness[0.], 
+               Thickness[0.025], 
                
                FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
                  0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 
@@ -1074,9 +1026,8 @@ h/CXQM3nU4HQ0hBz/9u/t4f4aMl+JL4CQ40wRP9iCQcU/mYoX0YPmc/AsBzq
 3k/KUHdpobp3mjJEfbE6Mh8YDorI5qPzH/w/rI1q3kOof29A9XdZQegPEH83
 GDlA+Oed4XwANQpGjA==
                  "]}]}, {{{1, 0}, {0, -1}}, {0, 0}}], AspectRatio -> 
-             Automatic, ImageSize -> {55., 46.}, 
-             PlotRange -> {{0., 54.666666666666664`}, {
-              0., -45.333333333333336`}}], 
+             Automatic, ImageSize -> {40., 34.}, 
+             PlotRange -> {{0., 40.}, {0., -33.333333333333336`}}], 
             GridBox[{{
                RowBox[{
                  TagBox["\"Type: \"", "SummaryItemAnnotation"], 
@@ -1086,7 +1037,7 @@ GDlA+Oed4XwANQpGjA==
                  TagBox["\"UUID: \"", "SummaryItemAnnotation"], 
                  "\[InvisibleSpace]", 
                  TagBox[
-                 "\"885e3a87-6544-425b-88d9-26c6a1afadff\"", 
+                 "\"994e4d6b-3256-40fb-a9d0-8534e51e8ba9\"", 
                   "SummaryItem"]}]}, {
                RowBox[{
                  TagBox["\"Local Port: \"", "SummaryItemAnnotation"], 
@@ -1102,39 +1053,39 @@ GDlA+Oed4XwANQpGjA==
                     FailureQ[
                     <|
                     "Type" -> "WebSocketServer", "Listener" -> 
-                    SocketListener[3755418945182686167], "Socket" -> 
+                    SocketListener[3798440643279943312], "Socket" -> 
                     SocketObject[
-                    "TCPSERVER-25f3ad7a-7ad0-4ab7-b88d-8b83122c1baf"], "UUID" -> 
-                    "885e3a87-6544-425b-88d9-26c6a1afadff", "Port" -> 30000, 
+                    "TCPSERVER-8fd36c71-abb0-47d5-b7b5-9ff877f9556a"], "UUID" -> 
+                    "994e4d6b-3256-40fb-a9d0-8534e51e8ba9", "Port" -> 30000, 
                     "ConnectedClients" :> 
                     ToneAr`WebSocketLink`FileScope`Server`Private`\
-connectedClients$18778, "HandlerFunctions" -> <|"DataReceived" -> (Echo[
+connectedClients$10684, "HandlerFunctions" -> <|"DataReceived" -> (Echo[
                     Slot["Data"]]& )|>|>["Socket"]["InprocQ"]], 
                     ToneAr`WebSocketLink`$WebSocketServers = 
                     Select[ToneAr`WebSocketLink`$WebSocketServers, #[
                     "UUID"] =!= <|
                     "Type" -> "WebSocketServer", "Listener" -> 
-                    SocketListener[3755418945182686167], "Socket" -> 
+                    SocketListener[3798440643279943312], "Socket" -> 
                     SocketObject[
-                    "TCPSERVER-25f3ad7a-7ad0-4ab7-b88d-8b83122c1baf"], "UUID" -> 
-                    "885e3a87-6544-425b-88d9-26c6a1afadff", "Port" -> 30000, 
+                    "TCPSERVER-8fd36c71-abb0-47d5-b7b5-9ff877f9556a"], "UUID" -> 
+                    "994e4d6b-3256-40fb-a9d0-8534e51e8ba9", "Port" -> 30000, 
                     "ConnectedClients" :> 
                     ToneAr`WebSocketLink`FileScope`Server`Private`\
-connectedClients$18778, "HandlerFunctions" -> <|"DataReceived" -> (Echo[
+connectedClients$10684, "HandlerFunctions" -> <|"DataReceived" -> (Echo[
                     Slot["Data"]]& )|>|>["UUID"]& ]; "Inactive", 
                     Length[
                     <|
                     "Type" -> "WebSocketServer", "Listener" -> 
-                    SocketListener[3755418945182686167], "Socket" -> 
+                    SocketListener[3798440643279943312], "Socket" -> 
                     SocketObject[
-                    "TCPSERVER-25f3ad7a-7ad0-4ab7-b88d-8b83122c1baf"], "UUID" -> 
-                    "885e3a87-6544-425b-88d9-26c6a1afadff", "Port" -> 30000, 
+                    "TCPSERVER-8fd36c71-abb0-47d5-b7b5-9ff877f9556a"], "UUID" -> 
+                    "994e4d6b-3256-40fb-a9d0-8534e51e8ba9", "Port" -> 30000, 
                     "ConnectedClients" :> 
                     ToneAr`WebSocketLink`FileScope`Server`Private`\
-connectedClients$18778, "HandlerFunctions" -> <|"DataReceived" -> (Echo[
+connectedClients$10684, "HandlerFunctions" -> <|"DataReceived" -> (Echo[
                     Slot["Data"]]& )|>|>["ConnectedClients"]]], StandardForm],
-                    ImageSizeCache -> {5.91796875, {0.15234375, 7.44140625}}],
-                   "SummaryItem"]}]}}, AutoDelete -> False, 
+                    ImageSizeCache -> {33.1640625, {0.09375, 6.6328125}}], 
+                  "SummaryItem"]}]}}, AutoDelete -> False, 
              BaseStyle -> {
               ShowStringCharacters -> False, NumberMarks -> False, 
                PrintPrecision -> 3, ShowSyntaxStyles -> False}, 
@@ -1152,8 +1103,10 @@ connectedClients$18778, "HandlerFunctions" -> <|"DataReceived" -> (Echo[
             PaneBox[
              ButtonBox[
               DynamicBox[
-               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"]], 
-              Appearance -> None, BaseStyle -> {}, 
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"], 
+               ImageSizeCache -> {
+                9.375937500000001, {0., 9.375937500000001}}], Appearance -> 
+              None, BaseStyle -> {}, 
               ButtonFunction :> (Typeset`open$$ = False), Evaluator -> 
               Automatic, Method -> "Preemptive"], 
              Alignment -> {Center, Center}, ImageSize -> 
@@ -1163,7 +1116,7 @@ connectedClients$18778, "HandlerFunctions" -> <|"DataReceived" -> (Echo[
                  Magnification])}]], 
             GraphicsBox[
              GeometricTransformationBox[{
-               Thickness[0.], 
+               Thickness[0.025], 
                
                FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
                  0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 
@@ -1181,9 +1134,8 @@ h/CXQM3nU4HQ0hBz/9u/t4f4aMl+JL4CQ40wRP9iCQcU/mYoX0YPmc/AsBzq
 3k/KUHdpobp3mjJEfbE6Mh8YDorI5qPzH/w/rI1q3kOof29A9XdZQegPEH83
 GDlA+Oed4XwANQpGjA==
                  "]}]}, {{{1, 0}, {0, -1}}, {0, 0}}], AspectRatio -> 
-             Automatic, ImageSize -> {55., 46.}, 
-             PlotRange -> {{0., 54.666666666666664`}, {
-              0., -45.333333333333336`}}], 
+             Automatic, ImageSize -> {40., 34.}, 
+             PlotRange -> {{0., 40.}, {0., -33.333333333333336`}}], 
             GridBox[{{
                RowBox[{
                  TagBox["\"Type: \"", "SummaryItemAnnotation"], 
@@ -1193,7 +1145,7 @@ GDlA+Oed4XwANQpGjA==
                  TagBox["\"UUID: \"", "SummaryItemAnnotation"], 
                  "\[InvisibleSpace]", 
                  TagBox[
-                 "\"885e3a87-6544-425b-88d9-26c6a1afadff\"", 
+                 "\"994e4d6b-3256-40fb-a9d0-8534e51e8ba9\"", 
                   "SummaryItem"]}]}, {
                RowBox[{
                  TagBox["\"Local Port: \"", "SummaryItemAnnotation"], 
@@ -1209,38 +1161,39 @@ GDlA+Oed4XwANQpGjA==
                     FailureQ[
                     <|
                     "Type" -> "WebSocketServer", "Listener" -> 
-                    SocketListener[3755418945182686167], "Socket" -> 
+                    SocketListener[3798440643279943312], "Socket" -> 
                     SocketObject[
-                    "TCPSERVER-25f3ad7a-7ad0-4ab7-b88d-8b83122c1baf"], "UUID" -> 
-                    "885e3a87-6544-425b-88d9-26c6a1afadff", "Port" -> 30000, 
+                    "TCPSERVER-8fd36c71-abb0-47d5-b7b5-9ff877f9556a"], "UUID" -> 
+                    "994e4d6b-3256-40fb-a9d0-8534e51e8ba9", "Port" -> 30000, 
                     "ConnectedClients" :> 
                     ToneAr`WebSocketLink`FileScope`Server`Private`\
-connectedClients$18778, "HandlerFunctions" -> <|"DataReceived" -> (Echo[
+connectedClients$10684, "HandlerFunctions" -> <|"DataReceived" -> (Echo[
                     Slot["Data"]]& )|>|>["Socket"]["InprocQ"]], 
                     ToneAr`WebSocketLink`$WebSocketServers = 
                     Select[ToneAr`WebSocketLink`$WebSocketServers, #[
                     "UUID"] =!= <|
                     "Type" -> "WebSocketServer", "Listener" -> 
-                    SocketListener[3755418945182686167], "Socket" -> 
+                    SocketListener[3798440643279943312], "Socket" -> 
                     SocketObject[
-                    "TCPSERVER-25f3ad7a-7ad0-4ab7-b88d-8b83122c1baf"], "UUID" -> 
-                    "885e3a87-6544-425b-88d9-26c6a1afadff", "Port" -> 30000, 
+                    "TCPSERVER-8fd36c71-abb0-47d5-b7b5-9ff877f9556a"], "UUID" -> 
+                    "994e4d6b-3256-40fb-a9d0-8534e51e8ba9", "Port" -> 30000, 
                     "ConnectedClients" :> 
                     ToneAr`WebSocketLink`FileScope`Server`Private`\
-connectedClients$18778, "HandlerFunctions" -> <|"DataReceived" -> (Echo[
+connectedClients$10684, "HandlerFunctions" -> <|"DataReceived" -> (Echo[
                     Slot["Data"]]& )|>|>["UUID"]& ]; "Inactive", 
                     Length[
                     <|
                     "Type" -> "WebSocketServer", "Listener" -> 
-                    SocketListener[3755418945182686167], "Socket" -> 
+                    SocketListener[3798440643279943312], "Socket" -> 
                     SocketObject[
-                    "TCPSERVER-25f3ad7a-7ad0-4ab7-b88d-8b83122c1baf"], "UUID" -> 
-                    "885e3a87-6544-425b-88d9-26c6a1afadff", "Port" -> 30000, 
+                    "TCPSERVER-8fd36c71-abb0-47d5-b7b5-9ff877f9556a"], "UUID" -> 
+                    "994e4d6b-3256-40fb-a9d0-8534e51e8ba9", "Port" -> 30000, 
                     "ConnectedClients" :> 
                     ToneAr`WebSocketLink`FileScope`Server`Private`\
-connectedClients$18778, "HandlerFunctions" -> <|"DataReceived" -> (Echo[
-                    Slot["Data"]]& )|>|>["ConnectedClients"]]], 
-                    StandardForm]], "SummaryItem"]}]}, {
+connectedClients$10684, "HandlerFunctions" -> <|"DataReceived" -> (Echo[
+                    Slot["Data"]]& )|>|>["ConnectedClients"]]], StandardForm],
+                    ImageSizeCache -> {5.14453125, {0.09375, 6.515625}}], 
+                  "SummaryItem"]}]}, {
                RowBox[{
                  TagBox["\"Socket: \"", "SummaryItemAnnotation"], 
                  "\[InvisibleSpace]", 
@@ -1343,7 +1296,7 @@ connectedClients$18778, "HandlerFunctions" -> <|"DataReceived" -> (Echo[
                     TagBox["\"UUID: \"", "SummaryItemAnnotation"], 
                     "\[InvisibleSpace]", 
                     TagBox[
-                    "\"TCPSERVER-25f3ad7a-7ad0-4ab7-b88d-8b83122c1baf\"", 
+                    "\"TCPSERVER-8fd36c71-abb0-47d5-b7b5-9ff877f9556a\"", 
                     "SummaryItem"]}], 
                     RowBox[{
                     TagBox[
@@ -1365,9 +1318,8 @@ formatConnectedClientCount[
                     ZeroMQLink`PackageScope`safeSocketProperty[
                     ZeroMQLink`PackageScope`$TCPConnectedClients, 
                     ZeroMQLink`PackageScope`safeSocketProperty[
-                    Lookup[
-                    ZeroMQLink`PackageScope`$Sockets, 
-                    "TCPSERVER-25f3ad7a-7ad0-4ab7-b88d-8b83122c1baf", <||>], 
+                    Lookup[ZeroMQLink`PackageScope`$Sockets, 
+                    "TCPSERVER-8fd36c71-abb0-47d5-b7b5-9ff877f9556a", <||>], 
                     "SocketID"]], {PatternTest[
                     Pattern[ZeroMQLink`Graphic`PackagePrivate`clients, 
                     Blank[Association]], AssociationQ] :> 
@@ -1483,7 +1435,7 @@ formatConnectedClientCount[
                     TagBox["\"UUID: \"", "SummaryItemAnnotation"], 
                     "\[InvisibleSpace]", 
                     TagBox[
-                    "\"TCPSERVER-25f3ad7a-7ad0-4ab7-b88d-8b83122c1baf\"", 
+                    "\"TCPSERVER-8fd36c71-abb0-47d5-b7b5-9ff877f9556a\"", 
                     "SummaryItem"]}], 
                     RowBox[{
                     TagBox[
@@ -1507,7 +1459,7 @@ formatConnectedClientCount[
                     ZeroMQLink`PackageScope`safeSocketProperty[
                     Lookup[
                     ZeroMQLink`PackageScope`$Sockets, 
-                    "TCPSERVER-25f3ad7a-7ad0-4ab7-b88d-8b83122c1baf", <||>], 
+                    "TCPSERVER-8fd36c71-abb0-47d5-b7b5-9ff877f9556a", <||>], 
                     "SocketID"]], {PatternTest[
                     Pattern[ZeroMQLink`Graphic`PackagePrivate`clients, 
                     Blank[Association]], AssociationQ] :> 
@@ -1538,8 +1490,9 @@ formatConnectedClientList[
                     ZeroMQLink`PackageScope`safeSocketProperty[
                     ZeroMQLink`PackageScope`$TCPConnectedClients, 
                     ZeroMQLink`PackageScope`safeSocketProperty[
-                    Lookup[ZeroMQLink`PackageScope`$Sockets, 
-                    "TCPSERVER-25f3ad7a-7ad0-4ab7-b88d-8b83122c1baf", <||>], 
+                    Lookup[
+                    ZeroMQLink`PackageScope`$Sockets, 
+                    "TCPSERVER-8fd36c71-abb0-47d5-b7b5-9ff877f9556a", <||>], 
                     "SocketID"]], {PatternTest[
                     Pattern[ZeroMQLink`Graphic`PackagePrivate`clients, 
                     Blank[Association]], AssociationQ] :> 
@@ -1568,7 +1521,7 @@ formatConnectedClientList[
                     Dynamic[Typeset`open$$], ImageSize -> Automatic]}, 
                     "SummaryPanel"], DynamicModuleValues :> {}], "]"}], 
                    SocketObject[
-                   "TCPSERVER-25f3ad7a-7ad0-4ab7-b88d-8b83122c1baf"], 
+                   "TCPSERVER-8fd36c71-abb0-47d5-b7b5-9ff877f9556a"], 
                    Editable -> False, SelectWithContents -> True, Selectable -> 
                    False], "SummaryItem"]}]}, {
                RowBox[{
@@ -1799,7 +1752,7 @@ formatConnectedClientList[
                     Replace[
                     ZeroMQLink`PackageScope`safeSocketProperty[
                     ZeroMQLink`PackageScope`$SocketListeners, 
-                    3755418945182686167], {
+                    3798440643279943312], {
                     Pattern[ZeroMQLink`Graphic`PackagePrivate`listener, 
                     Blank[Association]] :> 
                     ZeroMQLink`PackageScope`listenerMessageCount[
@@ -2008,6 +1961,7 @@ formatConnectedClientList[
                     56.678000000000004`, 39.051}, {44.057, 39.051}, {44.057, 
                     31.675}}]}}], 
                     FilledCurveBox[{{
+                    
                     Line[{{44.057, 43.685}, {56.678000000000004`, 43.685}, {
                     56.678000000000004`, 65.089}, {44.057, 65.089}, {44.057, 
                     43.685}}]}}]}, {{{1, 0}, {0, -1}}, Center}], 
@@ -2040,7 +1994,7 @@ formatConnectedClientList[
                     Replace[
                     ZeroMQLink`PackageScope`safeSocketProperty[
                     ZeroMQLink`PackageScope`$SocketListeners, 
-                    3755418945182686167], {
+                    3798440643279943312], {
                     Pattern[ZeroMQLink`Graphic`PackagePrivate`listener, 
                     Blank[Association]] :> 
                     ZeroMQLink`PackageScope`listenerMessageCount[
@@ -2067,12 +2021,14 @@ formatConnectedClientList[
                     RowBox[{
                     RowBox[{"\[LeftSkeleton]", "54", "\[RightSkeleton]"}], 
                     ",", 
-                    RowBox[{"\[LeftSkeleton]", "54", "\[RightSkeleton]"}], 
+                    RowBox[{"\[LeftSkeleton]", "10", "\[RightSkeleton]"}], 
                     ",", 
-                    RowBox[{"\[LeftSkeleton]", "8", "\[RightSkeleton]"}], ",", 
-                    RowBox[{"\[LeftSkeleton]", "1", "\[RightSkeleton]"}], ",", 
-                    RowBox[{"\[LeftSkeleton]", "1", "\[RightSkeleton]"}]}], 
-                    "}"}], ",", 
+                    RowBox[{
+                    RowBox[{"\[LeftSkeleton]", "53", "\[RightSkeleton]"}], 
+                    "=", 
+                    RowBox[{
+                    RowBox[{"\[LeftSkeleton]", "52", "\[RightSkeleton]"}], 
+                    "[", "\"SourceSocket\"", "]"}]}]}], "}"}], ",", 
                     RowBox[{"\[LeftSkeleton]", "1", "\[RightSkeleton]"}]}], 
                     "]"}]}], "]"}], Short], "SummaryItem"]}]}, {
                     RowBox[{
@@ -2100,6 +2056,7 @@ formatConnectedClientList[
                     InterpretationBox[
                     RowBox[{
                     TagBox["SocketObject", "SummaryHead"], "[", 
+                    
                     DynamicModuleBox[{Typeset`open$$ = False, 
                     Typeset`embedState$$ = "Ready"}, 
                     TemplateBox[{
@@ -2193,7 +2150,7 @@ formatConnectedClientList[
                     TagBox["\"UUID: \"", "SummaryItemAnnotation"], 
                     "\[InvisibleSpace]", 
                     TagBox[
-                    "\"TCPSERVER-25f3ad7a-7ad0-4ab7-b88d-8b83122c1baf\"", 
+                    "\"TCPSERVER-8fd36c71-abb0-47d5-b7b5-9ff877f9556a\"", 
                     "SummaryItem"]}], "\[SpanFromLeft]", "\[SpanFromLeft]"}}, 
                     GridBoxAlignment -> {"Columns" -> {{Left}}, 
                     "Rows" -> {{Automatic}}}, AutoDelete -> False, 
@@ -2296,7 +2253,7 @@ formatConnectedClientList[
                     TagBox["\"UUID: \"", "SummaryItemAnnotation"], 
                     "\[InvisibleSpace]", 
                     TagBox[
-                    "\"TCPSERVER-25f3ad7a-7ad0-4ab7-b88d-8b83122c1baf\"", 
+                    "\"TCPSERVER-8fd36c71-abb0-47d5-b7b5-9ff877f9556a\"", 
                     "SummaryItem"]}], "\[SpanFromLeft]", "\[SpanFromLeft]"}, {
                     
                     RowBox[{
@@ -2319,7 +2276,7 @@ formatConnectedClientList[
                     Dynamic[Typeset`open$$], ImageSize -> Automatic]}, 
                     "SummaryPanel"], DynamicModuleValues :> {}], "]"}], 
                     SocketObject[
-                    "TCPSERVER-25f3ad7a-7ad0-4ab7-b88d-8b83122c1baf"], 
+                    "TCPSERVER-8fd36c71-abb0-47d5-b7b5-9ff877f9556a"], 
                     Selectable -> False, Editable -> False, 
                     SelectWithContents -> True], "SummaryItem"]}]}}, 
                     GridBoxAlignment -> {
@@ -2339,7 +2296,7 @@ formatConnectedClientList[
                     BaselinePosition -> {1, 1}]}, 
                     Dynamic[Typeset`open$$], ImageSize -> Automatic]}, 
                     "SummaryPanel"], DynamicModuleValues :> {}], "]"}], 
-                   SocketListener[3755418945182686167], Editable -> False, 
+                   SocketListener[3798440643279943312], Editable -> False, 
                    SelectWithContents -> True, Selectable -> False], 
                   "SummaryItem"]}]}}, AutoDelete -> False, 
              BaseStyle -> {
@@ -2360,61 +2317,2552 @@ formatConnectedClientList[
     DynamicModuleValues:>{}], "]"}],
   ToneAr`WebSocketLink`WebSocketObject[<|
    "Type" -> "WebSocketServer", "Listener" -> 
-    SocketListener[3755418945182686167], "Socket" -> 
-    SocketObject["TCPSERVER-25f3ad7a-7ad0-4ab7-b88d-8b83122c1baf"], "UUID" -> 
-    "885e3a87-6544-425b-88d9-26c6a1afadff", "Port" -> 30000, 
+    SocketListener[3798440643279943312], "Socket" -> 
+    SocketObject["TCPSERVER-8fd36c71-abb0-47d5-b7b5-9ff877f9556a"], "UUID" -> 
+    "994e4d6b-3256-40fb-a9d0-8534e51e8ba9", "Port" -> 30000, 
     "ConnectedClients" :> 
-    ToneAr`WebSocketLink`FileScope`Server`Private`connectedClients$18778, 
+    ToneAr`WebSocketLink`FileScope`Server`Private`connectedClients$10684, 
     "HandlerFunctions" -> <|"DataReceived" -> (Echo[
         Slot["Data"]]& )|>|>],
   Editable->False,
   SelectWithContents->True,
   Selectable->False]], "Output",
  TaggingRules->{},
- CellLabel->"Out[83]=",
- CellID->1848664006,ExpressionUUID->"f14bc82a-884a-46b4-b584-722756dc6d05"]
+ CellChangeTimes->{
+  3.9761631970892563`*^9, 3.9776020838428507`*^9, 3.977602195841137*^9, {
+   3.9776022306340437`*^9, 3.977602246760208*^9}, {3.977602595369289*^9, 
+   3.9776026069851418`*^9}, 3.977602670744658*^9, {3.977603929097991*^9, 
+   3.97760393722865*^9}, 3.9776039788863363`*^9, 3.977608273765996*^9, 
+   3.977661320143547*^9, 3.97766139047886*^9, 3.977775559926499*^9},
+ CellLabel->"Out[3]=",
+ CellID->1688665045,ExpressionUUID->"fd54a797-6115-4a8c-95fc-3e66b38de5c9"]
 }, Open  ]],
 
-Cell[BoxData[
- RowBox[{"Read", "[", 
-  RowBox[{"Last", " ", "@", " ", 
-   RowBox[{"server", "[", "\"\<ConnectedClients\>\"", "]"}]}], "]"}]], "Input",
+Cell["Connect to the server:", "Text",
  TaggingRules->{},
- CellLabel->"In[39]:=",
- CellID->1615883635,ExpressionUUID->"1095c202-2ac6-4aaf-b5ee-9e9a32bfaf5e"],
+ CellChangeTimes->{{3.9761632082122917`*^9, 3.9761632264866333`*^9}},
+ CellID->1788264430,ExpressionUUID->"0937244b-0d89-4e8a-bd3c-6d9bcfecc6f7"],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"WriteString", "[", 
+ RowBox[{"client", " ", "=", " ", 
   RowBox[{
-   RowBox[{"Last", " ", "@", " ", 
-    RowBox[{"server", "[", "\"\<ConnectedClients\>\"", "]"}]}], ",", 
-   " ", "\"\<Hello\>\""}], "]"}]], "Input",
- CellLabel->"In[38]:=",
- CellID->1146476758,ExpressionUUID->"c5e23875-ddb6-4155-8cd2-5008a4f64e39"],
-
-Cell["Close the WebSocket server:", "Text",
+  "WebSocketConnect", "[", "\"\<localhost:30000\>\"", "]"}]}]], "Input",
  TaggingRules->{},
+ CellChangeTimes->{{3.9761632281391573`*^9, 3.9761632608886747`*^9}},
+ CellLabel->"In[4]:=",
+ CellID->766358366,ExpressionUUID->"ae346bc6-bc0f-4ad5-9769-53a017a6379b"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["WebSocketObject",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            GraphicsBox[
+             GeometricTransformationBox[{
+               Thickness[0.025], 
+               StyleBox[{
+                 
+                 FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                   0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                   0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                   0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                   0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                   0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                   0}, {0, 1, 0}, {0, 1, 0}}}, {{{29.7734375, 24.6328125}, {
+                   34.6953125, 24.6328125}, {34.6953125, 12.15234375}, {
+                   29.1484375, 6.296875}, {25.66796875, 9.97265625}, {
+                   29.7734375, 14.304688453674316`}}, CompressedData["
+1:eJxTTMoPSmViYGCQBmIQDQINUY4OYIatNYTuNETmKzDc0YLwX5hB6Ag9CC1o
+CqEnGEHopRYQussSlb8KKp8INTfbBELz6UNob6i9J8xQ+deg9rwyB9EP/m9W
+h/CXQM3nU4HQ0hBz/9u/t4f4aMl+JL4CQ40wRP9iCQcU/mYoX0YPmc/AsBzq
+3k/KUHdpobp3mjJEfbE6Mh8YDorI5qPzH/w/rI1q3kOof29A9XdZQegPEH83
+GDlA+Oed4XwANQpGjA==
+                   "]}]}, {
+                 Thickness[0.025]}, StripOnInput -> False]}, {{{1, 0}, {
+               0, -1}}, {0, 0}}], ImageSize -> {40., 34.}, 
+             PlotRange -> {{0., 40.}, {0., -33.333333333333336`}}, 
+             AspectRatio -> Automatic], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Type: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"WebSocketClient\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"UUID: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  
+                  RowBox[{
+                   "\"9c54bb74-42c5-4c35-89d3-ec3fca0c323c\"", "[", 
+                    "\"UUID\"", "]"}], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Address: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"localhost:30000\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Messages: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  DynamicBox[
+                   ToBoxes[If[
+                    SocketReadyQ[
+                    <|
+                    "Type" -> "WebSocketClient", "UUID" -> 
+                    "9c54bb74-42c5-4c35-89d3-ec3fca0c323c"["UUID"], "Socket" -> 
+                    SocketObject["97d1758c-5d4a-4490-ad10-d356f25b8038"], 
+                    "Address" -> "localhost:30000", "Messages" -> 
+                    DataStructure[
+                    "RingBuffer", {"Data" -> {}, "Capacity" -> 1000}], 
+                    "GetMessage" :> If[
+                    SocketReadyQ[
+                    ToneAr`WebSocketLink`FileScope`Client`Private`server$\
+11003], 
+                    ToneAr`WebSocketLink`WebSocketFrameImport[
+                    Composition[ByteArray, BinaryReadList][
+                    ToneAr`WebSocketLink`FileScope`Client`Private`server$\
+11003]], Null], "SendMessage" :> 
+                    ToneAr`WebSocketLink`FileScope`Client`Private`sendMessage$\
+11003|>["Socket"]], <|"Type" -> "WebSocketClient", "UUID" -> 
+                    "9c54bb74-42c5-4c35-89d3-ec3fca0c323c"["UUID"], "Socket" -> 
+                    SocketObject["97d1758c-5d4a-4490-ad10-d356f25b8038"], 
+                    "Address" -> "localhost:30000", "Messages" -> 
+                    DataStructure[
+                    "RingBuffer", {"Data" -> {}, "Capacity" -> 1000}], 
+                    "GetMessage" :> If[
+                    SocketReadyQ[
+                    ToneAr`WebSocketLink`FileScope`Client`Private`server$\
+11003], 
+                    ToneAr`WebSocketLink`WebSocketFrameImport[
+                    Composition[ByteArray, BinaryReadList][
+                    ToneAr`WebSocketLink`FileScope`Client`Private`server$\
+11003]], Null], "SendMessage" :> 
+                    ToneAr`WebSocketLink`FileScope`Client`Private`sendMessage$\
+11003|>["Messages"]["PushBack", 
+                    <|
+                    "Type" -> "WebSocketClient", "UUID" -> 
+                    "9c54bb74-42c5-4c35-89d3-ec3fca0c323c"["UUID"], "Socket" -> 
+                    SocketObject["97d1758c-5d4a-4490-ad10-d356f25b8038"], 
+                    "Address" -> "localhost:30000", "Messages" -> 
+                    DataStructure[
+                    "RingBuffer", {"Data" -> {}, "Capacity" -> 1000}], 
+                    "GetMessage" :> If[
+                    SocketReadyQ[
+                    ToneAr`WebSocketLink`FileScope`Client`Private`server$\
+11003], 
+                    ToneAr`WebSocketLink`WebSocketFrameImport[
+                    Composition[ByteArray, BinaryReadList][
+                    ToneAr`WebSocketLink`FileScope`Client`Private`server$\
+11003]], Null], "SendMessage" :> 
+                    ToneAr`WebSocketLink`FileScope`Client`Private`sendMessage$\
+11003|>["GetMessage"]]; Null]; <|
+                    "Type" -> "WebSocketClient", "UUID" -> 
+                    "9c54bb74-42c5-4c35-89d3-ec3fca0c323c"["UUID"], "Socket" -> 
+                    SocketObject["97d1758c-5d4a-4490-ad10-d356f25b8038"], 
+                    "Address" -> "localhost:30000", "Messages" -> 
+                    DataStructure[
+                    "RingBuffer", {"Data" -> {}, "Capacity" -> 1000}], 
+                    "GetMessage" :> If[
+                    SocketReadyQ[
+                    ToneAr`WebSocketLink`FileScope`Client`Private`server$\
+11003], 
+                    ToneAr`WebSocketLink`WebSocketFrameImport[
+                    Composition[ByteArray, BinaryReadList][
+                    ToneAr`WebSocketLink`FileScope`Client`Private`server$\
+11003]], Null], "SendMessage" :> 
+                    ToneAr`WebSocketLink`FileScope`Client`Private`sendMessage$\
+11003|>["Messages"]["Length"], StandardForm]], "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            GraphicsBox[
+             GeometricTransformationBox[{
+               Thickness[0.025], 
+               StyleBox[{
+                 
+                 FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                   0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                   0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                   0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                   0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                   0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                   0}, {0, 1, 0}, {0, 1, 0}}}, {{{29.7734375, 24.6328125}, {
+                   34.6953125, 24.6328125}, {34.6953125, 12.15234375}, {
+                   29.1484375, 6.296875}, {25.66796875, 9.97265625}, {
+                   29.7734375, 14.304688453674316`}}, CompressedData["
+1:eJxTTMoPSmViYGCQBmIQDQINUY4OYIatNYTuNETmKzDc0YLwX5hB6Ag9CC1o
+CqEnGEHopRYQussSlb8KKp8INTfbBELz6UNob6i9J8xQ+deg9rwyB9EP/m9W
+h/CXQM3nU4HQ0hBz/9u/t4f4aMl+JL4CQ40wRP9iCQcU/mYoX0YPmc/AsBzq
+3k/KUHdpobp3mjJEfbE6Mh8YDorI5qPzH/w/rI1q3kOof29A9XdZQegPEH83
+GDlA+Oed4XwANQpGjA==
+                   "]}]}, {
+                 Thickness[0.025]}, StripOnInput -> False]}, {{{1, 0}, {
+               0, -1}}, {0, 0}}], ImageSize -> {40., 34.}, 
+             PlotRange -> {{0., 40.}, {0., -33.333333333333336`}}, 
+             AspectRatio -> Automatic], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Type: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"WebSocketClient\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"UUID: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  
+                  RowBox[{
+                   "\"9c54bb74-42c5-4c35-89d3-ec3fca0c323c\"", "[", 
+                    "\"UUID\"", "]"}], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Address: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"localhost:30000\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Messages: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  DynamicBox[
+                   ToBoxes[If[
+                    SocketReadyQ[
+                    <|
+                    "Type" -> "WebSocketClient", "UUID" -> 
+                    "9c54bb74-42c5-4c35-89d3-ec3fca0c323c"["UUID"], "Socket" -> 
+                    SocketObject["97d1758c-5d4a-4490-ad10-d356f25b8038"], 
+                    "Address" -> "localhost:30000", "Messages" -> 
+                    DataStructure[
+                    "RingBuffer", {"Data" -> {}, "Capacity" -> 1000}], 
+                    "GetMessage" :> If[
+                    SocketReadyQ[
+                    ToneAr`WebSocketLink`FileScope`Client`Private`server$\
+11003], 
+                    ToneAr`WebSocketLink`WebSocketFrameImport[
+                    Composition[ByteArray, BinaryReadList][
+                    
+                    ToneAr`WebSocketLink`FileScope`Client`Private`server$\
+11003]], Null], "SendMessage" :> 
+                    ToneAr`WebSocketLink`FileScope`Client`Private`sendMessage$\
+11003|>["Socket"]], <|"Type" -> "WebSocketClient", "UUID" -> 
+                    "9c54bb74-42c5-4c35-89d3-ec3fca0c323c"["UUID"], "Socket" -> 
+                    SocketObject["97d1758c-5d4a-4490-ad10-d356f25b8038"], 
+                    "Address" -> "localhost:30000", "Messages" -> 
+                    DataStructure[
+                    "RingBuffer", {"Data" -> {}, "Capacity" -> 1000}], 
+                    "GetMessage" :> If[
+                    SocketReadyQ[
+                    ToneAr`WebSocketLink`FileScope`Client`Private`server$\
+11003], 
+                    ToneAr`WebSocketLink`WebSocketFrameImport[
+                    Composition[ByteArray, BinaryReadList][
+                    ToneAr`WebSocketLink`FileScope`Client`Private`server$\
+11003]], Null], "SendMessage" :> 
+                    ToneAr`WebSocketLink`FileScope`Client`Private`sendMessage$\
+11003|>["Messages"]["PushBack", 
+                    <|
+                    "Type" -> "WebSocketClient", "UUID" -> 
+                    "9c54bb74-42c5-4c35-89d3-ec3fca0c323c"["UUID"], "Socket" -> 
+                    SocketObject["97d1758c-5d4a-4490-ad10-d356f25b8038"], 
+                    "Address" -> "localhost:30000", "Messages" -> 
+                    DataStructure[
+                    "RingBuffer", {"Data" -> {}, "Capacity" -> 1000}], 
+                    "GetMessage" :> If[
+                    SocketReadyQ[
+                    ToneAr`WebSocketLink`FileScope`Client`Private`server$\
+11003], 
+                    ToneAr`WebSocketLink`WebSocketFrameImport[
+                    Composition[ByteArray, BinaryReadList][
+                    ToneAr`WebSocketLink`FileScope`Client`Private`server$\
+11003]], Null], "SendMessage" :> 
+                    ToneAr`WebSocketLink`FileScope`Client`Private`sendMessage$\
+11003|>["GetMessage"]]; Null]; <|
+                    "Type" -> "WebSocketClient", "UUID" -> 
+                    "9c54bb74-42c5-4c35-89d3-ec3fca0c323c"["UUID"], "Socket" -> 
+                    SocketObject["97d1758c-5d4a-4490-ad10-d356f25b8038"], 
+                    "Address" -> "localhost:30000", "Messages" -> 
+                    DataStructure[
+                    "RingBuffer", {"Data" -> {}, "Capacity" -> 1000}], 
+                    "GetMessage" :> If[
+                    SocketReadyQ[
+                    ToneAr`WebSocketLink`FileScope`Client`Private`server$\
+11003], 
+                    ToneAr`WebSocketLink`WebSocketFrameImport[
+                    Composition[ByteArray, BinaryReadList][
+                    ToneAr`WebSocketLink`FileScope`Client`Private`server$\
+11003]], Null], "SendMessage" :> 
+                    ToneAr`WebSocketLink`FileScope`Client`Private`sendMessage$\
+11003|>["Messages"]["Length"], StandardForm]], "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  ToneAr`WebSocketLink`WebSocketObject[<|
+   "Type" -> "WebSocketClient", "UUID" -> 
+    "9c54bb74-42c5-4c35-89d3-ec3fca0c323c"["UUID"], "Socket" -> 
+    SocketObject["97d1758c-5d4a-4490-ad10-d356f25b8038"], "Address" -> 
+    "localhost:30000", "Messages" -> 
+    DataStructure["RingBuffer", {"Data" -> {}, "Capacity" -> 1000}], 
+    "GetMessage" :> If[
+      SocketReadyQ[
+      ToneAr`WebSocketLink`FileScope`Client`Private`server$11003], 
+      ToneAr`WebSocketLink`WebSocketFrameImport[
+       Composition[ByteArray, BinaryReadList][
+       ToneAr`WebSocketLink`FileScope`Client`Private`server$11003]], Null], 
+    "SendMessage" :> 
+    ToneAr`WebSocketLink`FileScope`Client`Private`sendMessage$11003|>],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ TaggingRules->{},
+ CellChangeTimes->{{3.97616325325916*^9, 3.976163262204216*^9}, {
+   3.977602085854868*^9, 3.977602097729308*^9}, 3.977602199140666*^9, 
+   3.977602251066378*^9, 3.97760260861299*^9, 3.977602672769026*^9, 
+   3.9776039443400106`*^9, 3.977603980618247*^9, 3.977608285150971*^9, 
+   3.977661321751865*^9, 3.977661391802001*^9, 3.9777755647589083`*^9},
+ CellLabel->"Out[4]=",
+ CellID->341923568,ExpressionUUID->"58206d28-6cf9-4e88-80bf-9325562d2791"]
+}, Open  ]],
+
+Cell["Write message to from the client to the server:", "Text",
+ TaggingRules->{},
+ CellChangeTimes->{{3.97616328627712*^9, 3.9761633011113443`*^9}, {
+  3.9761633405103683`*^9, 3.976163343314949*^9}},
+ CellID->83915629,ExpressionUUID->"50a2ed25-12c8-42d6-9e5d-8b2579d82b21"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"client", "[", "\"\<SendMessage\>\"", "]"}], "[", 
+  " ", "\"\<Hello from client\>\"", " ", "]"}]], "Input",
+ TaggingRules->{},
+ CellChangeTimes->{{3.976163303092188*^9, 3.976163324134573*^9}, {
+   3.977602108412662*^9, 3.9776021099354267`*^9}, {3.9776022043896847`*^9, 
+   3.977602218279999*^9}, 3.977602257805977*^9, {3.977661371309016*^9, 
+   3.977661377634445*^9}},
+ CellLabel->"In[5]:=",
+ CellID->1099207937,ExpressionUUID->"7a6225d0-4a5c-4940-8405-c2687429a0c7"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["OutputStream",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"], 
+               ImageSizeCache -> {
+                9.375937500000001, {0., 9.375937500000001}}], Appearance -> 
+              None, BaseStyle -> {}, 
+              ButtonFunction :> (Typeset`open$$ = True), Evaluator -> 
+              Automatic, Method -> "Preemptive"], 
+             Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GraphicsBox[{
+              Thickness[0.0016806722689075631`], {
+               FaceForm[{
+                 GrayLevel[0.93], 
+                 Opacity[1.]}], 
+               
+               FilledCurveBox[{{{1, 4, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {
+                1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}}}, {{{
+                25.499999999999996`, 2.5}, {25.499999999999996`, 
+                1.3953100000000003`}, {24.604699999999998`, 
+                0.49999999999999994`}, {23.5, 0.49999999999999994`}, {2.5, 
+                0.49999999999999994`}, {1.3953100000000003`, 
+                0.49999999999999994`}, {0.49999999999999994`, 
+                1.3953100000000003`}, {0.49999999999999994`, 2.5}, {
+                0.49999999999999994`, 23.5}, {0.49999999999999994`, 
+                24.604699999999998`}, {1.3953100000000003`, 
+                25.499999999999996`}, {2.5, 25.499999999999996`}, {23.5, 
+                25.499999999999996`}, {24.604699999999998`, 
+                25.499999999999996`}, {25.499999999999996`, 
+                24.604699999999998`}, {25.499999999999996`, 23.5}, {
+                25.499999999999996`, 2.5}}}]}, {
+               RGBColor[0.699951, 0.699951, 0.699951], 
+               Opacity[1.], 
+               JoinForm[{ElisionsDump`Miter, 10.}], 
+               
+               JoinedCurveBox[{{{1, 4, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {
+                1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}}}, {{{
+                25.499999999999996`, 2.5}, {25.499999999999996`, 
+                1.3953100000000003`}, {24.604699999999998`, 
+                0.49999999999999994`}, {23.5, 0.49999999999999994`}, {2.5, 
+                0.49999999999999994`}, {1.3953100000000003`, 
+                0.49999999999999994`}, {0.49999999999999994`, 
+                1.3953100000000003`}, {0.49999999999999994`, 2.5}, {
+                0.49999999999999994`, 23.5}, {0.49999999999999994`, 
+                24.604699999999998`}, {1.3953100000000003`, 
+                25.499999999999996`}, {2.5, 25.499999999999996`}, {23.5, 
+                25.499999999999996`}, {24.604699999999998`, 
+                25.499999999999996`}, {25.499999999999996`, 
+                24.604699999999998`}, {25.499999999999996`, 23.5}, {
+                25.499999999999996`, 2.5}}}]}, {
+               FaceForm[{
+                 RGBColor[0.5, 0.5, 0.5], 
+                 Opacity[1.]}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {
+                0, 1, 0}, {1, 3, 3}, {1, 3, 3}}}, {{{3.52539, 
+                1.0035199999999997`}, {2.5250000000000004`, 
+                1.0035199999999997`}, {1.6828099999999997`, 
+                1.0035199999999997`}, {0.9999999999999999, 
+                1.6863299999999997`}, {0.9999999999999999, 
+                2.5285199999999994`}, {0.9999999999999999, 
+                23.474999999999998`}, {0.9999999999999999, 
+                24.317199999999996`}, {1.6828099999999997`, 
+                24.999999999999996`}, {2.5250000000000004`, 
+                24.999999999999996`}, {3.52539, 24.999999999999996`}, {
+                3.52539, 24.999999999999993`}, {5.523440000000001, 
+                22.421099999999996`}, {5.523440000000001, 13.0039}, {
+                5.523440000000001, 3.5867199999999992`}, {3.52539, 
+                1.0035199999999997`}, {3.52539, 1.0035199999999997`}}}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}, {0, 1, 0}}}, {{{22.4977, 12.9016}, {
+                17.740599999999997`, 16.8398}, {17.740599999999997`, 
+                14.856599999999998`}, {19.980900000000002`, 
+                12.947299999999997`}, {17.740599999999997`, 
+                10.946100000000001`}, {17.740599999999997`, 8.96289}, {
+                22.4977, 12.9016}}}]}, {
+               FaceForm[{
+                 RGBColor[
+                 0.46093800000000007`, 0.46093800000000007`, 
+                  0.46093800000000007`], 
+                 Opacity[1.]}], 
+               
+               FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+                3}}}, {{{9.202339999999998, 12.8969}, {9.202339999999998, 
+                12.335499999999998`}, {8.747660000000002, 
+                11.880899999999999`}, {8.186329999999998, 
+                11.880899999999999`}, {7.624999999999999, 
+                11.880899999999999`}, {7.169920000000001, 
+                12.335499999999998`}, {7.169920000000001, 12.8969}, {
+                7.169920000000001, 13.458200000000003`}, {7.624999999999999, 
+                13.9133}, {8.186329999999998, 13.9133}, {8.747660000000002, 
+                13.9133}, {9.202339999999998, 13.458200000000003`}, {
+                9.202339999999998, 12.8969}}}], 
+               
+               FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+                3}}}, {{{12.6227, 12.8969}, {12.6227, 12.335499999999998`}, {
+                12.167599999999998`, 11.880899999999999`}, {
+                11.606200000000001`, 11.880899999999999`}, {11.0449, 
+                11.880899999999999`}, {10.589799999999999`, 
+                12.335499999999998`}, {10.589799999999999`, 12.8969}, {
+                10.589799999999999`, 13.458200000000003`}, {11.0449, 
+                13.9133}, {11.606200000000001`, 13.9133}, {
+                12.167599999999998`, 13.9133}, {12.6227, 
+                13.458200000000003`}, {12.6227, 12.8969}}}], 
+               
+               FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+                3}}}, {{{16.042600000000004`, 12.8969}, {16.042600000000004`, 
+                12.335499999999998`}, {15.587499999999999`, 
+                11.880899999999999`}, {15.026199999999998`, 
+                11.880899999999999`}, {14.464799999999997`, 
+                11.880899999999999`}, {14.010199999999998`, 
+                12.335499999999998`}, {14.010199999999998`, 12.8969}, {
+                14.010199999999998`, 13.458200000000003`}, {
+                14.464799999999997`, 13.9133}, {15.026199999999998`, 
+                13.9133}, {15.587499999999999`, 13.9133}, {
+                16.042600000000004`, 13.458200000000003`}, {
+                16.042600000000004`, 12.8969}}}]}}, AspectRatio -> 1, Axes -> 
+             False, Background -> GrayLevel[0.5], Frame -> True, FrameStyle -> 
+             Directive[
+               Thickness[Tiny], 
+               GrayLevel[0.7]], FrameTicks -> None, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Name: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  StyleBox[
+                   PaneBox[
+                   "\"out-97d1758c-5d4a-4490-ad10-d356f25b8038\"", 
+                    BaselinePosition -> Baseline, ContentPadding -> False, 
+                    FrameMargins -> 0, ImageSize -> {{1, 300}, Automatic}, 
+                    ScrollPosition -> {0., 0.}, StripOnInput -> True], 
+                   LineBreakWithin -> False], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Unique ID: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["3", "SummaryItem"]}]}}, AutoDelete -> False, 
+             BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+             GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {
+              "Columns" -> {{2}}, "Rows" -> {{Automatic}}}]}}, AutoDelete -> 
+          False, BaselinePosition -> {1, 1}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], True -> 
+        GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"]], 
+              Appearance -> None, BaseStyle -> {}, 
+              ButtonFunction :> (Typeset`open$$ = False), Evaluator -> 
+              Automatic, Method -> "Preemptive"], 
+             Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GraphicsBox[{
+              Thickness[0.0016806722689075631`], {
+               FaceForm[{
+                 GrayLevel[0.93], 
+                 Opacity[1.]}], 
+               
+               FilledCurveBox[{{{1, 4, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {
+                1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}}}, {{{
+                25.499999999999996`, 2.5}, {25.499999999999996`, 
+                1.3953100000000003`}, {24.604699999999998`, 
+                0.49999999999999994`}, {23.5, 0.49999999999999994`}, {2.5, 
+                0.49999999999999994`}, {1.3953100000000003`, 
+                0.49999999999999994`}, {0.49999999999999994`, 
+                1.3953100000000003`}, {0.49999999999999994`, 2.5}, {
+                0.49999999999999994`, 23.5}, {0.49999999999999994`, 
+                24.604699999999998`}, {1.3953100000000003`, 
+                25.499999999999996`}, {2.5, 25.499999999999996`}, {23.5, 
+                25.499999999999996`}, {24.604699999999998`, 
+                25.499999999999996`}, {25.499999999999996`, 
+                24.604699999999998`}, {25.499999999999996`, 23.5}, {
+                25.499999999999996`, 2.5}}}]}, {
+               RGBColor[0.699951, 0.699951, 0.699951], 
+               Opacity[1.], 
+               JoinForm[{ElisionsDump`Miter, 10.}], 
+               
+               JoinedCurveBox[{{{1, 4, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {
+                1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}}}, {{{
+                25.499999999999996`, 2.5}, {25.499999999999996`, 
+                1.3953100000000003`}, {24.604699999999998`, 
+                0.49999999999999994`}, {23.5, 0.49999999999999994`}, {2.5, 
+                0.49999999999999994`}, {1.3953100000000003`, 
+                0.49999999999999994`}, {0.49999999999999994`, 
+                1.3953100000000003`}, {0.49999999999999994`, 2.5}, {
+                0.49999999999999994`, 23.5}, {0.49999999999999994`, 
+                24.604699999999998`}, {1.3953100000000003`, 
+                25.499999999999996`}, {2.5, 25.499999999999996`}, {23.5, 
+                25.499999999999996`}, {24.604699999999998`, 
+                25.499999999999996`}, {25.499999999999996`, 
+                24.604699999999998`}, {25.499999999999996`, 23.5}, {
+                25.499999999999996`, 2.5}}}]}, {
+               FaceForm[{
+                 RGBColor[0.5, 0.5, 0.5], 
+                 Opacity[1.]}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {
+                0, 1, 0}, {1, 3, 3}, {1, 3, 3}}}, {{{3.52539, 
+                1.0035199999999997`}, {2.5250000000000004`, 
+                1.0035199999999997`}, {1.6828099999999997`, 
+                1.0035199999999997`}, {0.9999999999999999, 
+                1.6863299999999997`}, {0.9999999999999999, 
+                2.5285199999999994`}, {0.9999999999999999, 
+                23.474999999999998`}, {0.9999999999999999, 
+                24.317199999999996`}, {1.6828099999999997`, 
+                24.999999999999996`}, {2.5250000000000004`, 
+                24.999999999999996`}, {3.52539, 24.999999999999996`}, {
+                3.52539, 24.999999999999993`}, {5.523440000000001, 
+                22.421099999999996`}, {5.523440000000001, 13.0039}, {
+                5.523440000000001, 3.5867199999999992`}, {3.52539, 
+                1.0035199999999997`}, {3.52539, 1.0035199999999997`}}}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}, {0, 1, 0}}}, {{{22.4977, 12.9016}, {
+                17.740599999999997`, 16.8398}, {17.740599999999997`, 
+                14.856599999999998`}, {19.980900000000002`, 
+                12.947299999999997`}, {17.740599999999997`, 
+                10.946100000000001`}, {17.740599999999997`, 8.96289}, {
+                22.4977, 12.9016}}}]}, {
+               FaceForm[{
+                 RGBColor[
+                 0.46093800000000007`, 0.46093800000000007`, 
+                  0.46093800000000007`], 
+                 Opacity[1.]}], 
+               
+               FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+                3}}}, {{{9.202339999999998, 12.8969}, {9.202339999999998, 
+                12.335499999999998`}, {8.747660000000002, 
+                11.880899999999999`}, {8.186329999999998, 
+                11.880899999999999`}, {7.624999999999999, 
+                11.880899999999999`}, {7.169920000000001, 
+                12.335499999999998`}, {7.169920000000001, 12.8969}, {
+                7.169920000000001, 13.458200000000003`}, {7.624999999999999, 
+                13.9133}, {8.186329999999998, 13.9133}, {8.747660000000002, 
+                13.9133}, {9.202339999999998, 13.458200000000003`}, {
+                9.202339999999998, 12.8969}}}], 
+               
+               FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+                3}}}, {{{12.6227, 12.8969}, {12.6227, 12.335499999999998`}, {
+                12.167599999999998`, 11.880899999999999`}, {
+                11.606200000000001`, 11.880899999999999`}, {11.0449, 
+                11.880899999999999`}, {10.589799999999999`, 
+                12.335499999999998`}, {10.589799999999999`, 12.8969}, {
+                10.589799999999999`, 13.458200000000003`}, {11.0449, 
+                13.9133}, {11.606200000000001`, 13.9133}, {
+                12.167599999999998`, 13.9133}, {12.6227, 
+                13.458200000000003`}, {12.6227, 12.8969}}}], 
+               
+               FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+                3}}}, {{{16.042600000000004`, 12.8969}, {16.042600000000004`, 
+                12.335499999999998`}, {15.587499999999999`, 
+                11.880899999999999`}, {15.026199999999998`, 
+                11.880899999999999`}, {14.464799999999997`, 
+                11.880899999999999`}, {14.010199999999998`, 
+                12.335499999999998`}, {14.010199999999998`, 12.8969}, {
+                14.010199999999998`, 13.458200000000003`}, {
+                14.464799999999997`, 13.9133}, {15.026199999999998`, 
+                13.9133}, {15.587499999999999`, 13.9133}, {
+                16.042600000000004`, 13.458200000000003`}, {
+                16.042600000000004`, 12.8969}}}]}}, AspectRatio -> 1, Axes -> 
+             False, Background -> GrayLevel[0.5], Frame -> True, FrameStyle -> 
+             Directive[
+               Thickness[Tiny], 
+               GrayLevel[0.7]], FrameTicks -> None, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Name: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  PaneBox[
+                  "\"out-97d1758c-5d4a-4490-ad10-d356f25b8038\"", 
+                   BaselinePosition -> Baseline, ContentPadding -> False, 
+                   FrameMargins -> 0, ImageSize -> {{1, 500}, Automatic}, 
+                   StripOnInput -> True], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Unique ID: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["3", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Binary: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["True", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Open: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  DynamicBox[
+                   ToBoxes[Options[
+                    OutputStream[
+                    "out-97d1758c-5d4a-4490-ad10-d356f25b8038", 3]] =!= {}, 
+                    StandardForm], UpdateInterval -> 1], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Encoding: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["Automatic", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Format: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["InputForm", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Page width: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\[Infinity]", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Number marks: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["Automatic", "SummaryItem"]}]}}, AutoDelete -> False, 
+             BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+             GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {
+              "Columns" -> {{2}}, "Rows" -> {{Automatic}}}]}}, AutoDelete -> 
+          False, BaselinePosition -> {1, 1}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  OutputStream["out-97d1758c-5d4a-4490-ad10-d356f25b8038", 3],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ TaggingRules->{},
+ CellChangeTimes->{{3.976163308476427*^9, 3.9761633277162657`*^9}, {
+   3.977602103456512*^9, 3.977602110379232*^9}, {3.977602201434188*^9, 
+   3.977602218464546*^9}, 3.977602258116929*^9, 3.977602611359783*^9, 
+   3.977602675580367*^9, {3.9776039402495747`*^9, 3.9776039454814043`*^9}, 
+   3.977603982072545*^9, 3.977661325477241*^9, 3.97766139301191*^9, 
+   3.977775569126224*^9},
+ CellLabel->"Out[5]=",
+ CellID->1965254615,ExpressionUUID->"0f7cf263-233e-4a78-9283-6ed68fde9ea4"]
+}, Open  ]],
+
+Cell["Write a message from the server to the client:", "Text",
+ TaggingRules->{},
+ CellChangeTimes->{{3.976163337247211*^9, 3.976163355195726*^9}},
+ CellID->648707468,ExpressionUUID->"5112022f-4b57-45e9-8cd5-3f3007a99dda"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"server", "[", "\"\<ConnectedClients\>\"", "]"}], "[", 
+    RowBox[{"[", "1", "]"}], "]"}], "[", "\"\<SendMessage\>\"", "]"}], 
+  "[", "\"\<Hello from server\>\"", "]"}]], "Input",
+ TaggingRules->{},
+ CellChangeTimes->{{3.976163359104334*^9, 3.97616336737998*^9}, {
+   3.9761637611215897`*^9, 3.9761637915531397`*^9}, 3.9776023232299633`*^9, {
+   3.977661333717457*^9, 3.977661341281878*^9}, {3.977661384047738*^9, 
+   3.9776613882815943`*^9}},
+ CellLabel->"In[6]:=",
+ CellID->330363924,ExpressionUUID->"fb314349-0ee7-43f9-bedd-b76b5ca92409"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["OutputStream",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"]], 
+              ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GraphicsBox[{
+              Thickness[0.0016806722689075631`], {
+               FaceForm[{
+                 GrayLevel[0.93], 
+                 Opacity[1.]}], 
+               
+               FilledCurveBox[{{{1, 4, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {
+                1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}}}, {{{
+                25.499999999999996`, 2.5}, {25.499999999999996`, 
+                1.3953100000000003`}, {24.604699999999998`, 
+                0.49999999999999994`}, {23.5, 0.49999999999999994`}, {2.5, 
+                0.49999999999999994`}, {1.3953100000000003`, 
+                0.49999999999999994`}, {0.49999999999999994`, 
+                1.3953100000000003`}, {0.49999999999999994`, 2.5}, {
+                0.49999999999999994`, 23.5}, {0.49999999999999994`, 
+                24.604699999999998`}, {1.3953100000000003`, 
+                25.499999999999996`}, {2.5, 25.499999999999996`}, {23.5, 
+                25.499999999999996`}, {24.604699999999998`, 
+                25.499999999999996`}, {25.499999999999996`, 
+                24.604699999999998`}, {25.499999999999996`, 23.5}, {
+                25.499999999999996`, 2.5}}}]}, {
+               RGBColor[0.699951, 0.699951, 0.699951], 
+               Opacity[1.], 
+               JoinForm[{ElisionsDump`Miter, 10.}], 
+               
+               JoinedCurveBox[{{{1, 4, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {
+                1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}}}, {{{
+                25.499999999999996`, 2.5}, {25.499999999999996`, 
+                1.3953100000000003`}, {24.604699999999998`, 
+                0.49999999999999994`}, {23.5, 0.49999999999999994`}, {2.5, 
+                0.49999999999999994`}, {1.3953100000000003`, 
+                0.49999999999999994`}, {0.49999999999999994`, 
+                1.3953100000000003`}, {0.49999999999999994`, 2.5}, {
+                0.49999999999999994`, 23.5}, {0.49999999999999994`, 
+                24.604699999999998`}, {1.3953100000000003`, 
+                25.499999999999996`}, {2.5, 25.499999999999996`}, {23.5, 
+                25.499999999999996`}, {24.604699999999998`, 
+                25.499999999999996`}, {25.499999999999996`, 
+                24.604699999999998`}, {25.499999999999996`, 23.5}, {
+                25.499999999999996`, 2.5}}}]}, {
+               FaceForm[{
+                 RGBColor[0.5, 0.5, 0.5], 
+                 Opacity[1.]}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {
+                0, 1, 0}, {1, 3, 3}, {1, 3, 3}}}, {{{3.52539, 
+                1.0035199999999997`}, {2.5250000000000004`, 
+                1.0035199999999997`}, {1.6828099999999997`, 
+                1.0035199999999997`}, {0.9999999999999999, 
+                1.6863299999999997`}, {0.9999999999999999, 
+                2.5285199999999994`}, {0.9999999999999999, 
+                23.474999999999998`}, {0.9999999999999999, 
+                24.317199999999996`}, {1.6828099999999997`, 
+                24.999999999999996`}, {2.5250000000000004`, 
+                24.999999999999996`}, {3.52539, 24.999999999999996`}, {
+                3.52539, 24.999999999999993`}, {5.523440000000001, 
+                22.421099999999996`}, {5.523440000000001, 13.0039}, {
+                5.523440000000001, 3.5867199999999992`}, {3.52539, 
+                1.0035199999999997`}, {3.52539, 1.0035199999999997`}}}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}, {0, 1, 0}}}, {{{22.4977, 12.9016}, {
+                17.740599999999997`, 16.8398}, {17.740599999999997`, 
+                14.856599999999998`}, {19.980900000000002`, 
+                12.947299999999997`}, {17.740599999999997`, 
+                10.946100000000001`}, {17.740599999999997`, 8.96289}, {
+                22.4977, 12.9016}}}]}, {
+               FaceForm[{
+                 RGBColor[
+                 0.46093800000000007`, 0.46093800000000007`, 
+                  0.46093800000000007`], 
+                 Opacity[1.]}], 
+               
+               FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+                3}}}, {{{9.202339999999998, 12.8969}, {9.202339999999998, 
+                12.335499999999998`}, {8.747660000000002, 
+                11.880899999999999`}, {8.186329999999998, 
+                11.880899999999999`}, {7.624999999999999, 
+                11.880899999999999`}, {7.169920000000001, 
+                12.335499999999998`}, {7.169920000000001, 12.8969}, {
+                7.169920000000001, 13.458200000000003`}, {7.624999999999999, 
+                13.9133}, {8.186329999999998, 13.9133}, {8.747660000000002, 
+                13.9133}, {9.202339999999998, 13.458200000000003`}, {
+                9.202339999999998, 12.8969}}}], 
+               
+               FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+                3}}}, {{{12.6227, 12.8969}, {12.6227, 12.335499999999998`}, {
+                12.167599999999998`, 11.880899999999999`}, {
+                11.606200000000001`, 11.880899999999999`}, {11.0449, 
+                11.880899999999999`}, {10.589799999999999`, 
+                12.335499999999998`}, {10.589799999999999`, 12.8969}, {
+                10.589799999999999`, 13.458200000000003`}, {11.0449, 
+                13.9133}, {11.606200000000001`, 13.9133}, {
+                12.167599999999998`, 13.9133}, {12.6227, 
+                13.458200000000003`}, {12.6227, 12.8969}}}], 
+               
+               FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+                3}}}, {{{16.042600000000004`, 12.8969}, {16.042600000000004`, 
+                12.335499999999998`}, {15.587499999999999`, 
+                11.880899999999999`}, {15.026199999999998`, 
+                11.880899999999999`}, {14.464799999999997`, 
+                11.880899999999999`}, {14.010199999999998`, 
+                12.335499999999998`}, {14.010199999999998`, 12.8969}, {
+                14.010199999999998`, 13.458200000000003`}, {
+                14.464799999999997`, 13.9133}, {15.026199999999998`, 
+                13.9133}, {15.587499999999999`, 13.9133}, {
+                16.042600000000004`, 13.458200000000003`}, {
+                16.042600000000004`, 12.8969}}}]}}, AspectRatio -> 1, Axes -> 
+             False, Background -> GrayLevel[0.5], Frame -> True, FrameStyle -> 
+             Directive[
+               Thickness[Tiny], 
+               GrayLevel[0.7]], FrameTicks -> None, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Name: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  StyleBox[
+                   PaneBox[
+                   "\"out-843192cd-645c-4cee-b0b8-327b0a1fec9c\"", 
+                    ContentPadding -> False, FrameMargins -> 0, StripOnInput -> 
+                    True, BaselinePosition -> Baseline, 
+                    ImageSize -> {{1, 300}, Automatic}], LineBreakWithin -> 
+                   False], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Unique ID: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["4", "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"]], 
+              ButtonFunction :> (Typeset`open$$ = False), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GraphicsBox[{
+              Thickness[0.0016806722689075631`], {
+               FaceForm[{
+                 GrayLevel[0.93], 
+                 Opacity[1.]}], 
+               
+               FilledCurveBox[{{{1, 4, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {
+                1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}}}, {{{
+                25.499999999999996`, 2.5}, {25.499999999999996`, 
+                1.3953100000000003`}, {24.604699999999998`, 
+                0.49999999999999994`}, {23.5, 0.49999999999999994`}, {2.5, 
+                0.49999999999999994`}, {1.3953100000000003`, 
+                0.49999999999999994`}, {0.49999999999999994`, 
+                1.3953100000000003`}, {0.49999999999999994`, 2.5}, {
+                0.49999999999999994`, 23.5}, {0.49999999999999994`, 
+                24.604699999999998`}, {1.3953100000000003`, 
+                25.499999999999996`}, {2.5, 25.499999999999996`}, {23.5, 
+                25.499999999999996`}, {24.604699999999998`, 
+                25.499999999999996`}, {25.499999999999996`, 
+                24.604699999999998`}, {25.499999999999996`, 23.5}, {
+                25.499999999999996`, 2.5}}}]}, {
+               RGBColor[0.699951, 0.699951, 0.699951], 
+               Opacity[1.], 
+               JoinForm[{ElisionsDump`Miter, 10.}], 
+               
+               JoinedCurveBox[{{{1, 4, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {
+                1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}}}, {{{
+                25.499999999999996`, 2.5}, {25.499999999999996`, 
+                1.3953100000000003`}, {24.604699999999998`, 
+                0.49999999999999994`}, {23.5, 0.49999999999999994`}, {2.5, 
+                0.49999999999999994`}, {1.3953100000000003`, 
+                0.49999999999999994`}, {0.49999999999999994`, 
+                1.3953100000000003`}, {0.49999999999999994`, 2.5}, {
+                0.49999999999999994`, 23.5}, {0.49999999999999994`, 
+                24.604699999999998`}, {1.3953100000000003`, 
+                25.499999999999996`}, {2.5, 25.499999999999996`}, {23.5, 
+                25.499999999999996`}, {24.604699999999998`, 
+                25.499999999999996`}, {25.499999999999996`, 
+                24.604699999999998`}, {25.499999999999996`, 23.5}, {
+                25.499999999999996`, 2.5}}}]}, {
+               FaceForm[{
+                 RGBColor[0.5, 0.5, 0.5], 
+                 Opacity[1.]}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {
+                0, 1, 0}, {1, 3, 3}, {1, 3, 3}}}, {{{3.52539, 
+                1.0035199999999997`}, {2.5250000000000004`, 
+                1.0035199999999997`}, {1.6828099999999997`, 
+                1.0035199999999997`}, {0.9999999999999999, 
+                1.6863299999999997`}, {0.9999999999999999, 
+                2.5285199999999994`}, {0.9999999999999999, 
+                23.474999999999998`}, {0.9999999999999999, 
+                24.317199999999996`}, {1.6828099999999997`, 
+                24.999999999999996`}, {2.5250000000000004`, 
+                24.999999999999996`}, {3.52539, 24.999999999999996`}, {
+                3.52539, 24.999999999999993`}, {5.523440000000001, 
+                22.421099999999996`}, {5.523440000000001, 13.0039}, {
+                5.523440000000001, 3.5867199999999992`}, {3.52539, 
+                1.0035199999999997`}, {3.52539, 1.0035199999999997`}}}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}, {0, 1, 0}}}, {{{22.4977, 12.9016}, {
+                17.740599999999997`, 16.8398}, {17.740599999999997`, 
+                14.856599999999998`}, {19.980900000000002`, 
+                12.947299999999997`}, {17.740599999999997`, 
+                10.946100000000001`}, {17.740599999999997`, 8.96289}, {
+                22.4977, 12.9016}}}]}, {
+               FaceForm[{
+                 RGBColor[
+                 0.46093800000000007`, 0.46093800000000007`, 
+                  0.46093800000000007`], 
+                 Opacity[1.]}], 
+               
+               FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+                3}}}, {{{9.202339999999998, 12.8969}, {9.202339999999998, 
+                12.335499999999998`}, {8.747660000000002, 
+                11.880899999999999`}, {8.186329999999998, 
+                11.880899999999999`}, {7.624999999999999, 
+                11.880899999999999`}, {7.169920000000001, 
+                12.335499999999998`}, {7.169920000000001, 12.8969}, {
+                7.169920000000001, 13.458200000000003`}, {7.624999999999999, 
+                13.9133}, {8.186329999999998, 13.9133}, {8.747660000000002, 
+                13.9133}, {9.202339999999998, 13.458200000000003`}, {
+                9.202339999999998, 12.8969}}}], 
+               
+               FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+                3}}}, {{{12.6227, 12.8969}, {12.6227, 12.335499999999998`}, {
+                12.167599999999998`, 11.880899999999999`}, {
+                11.606200000000001`, 11.880899999999999`}, {11.0449, 
+                11.880899999999999`}, {10.589799999999999`, 
+                12.335499999999998`}, {10.589799999999999`, 12.8969}, {
+                10.589799999999999`, 13.458200000000003`}, {11.0449, 
+                13.9133}, {11.606200000000001`, 13.9133}, {
+                12.167599999999998`, 13.9133}, {12.6227, 
+                13.458200000000003`}, {12.6227, 12.8969}}}], 
+               
+               FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+                3}}}, {{{16.042600000000004`, 12.8969}, {16.042600000000004`, 
+                12.335499999999998`}, {15.587499999999999`, 
+                11.880899999999999`}, {15.026199999999998`, 
+                11.880899999999999`}, {14.464799999999997`, 
+                11.880899999999999`}, {14.010199999999998`, 
+                12.335499999999998`}, {14.010199999999998`, 12.8969}, {
+                14.010199999999998`, 13.458200000000003`}, {
+                14.464799999999997`, 13.9133}, {15.026199999999998`, 
+                13.9133}, {15.587499999999999`, 13.9133}, {
+                16.042600000000004`, 13.458200000000003`}, {
+                16.042600000000004`, 12.8969}}}]}}, AspectRatio -> 1, Axes -> 
+             False, Background -> GrayLevel[0.5], Frame -> True, FrameStyle -> 
+             Directive[
+               Thickness[Tiny], 
+               GrayLevel[0.7]], FrameTicks -> None, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Name: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  PaneBox[
+                  "\"out-843192cd-645c-4cee-b0b8-327b0a1fec9c\"", 
+                   ImageSize -> {{1, 500}, Automatic}, BaselinePosition -> 
+                   Baseline, ContentPadding -> False, FrameMargins -> 0, 
+                   StripOnInput -> True], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Unique ID: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["4", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Binary: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["True", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Open: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  DynamicBox[
+                   ToBoxes[Options[
+                    OutputStream[
+                    "out-843192cd-645c-4cee-b0b8-327b0a1fec9c", 4]] =!= {}, 
+                    StandardForm], UpdateInterval -> 1], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Encoding: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["Automatic", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Format: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["InputForm", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Page width: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\[Infinity]", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Number marks: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["Automatic", "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  OutputStream["out-843192cd-645c-4cee-b0b8-327b0a1fec9c", 4],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ TaggingRules->{},
+ CellChangeTimes->{
+  3.976163367836094*^9, {3.9761637633839293`*^9, 3.9761637926664953`*^9}, 
+   3.9761639497756987`*^9, 3.976164028520875*^9, 3.976164075067667*^9, 
+   3.9776023237447643`*^9, 3.9776039855096273`*^9, 3.977661344120615*^9, 
+   3.977661394572658*^9, 3.9777755708002033`*^9},
+ CellLabel->"Out[6]=",
+ CellID->1437595975,ExpressionUUID->"b5ee5bd1-81e6-4a1d-8364-4dc044af754e"]
+}, Open  ]],
+
+Cell["Read the server messages: ", "Text",
+ TaggingRules->{},
+ CellChangeTimes->{{3.976163832876091*^9, 3.9761638397828703`*^9}, {
+  3.976163915737502*^9, 3.97616392068191*^9}},
+ CellID->1844902548,ExpressionUUID->"59f1071b-5a12-461c-a177-2bae1ef958db"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"server", "[", "\"\<ConnectedClients\>\"", "]"}], "[", 
+   RowBox[{"[", "1", "]"}], "]"}], "[", "\"\<GetMessage\>\"", "]"}]], "Input",
+ 
+ TaggingRules->{},
+ CellChangeTimes->{{3.976163881823106*^9, 3.9761639014282017`*^9}},
+ CellLabel->"In[96]:=",
+ CellID->903809275,ExpressionUUID->"685d109e-3117-4624-a2c1-9c2012794097"],
+
+Cell[BoxData["\<\"Hello from client\"\>"], "Output",
+ CellChangeTimes->{3.977661352722509*^9, 3.9776613961588*^9},
+ CellLabel->"Out[96]=",
+ CellID->1760160773,ExpressionUUID->"2b678bab-f159-4a62-95fa-7b776a957a26"]
+}, Open  ]],
+
+Cell["Read the client messages", "Text",
+ TaggingRules->{},
+ CellChangeTimes->{{3.976163923113291*^9, 3.976163930415182*^9}},
+ CellID->544590058,ExpressionUUID->"f636f5a8-d38a-450c-87ba-bddab6d2f2c0"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"client", "[", "\"\<GetMessage\>\"", "]"}]], "Input",
+ TaggingRules->{},
+ CellChangeTimes->{{3.976163934606851*^9, 3.976163941153695*^9}},
+ CellLabel->"In[97]:=",
+ CellID->1565807941,ExpressionUUID->"19db9f81-772d-416c-97f2-f67f61756411"],
+
+Cell[BoxData["\<\"Hello from server\"\>"], "Output",
+ CellChangeTimes->{3.977661399075089*^9},
+ CellLabel->"Out[97]=",
+ CellID->491678605,ExpressionUUID->"8f1eaa15-1475-4a60-b2eb-6f04251a8906"]
+}, Open  ]],
+
+Cell["Close the WebSocket client:", "Text",
+ TaggingRules->{},
+ CellChangeTimes->{{3.976164098481086*^9, 3.9761640991695347`*^9}},
  CellID->88142415,ExpressionUUID->"7c84d4a2-6f6c-45ff-8e4a-a02417f0b4b9"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Close", "[", "client", "]"}]], "Input",
+ TaggingRules->{},
+ CellChangeTimes->{{3.97616410341499*^9, 3.976164104088202*^9}},
+ CellLabel->"In[7]:=",
+ CellID->735059386,ExpressionUUID->"3bd995c5-24a1-4cd4-ac46-ae0f6acd4679"],
+
+Cell[BoxData["\<\"127.0.0.1:30000\"\>"], "Output",
+ TaggingRules->{},
+ CellChangeTimes->{3.9761641047245703`*^9, 3.9776613611874723`*^9, 
+  3.9776614064318323`*^9, 3.977775574561789*^9},
+ CellLabel->"Out[7]=",
+ CellID->2105902585,ExpressionUUID->"1696ce3d-b907-45c9-b5bd-4b52dffd274b"]
+}, Open  ]],
+
+Cell["Dispose the server:", "Text",
+ TaggingRules->{},
+ CellChangeTimes->{{3.9761641122455797`*^9, 3.976164117296193*^9}},
+ CellID->1531521185,ExpressionUUID->"d33a0315-34f5-42d1-a55a-68cce9736a89"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"Close", "[", "server", "]"}]], "Input",
  TaggingRules->{},
- CellLabel->"In[80]:=",
- CellID->735059386,ExpressionUUID->"3bd995c5-24a1-4cd4-ac46-ae0f6acd4679"],
+ CellChangeTimes->{{3.97616411835778*^9, 3.9761641201737957`*^9}},
+ CellLabel->"In[8]:=",
+ CellID->285201544,ExpressionUUID->"e52ab1cc-1c65-4374-aa46-6b775d9dd13f"],
 
 Cell[BoxData["\<\"127.0.0.1:30000\"\>"], "Output",
- CellLabel->"Out[80]=",
- CellID->1497512486,ExpressionUUID->"d834dd33-a07c-4a96-929e-fcfd8da7e2b1"]
+ TaggingRules->{},
+ CellChangeTimes->{3.9761641207918777`*^9, 3.9776613639186487`*^9, 
+  3.977661406966604*^9, 3.977775575469974*^9},
+ CellLabel->"Out[8]=",
+ CellID->1108936446,ExpressionUUID->"dcd3e11f-572a-49b8-8601-f9adf4dec474"]
 }, Open  ]]
-}, Open  ]],
+}, Closed]],
 
 Cell[CellGroupData[{
 
 Cell["Scope", "Subsection",
  TaggingRules->{},
  CellID->964056545,ExpressionUUID->"a6dce76e-f428-4457-b06d-692c9f6e5573"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"parsedUrl", " ", "=", " ", 
+  RowBox[{"\[LeftAssociation]", 
+   RowBox[{
+    RowBox[{"\"\<Scheme\>\"", "\[Rule]", "\"\<https\>\""}], ",", 
+    RowBox[{"\"\<User\>\"", "\[Rule]", "None"}], ",", 
+    RowBox[{"\"\<Domain\>\"", "\[Rule]", "\"\<echo.websocket.org\>\""}], ",", 
+    
+    RowBox[{"\"\<Port\>\"", "\[Rule]", "None"}], ",", 
+    RowBox[{"\"\<Path\>\"", "\[Rule]", 
+     RowBox[{"{", "}"}]}], ",", 
+    RowBox[{"\"\<Query\>\"", "\[Rule]", 
+     RowBox[{"{", "}"}]}], ",", 
+    RowBox[{"\"\<Fragment\>\"", "\[Rule]", "None"}]}], 
+   "\[RightAssociation]"}]}]], "Input",
+ CellChangeTimes->{{3.9777758655913897`*^9, 3.9777758692820377`*^9}},
+ CellLabel->"In[18]:=",
+ CellID->1778661550,ExpressionUUID->"762888fa-ba3d-4cca-98a2-b57a639e9fcb"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"Scheme\"\>", "\[Rule]", "\<\"https\"\>"}], ",", 
+   RowBox[{"\<\"User\"\>", "\[Rule]", "None"}], ",", 
+   RowBox[{"\<\"Domain\"\>", "\[Rule]", "\<\"echo.websocket.org\"\>"}], ",", 
+   RowBox[{"\<\"Port\"\>", "\[Rule]", "None"}], ",", 
+   RowBox[{"\<\"Path\"\>", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"\<\"Query\"\>", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"\<\"Fragment\"\>", "\[Rule]", "None"}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{3.9777758703677197`*^9},
+ CellLabel->"Out[18]=",
+ CellID->1422942043,ExpressionUUID->"9d879d40-f743-4dff-b31e-af68fa8f7ddd"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"proc", " ", "=", " ", 
+  RowBox[{"StartProcess", "[", 
+   RowBox[{"{", 
+    RowBox[{"\"\<openssl\>\"", ",", "\"\<s_client\>\"", 
+     ",", "\"\<-connect\>\"", ",", 
+     RowBox[{"\"\<echo.websocket.org:\>\"", "<>", 
+      RowBox[{"ToString", " ", "[", "443", "]"}]}]}], "}"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.977775856913735*^9, 3.9777758782819567`*^9}, {
+  3.977776074902273*^9, 3.977776085801937*^9}, {3.977776118410928*^9, 
+  3.977776147028644*^9}, {3.97777635224907*^9, 3.977776357763884*^9}},
+ CellLabel->"In[53]:=",
+ CellID->932613142,ExpressionUUID->"3692c229-8ffc-4b2f-8c7a-3ad82efe0317"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["ProcessObject",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"]], 
+              ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Program: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"openssl\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"PID: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["3594602", "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"]], 
+              ButtonFunction :> (Typeset`open$$ = False), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Program: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"openssl\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"PID: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["3594602", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Parent PID: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["3573598", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"User: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"tonya\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Path: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"/usr/bin/openssl\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Memory:\"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  
+                  TemplateBox[{
+                   "5.750784`", "\"MB\"", "megabytes", "\"Megabytes\""}, 
+                   "Quantity", SyntaxForm -> Mod], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Threads: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["1", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Start Time: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  TemplateBox[{
+                    RowBox[{"\"Mon 19 Jan 2026 01:53:27\"", 
+                    StyleBox["\"GMT\"", "TimeZoneLabel"]}], 
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2026", ",", "1", ",", "19", ",", "1", ",", "53", ",", 
+                    "27"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                    ",", "0.`"}], "]"}]}, "DateObject", Editable -> False], 
+                  "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"System Time: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  
+                  TemplateBox[{"0", "\"s\"", "seconds", "\"Seconds\""}, 
+                   "Quantity", SyntaxForm -> Mod], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"User Time: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  
+                  TemplateBox[{"0", "\"s\"", "seconds", "\"Seconds\""}, 
+                   "Quantity", SyntaxForm -> Mod], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Real Time: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  
+                  TemplateBox[{"1.`5.", "\"s\"", "seconds", "\"Seconds\""}, 
+                   "Quantity", SyntaxForm -> Mod], "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  ProcessObject[<|
+   "ManagedProcess" -> True, "UID" -> 15, "PID" -> 3594602, "PPID" -> 3573598,
+     "Program" -> "openssl", "Path" -> "/usr/bin/openssl", "User" -> "tonya", 
+    "StartTime" -> 
+    DateObject[{2026, 1, 19, 1, 53, 27}, "Instant", "Gregorian", 0.]|>],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{{3.977776368223323*^9, 3.977776408549144*^9}},
+ CellLabel->"Out[53]=",
+ CellID->1984167937,ExpressionUUID->"62acb51e-ec34-4f5d-a239-d048b3903214"]
+}, Open  ]],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["ProcessObject",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"]], 
+              ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Program: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"openssl\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"PID: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["3593454", "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"]], 
+              ButtonFunction :> (Typeset`open$$ = False), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Program: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"openssl\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"PID: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["3593454", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Parent PID: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["3573598", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"User: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"tonya\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Path: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"/usr/bin/openssl\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Memory:\"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  
+                  TemplateBox[{
+                   "5.701632`", "\"MB\"", "megabytes", "\"Megabytes\""}, 
+                   "Quantity", SyntaxForm -> Mod], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Threads: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["1", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Start Time: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  TemplateBox[{
+                    RowBox[{"\"Mon 19 Jan 2026 01:52:37\"", 
+                    StyleBox["\"GMT\"", "TimeZoneLabel"]}], 
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2026", ",", "1", ",", "19", ",", "1", ",", "52", ",", 
+                    "37"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                    ",", "0.`"}], "]"}]}, "DateObject", Editable -> False], 
+                  "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"System Time: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  
+                  TemplateBox[{"0", "\"s\"", "seconds", "\"Seconds\""}, 
+                   "Quantity", SyntaxForm -> Mod], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"User Time: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  
+                  TemplateBox[{"0", "\"s\"", "seconds", "\"Seconds\""}, 
+                   "Quantity", SyntaxForm -> Mod], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Real Time: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  
+                  TemplateBox[{"1.`5.", "\"s\"", "seconds", "\"Seconds\""}, 
+                   "Quantity", SyntaxForm -> Mod], "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  ProcessObject[<|
+   "ManagedProcess" -> True, "UID" -> 12, "PID" -> 3593454, "PPID" -> 3573598,
+     "Program" -> "openssl", "Path" -> "/usr/bin/openssl", "User" -> "tonya", 
+    "StartTime" -> 
+    DateObject[{2026, 1, 19, 1, 52, 37}, "Instant", "Gregorian", 0.]|>],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Input",
+ CellChangeTimes->{3.977776365465892*^9},
+ CellLabel->"Out[44]=",
+ CellID->72308196,ExpressionUUID->"fac0d305-a252-430e-b953-207822868c0b"],
+
+Cell[BoxData[
+ RowBox[{"ImportString", "[", "\n", "\t", 
+  RowBox[{
+   RowBox[{"ReadString", "[", 
+    RowBox[{"proc", ",", " ", 
+     RowBox[{"CRLF", "<>", "CRLF"}]}], "]"}], ",", "\n", 
+   "\t", "\"\<HTTPResponse\>\""}], "\n", "]"}]], "Input",
+ CellChangeTimes->{{3.9777759550349693`*^9, 3.97777595981876*^9}, 
+   3.977776064764151*^9},
+ CellLabel->"In[45]:=",
+ CellID->740800605,ExpressionUUID->"51a03a8a-929d-4d2d-b3b2-d105610fd317"],
+
+Cell[BoxData["proc"], "Input",
+ CellChangeTimes->{{3.97777594949767*^9, 3.977775950772636*^9}},
+ CellID->1737080488,ExpressionUUID->"21e2fba2-bc09-4f73-8b31-808b4c1f6fd1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WebSocketConnect", "[", "\"\<wss://echo.websocket.org\>\"", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.977775723821825*^9, 3.977775738856731*^9}, 
+   3.9777758355816097`*^9},
+ CellLabel->"In[83]:=",
+ CellID->165596658,ExpressionUUID->"730472c4-4ec6-4e27-8977-419b666ce829"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["WebSocketObject",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            GraphicsBox[
+             GeometricTransformationBox[{
+               Thickness[0.025], 
+               StyleBox[{
+                 
+                 FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                   0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                   0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                   0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                   0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                   0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                   0}, {0, 1, 0}, {0, 1, 0}}}, {{{29.7734375, 24.6328125}, {
+                   34.6953125, 24.6328125}, {34.6953125, 12.15234375}, {
+                   29.1484375, 6.296875}, {25.66796875, 9.97265625}, {
+                   29.7734375, 14.304688453674316`}}, CompressedData["
+1:eJxTTMoPSmViYGCQBmIQDQINUY4OYIatNYTuNETmKzDc0YLwX5hB6Ag9CC1o
+CqEnGEHopRYQussSlb8KKp8INTfbBELz6UNob6i9J8xQ+deg9rwyB9EP/m9W
+h/CXQM3nU4HQ0hBz/9u/t4f4aMl+JL4CQ40wRP9iCQcU/mYoX0YPmc/AsBzq
+3k/KUHdpobp3mjJEfbE6Mh8YDorI5qPzH/w/rI1q3kOof29A9XdZQegPEH83
+GDlA+Oed4XwANQpGjA==
+                   "]}]}, {
+                 Thickness[0.025]}, StripOnInput -> False]}, {{{1, 0}, {
+               0, -1}}, {0, 0}}], ImageSize -> {40., 34.}, 
+             PlotRange -> {{0., 40.}, {0., -33.333333333333336`}}, 
+             AspectRatio -> Automatic], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Type: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"WebSocketClient\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"UUID: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  
+                  RowBox[{
+                   "\"e2c98b69-b705-4e69-b0ab-e7792e657a57\"", "[", 
+                    "\"UUID\"", "]"}], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Address: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"wss://echo.websocket.org\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Messages: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  DynamicBox[
+                   ToBoxes[If[
+                    SocketReadyQ[
+                    <|
+                    "Type" -> "WebSocketClient", "UUID" -> 
+                    "e2c98b69-b705-4e69-b0ab-e7792e657a57"["UUID"], "Socket" -> 
+                    ProcessObject[<|
+                    "ManagedProcess" -> True, "UID" -> 20, "PID" -> 3662402, 
+                    "PPID" -> 3573598, "Program" -> "openssl", "Path" -> 
+                    "/usr/bin/openssl", "User" -> "tonya", "StartTime" -> 
+                    DateObject[{2026, 1, 19, 2, 40, 10}, "Instant", 
+                    "Gregorian", 0.]|>], "Address" -> 
+                    "wss://echo.websocket.org", "Messages" -> 
+                    DataStructure[
+                    "RingBuffer", {"Data" -> {}, "Capacity" -> 1000}], 
+                    "GetMessage" :> If[
+                    SocketReadyQ[
+                    ToneAr`WebSocketLink`FileScope`Client`Private`server$\
+66121], 
+                    ToneAr`WebSocketLink`WebSocketFrameImport[
+                    Composition[ByteArray, BinaryReadList][
+                    ToneAr`WebSocketLink`FileScope`Client`Private`server$\
+66121]], Null], "SendMessage" :> 
+                    ToneAr`WebSocketLink`FileScope`Client`Private`sendMessage$\
+66121|>["Socket"]], <|"Type" -> "WebSocketClient", "UUID" -> 
+                    "e2c98b69-b705-4e69-b0ab-e7792e657a57"["UUID"], "Socket" -> 
+                    ProcessObject[<|
+                    "ManagedProcess" -> True, "UID" -> 20, "PID" -> 3662402, 
+                    "PPID" -> 3573598, "Program" -> "openssl", "Path" -> 
+                    "/usr/bin/openssl", "User" -> "tonya", "StartTime" -> 
+                    DateObject[{2026, 1, 19, 2, 40, 10}, "Instant", 
+                    "Gregorian", 0.]|>], "Address" -> 
+                    "wss://echo.websocket.org", "Messages" -> 
+                    DataStructure[
+                    "RingBuffer", {"Data" -> {}, "Capacity" -> 1000}], 
+                    "GetMessage" :> If[
+                    SocketReadyQ[
+                    ToneAr`WebSocketLink`FileScope`Client`Private`server$\
+66121], 
+                    ToneAr`WebSocketLink`WebSocketFrameImport[
+                    Composition[ByteArray, BinaryReadList][
+                    ToneAr`WebSocketLink`FileScope`Client`Private`server$\
+66121]], Null], "SendMessage" :> 
+                    ToneAr`WebSocketLink`FileScope`Client`Private`sendMessage$\
+66121|>["Messages"]["PushBack", 
+                    <|
+                    "Type" -> "WebSocketClient", "UUID" -> 
+                    "e2c98b69-b705-4e69-b0ab-e7792e657a57"["UUID"], "Socket" -> 
+                    ProcessObject[<|
+                    "ManagedProcess" -> True, "UID" -> 20, "PID" -> 3662402, 
+                    "PPID" -> 3573598, "Program" -> "openssl", "Path" -> 
+                    "/usr/bin/openssl", "User" -> "tonya", "StartTime" -> 
+                    DateObject[{2026, 1, 19, 2, 40, 10}, "Instant", 
+                    "Gregorian", 0.]|>], "Address" -> 
+                    "wss://echo.websocket.org", "Messages" -> 
+                    DataStructure[
+                    "RingBuffer", {"Data" -> {}, "Capacity" -> 1000}], 
+                    "GetMessage" :> If[
+                    SocketReadyQ[
+                    ToneAr`WebSocketLink`FileScope`Client`Private`server$\
+66121], 
+                    ToneAr`WebSocketLink`WebSocketFrameImport[
+                    Composition[ByteArray, BinaryReadList][
+                    ToneAr`WebSocketLink`FileScope`Client`Private`server$\
+66121]], Null], "SendMessage" :> 
+                    ToneAr`WebSocketLink`FileScope`Client`Private`sendMessage$\
+66121|>["GetMessage"]]; Null]; <|
+                    "Type" -> "WebSocketClient", "UUID" -> 
+                    "e2c98b69-b705-4e69-b0ab-e7792e657a57"["UUID"], "Socket" -> 
+                    ProcessObject[<|
+                    "ManagedProcess" -> True, "UID" -> 20, "PID" -> 3662402, 
+                    "PPID" -> 3573598, "Program" -> "openssl", "Path" -> 
+                    "/usr/bin/openssl", "User" -> "tonya", "StartTime" -> 
+                    DateObject[{2026, 1, 19, 2, 40, 10}, "Instant", 
+                    "Gregorian", 0.]|>], "Address" -> 
+                    "wss://echo.websocket.org", "Messages" -> 
+                    DataStructure[
+                    "RingBuffer", {"Data" -> {}, "Capacity" -> 1000}], 
+                    "GetMessage" :> If[
+                    SocketReadyQ[
+                    ToneAr`WebSocketLink`FileScope`Client`Private`server$\
+66121], 
+                    ToneAr`WebSocketLink`WebSocketFrameImport[
+                    Composition[ByteArray, BinaryReadList][
+                    ToneAr`WebSocketLink`FileScope`Client`Private`server$\
+66121]], Null], "SendMessage" :> 
+                    ToneAr`WebSocketLink`FileScope`Client`Private`sendMessage$\
+66121|>["Messages"]["Length"], StandardForm]], "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            GraphicsBox[
+             GeometricTransformationBox[{
+               Thickness[0.025], 
+               StyleBox[{
+                 
+                 FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                   0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                   0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                   0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                   0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                   0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                   0}, {0, 1, 0}, {0, 1, 0}}}, {{{29.7734375, 24.6328125}, {
+                   34.6953125, 24.6328125}, {34.6953125, 12.15234375}, {
+                   29.1484375, 6.296875}, {25.66796875, 9.97265625}, {
+                   29.7734375, 14.304688453674316`}}, CompressedData["
+1:eJxTTMoPSmViYGCQBmIQDQINUY4OYIatNYTuNETmKzDc0YLwX5hB6Ag9CC1o
+CqEnGEHopRYQussSlb8KKp8INTfbBELz6UNob6i9J8xQ+deg9rwyB9EP/m9W
+h/CXQM3nU4HQ0hBz/9u/t4f4aMl+JL4CQ40wRP9iCQcU/mYoX0YPmc/AsBzq
+3k/KUHdpobp3mjJEfbE6Mh8YDorI5qPzH/w/rI1q3kOof29A9XdZQegPEH83
+GDlA+Oed4XwANQpGjA==
+                   "]}]}, {
+                 Thickness[0.025]}, StripOnInput -> False]}, {{{1, 0}, {
+               0, -1}}, {0, 0}}], ImageSize -> {40., 34.}, 
+             PlotRange -> {{0., 40.}, {0., -33.333333333333336`}}, 
+             AspectRatio -> Automatic], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Type: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"WebSocketClient\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"UUID: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  
+                  RowBox[{
+                   "\"e2c98b69-b705-4e69-b0ab-e7792e657a57\"", "[", 
+                    "\"UUID\"", "]"}], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Address: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"wss://echo.websocket.org\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Messages: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  DynamicBox[
+                   ToBoxes[If[
+                    SocketReadyQ[
+                    <|
+                    "Type" -> "WebSocketClient", "UUID" -> 
+                    "e2c98b69-b705-4e69-b0ab-e7792e657a57"["UUID"], "Socket" -> 
+                    ProcessObject[<|
+                    "ManagedProcess" -> True, "UID" -> 20, "PID" -> 3662402, 
+                    "PPID" -> 3573598, "Program" -> "openssl", "Path" -> 
+                    "/usr/bin/openssl", "User" -> "tonya", "StartTime" -> 
+                    DateObject[{2026, 1, 19, 2, 40, 10}, "Instant", 
+                    "Gregorian", 0.]|>], "Address" -> 
+                    "wss://echo.websocket.org", "Messages" -> 
+                    DataStructure[
+                    "RingBuffer", {"Data" -> {}, "Capacity" -> 1000}], 
+                    "GetMessage" :> If[
+                    SocketReadyQ[
+                    ToneAr`WebSocketLink`FileScope`Client`Private`server$\
+66121], 
+                    ToneAr`WebSocketLink`WebSocketFrameImport[
+                    Composition[ByteArray, BinaryReadList][
+                    ToneAr`WebSocketLink`FileScope`Client`Private`server$\
+66121]], Null], "SendMessage" :> 
+                    ToneAr`WebSocketLink`FileScope`Client`Private`sendMessage$\
+66121|>["Socket"]], <|"Type" -> "WebSocketClient", "UUID" -> 
+                    "e2c98b69-b705-4e69-b0ab-e7792e657a57"["UUID"], "Socket" -> 
+                    ProcessObject[<|
+                    "ManagedProcess" -> True, "UID" -> 20, "PID" -> 3662402, 
+                    "PPID" -> 3573598, "Program" -> "openssl", "Path" -> 
+                    "/usr/bin/openssl", "User" -> "tonya", "StartTime" -> 
+                    DateObject[{2026, 1, 19, 2, 40, 10}, "Instant", 
+                    "Gregorian", 0.]|>], "Address" -> 
+                    "wss://echo.websocket.org", "Messages" -> 
+                    DataStructure[
+                    "RingBuffer", {"Data" -> {}, "Capacity" -> 1000}], 
+                    "GetMessage" :> If[
+                    SocketReadyQ[
+                    ToneAr`WebSocketLink`FileScope`Client`Private`server$\
+66121], 
+                    ToneAr`WebSocketLink`WebSocketFrameImport[
+                    Composition[ByteArray, BinaryReadList][
+                    ToneAr`WebSocketLink`FileScope`Client`Private`server$\
+66121]], Null], "SendMessage" :> 
+                    ToneAr`WebSocketLink`FileScope`Client`Private`sendMessage$\
+66121|>["Messages"]["PushBack", 
+                    <|
+                    "Type" -> "WebSocketClient", "UUID" -> 
+                    "e2c98b69-b705-4e69-b0ab-e7792e657a57"["UUID"], "Socket" -> 
+                    ProcessObject[<|
+                    "ManagedProcess" -> True, "UID" -> 20, "PID" -> 3662402, 
+                    "PPID" -> 3573598, "Program" -> "openssl", "Path" -> 
+                    "/usr/bin/openssl", "User" -> "tonya", "StartTime" -> 
+                    DateObject[{2026, 1, 19, 2, 40, 10}, "Instant", 
+                    "Gregorian", 0.]|>], "Address" -> 
+                    "wss://echo.websocket.org", "Messages" -> 
+                    DataStructure[
+                    "RingBuffer", {"Data" -> {}, "Capacity" -> 1000}], 
+                    "GetMessage" :> If[
+                    SocketReadyQ[
+                    ToneAr`WebSocketLink`FileScope`Client`Private`server$\
+66121], 
+                    ToneAr`WebSocketLink`WebSocketFrameImport[
+                    Composition[ByteArray, BinaryReadList][
+                    ToneAr`WebSocketLink`FileScope`Client`Private`server$\
+66121]], Null], "SendMessage" :> 
+                    ToneAr`WebSocketLink`FileScope`Client`Private`sendMessage$\
+66121|>["GetMessage"]]; Null]; <|
+                    "Type" -> "WebSocketClient", "UUID" -> 
+                    "e2c98b69-b705-4e69-b0ab-e7792e657a57"["UUID"], "Socket" -> 
+                    ProcessObject[<|
+                    "ManagedProcess" -> True, "UID" -> 20, "PID" -> 3662402, 
+                    "PPID" -> 3573598, "Program" -> "openssl", "Path" -> 
+                    "/usr/bin/openssl", "User" -> "tonya", "StartTime" -> 
+                    DateObject[{2026, 1, 19, 2, 40, 10}, "Instant", 
+                    "Gregorian", 0.]|>], "Address" -> 
+                    "wss://echo.websocket.org", "Messages" -> 
+                    DataStructure[
+                    "RingBuffer", {"Data" -> {}, "Capacity" -> 1000}], 
+                    "GetMessage" :> If[
+                    SocketReadyQ[
+                    ToneAr`WebSocketLink`FileScope`Client`Private`server$\
+66121], 
+                    ToneAr`WebSocketLink`WebSocketFrameImport[
+                    Composition[ByteArray, BinaryReadList][
+                    ToneAr`WebSocketLink`FileScope`Client`Private`server$\
+66121]], Null], "SendMessage" :> 
+                    ToneAr`WebSocketLink`FileScope`Client`Private`sendMessage$\
+66121|>["Messages"]["Length"], StandardForm]], "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  ToneAr`WebSocketLink`WebSocketObject[<|
+   "Type" -> "WebSocketClient", "UUID" -> 
+    "e2c98b69-b705-4e69-b0ab-e7792e657a57"["UUID"], "Socket" -> 
+    ProcessObject[<|
+      "ManagedProcess" -> True, "UID" -> 20, "PID" -> 3662402, "PPID" -> 
+       3573598, "Program" -> "openssl", "Path" -> "/usr/bin/openssl", "User" -> 
+       "tonya", "StartTime" -> 
+       DateObject[{2026, 1, 19, 2, 40, 10}, "Instant", "Gregorian", 0.]|>], 
+    "Address" -> "wss://echo.websocket.org", "Messages" -> 
+    DataStructure["RingBuffer", {"Data" -> {}, "Capacity" -> 1000}], 
+    "GetMessage" :> If[
+      SocketReadyQ[
+      ToneAr`WebSocketLink`FileScope`Client`Private`server$66121], 
+      ToneAr`WebSocketLink`WebSocketFrameImport[
+       Composition[ByteArray, BinaryReadList][
+       ToneAr`WebSocketLink`FileScope`Client`Private`server$66121]], Null], 
+    "SendMessage" :> 
+    ToneAr`WebSocketLink`FileScope`Client`Private`sendMessage$66121|>],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{{3.9777757280471907`*^9, 3.977775762027755*^9}, 
+   3.9777758410387173`*^9, {3.977776159675692*^9, 3.977776172960107*^9}, 
+   3.977776343912574*^9, 3.9777770674395237`*^9, {3.977777258264786*^9, 
+   3.977777273115698*^9}, 3.977779212017288*^9},
+ CellLabel->"Out[83]=",
+ CellID->1196153611,ExpressionUUID->"a9ab5888-7193-4891-91e3-97ea0625351d"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"WriteString", "[", 
+  RowBox[{"%83", ",", " ", "\"\<Hi\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.977779224967914*^9, 3.977779237606827*^9}},
+ CellLabel->"In[84]:=",
+ CellID->1010826538,ExpressionUUID->"4297b9f0-a599-48f0-b963-9f4dda4db545"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"%83", "[", "\"\<GetMessage\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.977779244153008*^9, 3.977779249926323*^9}},
+ CellLabel->"In[85]:=",
+ CellID->1620757404,ExpressionUUID->"1a055ea3-ad98-4abe-aab8-12637d19bbcd"],
+
+Cell[BoxData[
+ RowBox[{"If", "[", 
+  RowBox[{
+   InterpretationBox[
+    RowBox[{
+     TagBox["Failure",
+      "SummaryHead"], "[", 
+     DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = 
+      "Ready"}, 
+      TemplateBox[{
+        PaneSelectorBox[{False -> GridBox[{{
+              FrameBox[
+               StyleBox["\"\[WarningSign]\"", 
+                Directive["Message", 35], StripOnInput -> False], 
+               ContentPadding -> False, FrameStyle -> None, 
+               FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+              GridBox[{{
+                 RowBox[{
+                   TagBox[
+                    
+                    TemplateBox[{"\"MessageTemplate\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    TagBox[
+                    StyleBox[
+                    RowBox[{"SocketReadyQ", "::", "notsocket"}], 
+                    "MessageName"], HoldForm], "SummaryItem"]}]}, {
+                 RowBox[{
+                   TagBox[
+                    
+                    TemplateBox[{"\"MessageParameters\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    TagBox[
+                    RowBox[{"{", 
+                    InterpretationBox[
+                    RowBox[{
+                    TagBox["ProcessObject", "SummaryHead"], "[", 
+                    
+                    DynamicModuleBox[{
+                    Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+                    TemplateBox[{
+                    PaneSelectorBox[{False -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxOpener"]], 
+                    ButtonFunction :> (Typeset`open$$ = True), Appearance -> 
+                    None, BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 
+                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], 
+                    GridBox[{{
+                    RowBox[{
+                    TagBox["\"Program: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"openssl\"", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"PID: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["3662402", "SummaryItem"]}]}}, 
+                    GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                    AutoDelete -> False, 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {
+                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                    BaseStyle -> {ShowStringCharacters -> False, NumberMarks -> 
+                    False, PrintPrecision -> 3, ShowSyntaxStyles -> False}]}},
+                     GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Top}}}, AutoDelete -> 
+                    False, GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    BaselinePosition -> {1, 1}], True -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxCloser"]], 
+                    ButtonFunction :> (Typeset`open$$ = False), Appearance -> 
+                    None, BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 
+                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], 
+                    GridBox[{{
+                    RowBox[{
+                    TagBox["\"Program: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"openssl\"", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"PID: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["3662402", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Parent PID: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["3573598", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"User: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"tonya\"", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Path: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"/usr/bin/openssl\"", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Memory:\"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"11.116544`", "\"MB\"", "megabytes", 
+                    "\"Megabytes\""}, "Quantity", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Threads: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["1", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Start Time: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    TemplateBox[{
+                    RowBox[{"\"Mon 19 Jan 2026 02:40:10\"", 
+                    StyleBox["\"GMT\"", "TimeZoneLabel"]}], 
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    
+                    RowBox[{"2026", ",", "1", ",", "19", ",", "2", ",", "40", 
+                    ",", "10"}], "}"}], ",", "\"Instant\"", ",", 
+                    "\"Gregorian\"", ",", "0.`"}], "]"}]}, "DateObject", 
+                    Editable -> False], "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"System Time: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"0.0100000000000000002`5.", "\"s\"", 
+                    "seconds", "\"Seconds\""}, "Quantity", SyntaxForm -> Mod],
+                     "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"User Time: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"0", "\"s\"", "seconds", "\"Seconds\""}, 
+                    "Quantity", SyntaxForm -> Mod], "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Real Time: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"40.`5.", "\"s\"", "seconds", "\"Seconds\""},
+                     "Quantity", SyntaxForm -> Mod], "SummaryItem"]}]}}, 
+                    GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                    AutoDelete -> False, 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {
+                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                    BaseStyle -> {ShowStringCharacters -> False, NumberMarks -> 
+                    False, PrintPrecision -> 3, ShowSyntaxStyles -> False}]}},
+                     GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Top}}}, AutoDelete -> 
+                    False, GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    BaselinePosition -> {1, 1}]}, 
+                    Dynamic[Typeset`open$$], ImageSize -> Automatic]}, 
+                    "SummaryPanel"], DynamicModuleValues :> {}], "]"}], 
+                    
+                    ProcessObject[<|
+                    "ManagedProcess" -> True, "UID" -> 20, "PID" -> 3662402, 
+                    "PPID" -> 3573598, "Program" -> "openssl", "Path" -> 
+                    "/usr/bin/openssl", "User" -> "tonya", "StartTime" -> 
+                    DateObject[{2026, 1, 19, 2, 40, 10}, "Instant", 
+                    "Gregorian", 0.]|>], Selectable -> False, Editable -> 
+                    False, SelectWithContents -> True], "}"}], HoldForm], 
+                    "SummaryItem"]}]}, {
+                 RowBox[{
+                   TagBox[
+                    TemplateBox[{"\"Tag\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                   TagBox[
+                    TagBox["\"ZeroMQLink\"", HoldForm], "SummaryItem"]}]}}, 
+               GridBoxAlignment -> {
+                "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+               False, GridBoxItemSize -> {
+                "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+               GridBoxSpacings -> {
+                "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+               BaseStyle -> {
+                ShowStringCharacters -> False, NumberMarks -> False, 
+                 PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+            GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+            AutoDelete -> False, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+            BaselinePosition -> {1, 1}], True -> GridBox[{{
+              FrameBox[
+               StyleBox["\"\[WarningSign]\"", 
+                Directive["Message", 35], StripOnInput -> False], 
+               ContentPadding -> False, FrameStyle -> None, 
+               FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+              GridBox[{{
+                 RowBox[{
+                   TagBox[
+                    
+                    TemplateBox[{"\"MessageTemplate\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    TagBox[
+                    StyleBox[
+                    RowBox[{"SocketReadyQ", "::", "notsocket"}], 
+                    "MessageName"], HoldForm], "SummaryItem"]}]}, {
+                 RowBox[{
+                   TagBox[
+                    
+                    TemplateBox[{"\"MessageParameters\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    TagBox[
+                    RowBox[{"{", 
+                    InterpretationBox[
+                    RowBox[{
+                    TagBox["ProcessObject", "SummaryHead"], "[", 
+                    
+                    DynamicModuleBox[{
+                    Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+                    TemplateBox[{
+                    PaneSelectorBox[{False -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxOpener"]], 
+                    ButtonFunction :> (Typeset`open$$ = True), Appearance -> 
+                    None, BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 
+                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], 
+                    GridBox[{{
+                    RowBox[{
+                    TagBox["\"Program: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"openssl\"", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"PID: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["3662402", "SummaryItem"]}]}}, 
+                    GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                    AutoDelete -> False, 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {
+                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                    BaseStyle -> {ShowStringCharacters -> False, NumberMarks -> 
+                    False, PrintPrecision -> 3, ShowSyntaxStyles -> False}]}},
+                     GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Top}}}, AutoDelete -> 
+                    False, GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    BaselinePosition -> {1, 1}], True -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxCloser"]], 
+                    ButtonFunction :> (Typeset`open$$ = False), Appearance -> 
+                    None, BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 
+                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], 
+                    GridBox[{{
+                    RowBox[{
+                    TagBox["\"Program: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"openssl\"", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"PID: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["3662402", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Parent PID: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["3573598", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"User: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"tonya\"", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Path: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"/usr/bin/openssl\"", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Memory:\"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"11.116544`", "\"MB\"", "megabytes", 
+                    "\"Megabytes\""}, "Quantity", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Threads: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["1", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Start Time: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    TemplateBox[{
+                    RowBox[{"\"Mon 19 Jan 2026 02:40:10\"", 
+                    StyleBox["\"GMT\"", "TimeZoneLabel"]}], 
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    
+                    RowBox[{"2026", ",", "1", ",", "19", ",", "2", ",", "40", 
+                    ",", "10"}], "}"}], ",", "\"Instant\"", ",", 
+                    "\"Gregorian\"", ",", "0.`"}], "]"}]}, "DateObject", 
+                    Editable -> False], "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"System Time: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"0.0100000000000000002`5.", "\"s\"", 
+                    "seconds", "\"Seconds\""}, "Quantity", SyntaxForm -> Mod],
+                     "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"User Time: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"0", "\"s\"", "seconds", "\"Seconds\""}, 
+                    "Quantity", SyntaxForm -> Mod], "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Real Time: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"40.`5.", "\"s\"", "seconds", "\"Seconds\""},
+                     "Quantity", SyntaxForm -> Mod], "SummaryItem"]}]}}, 
+                    GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                    AutoDelete -> False, 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {
+                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                    BaseStyle -> {ShowStringCharacters -> False, NumberMarks -> 
+                    False, PrintPrecision -> 3, ShowSyntaxStyles -> False}]}},
+                     GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Top}}}, AutoDelete -> 
+                    False, GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    BaselinePosition -> {1, 1}]}, 
+                    Dynamic[Typeset`open$$], ImageSize -> Automatic]}, 
+                    "SummaryPanel"], DynamicModuleValues :> {}], "]"}], 
+                    
+                    ProcessObject[<|
+                    "ManagedProcess" -> True, "UID" -> 20, "PID" -> 3662402, 
+                    "PPID" -> 3573598, "Program" -> "openssl", "Path" -> 
+                    "/usr/bin/openssl", "User" -> "tonya", "StartTime" -> 
+                    DateObject[{2026, 1, 19, 2, 40, 10}, "Instant", 
+                    "Gregorian", 0.]|>], Selectable -> False, Editable -> 
+                    False, SelectWithContents -> True], "}"}], HoldForm], 
+                    "SummaryItem"]}]}, {
+                 RowBox[{
+                   TagBox[
+                    TemplateBox[{"\"Tag\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                   TagBox[
+                    TagBox["\"ZeroMQLink\"", HoldForm], "SummaryItem"]}]}}, 
+               GridBoxAlignment -> {
+                "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+               False, GridBoxItemSize -> {
+                "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+               GridBoxSpacings -> {
+                "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+               BaseStyle -> {
+                ShowStringCharacters -> False, NumberMarks -> False, 
+                 PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+            GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+            AutoDelete -> False, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+            BaselinePosition -> {1, 1}]}, 
+         Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+       "SummaryPanel"],
+      DynamicModuleValues:>{}], "]"}],
+    Failure[
+    "ZeroMQLink", <|
+     "MessageTemplate" :> MessageName[SocketReadyQ, "notsocket"], 
+      "MessageParameters" -> {
+        ProcessObject[<|
+         "ManagedProcess" -> True, "UID" -> 20, "PID" -> 3662402, "PPID" -> 
+          3573598, "Program" -> "openssl", "Path" -> "/usr/bin/openssl", 
+          "User" -> "tonya", "StartTime" -> 
+          DateObject[{2026, 1, 19, 2, 40, 10}, "Instant", "Gregorian", 
+            0.]|>]}|>],
+    Editable->False,
+    SelectWithContents->True,
+    Selectable->False], ",", 
+   RowBox[{"WebSocketFrameImport", "[", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"ByteArray", "@*", "BinaryReadList"}], ")"}], "[", 
+     "ToneAr`WebSocketLink`FileScope`Client`Private`server$66121", "]"}], 
+    "]"}], ",", "Null"}], "]"}]], "Output",
+ CellChangeTimes->{3.977779250205316*^9},
+ CellLabel->"Out[85]=",
+ CellID->303719229,ExpressionUUID->"74f9201c-8a12-42b0-8bae-5b0df2eee05b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"StringReplace", "[", "\n", "\t", 
+  RowBox[{"tmp", ",", "\n", "\t", 
+   RowBox[{"{", "\n", "\t\t", 
+    RowBox[{
+     RowBox[{"___", " ", "~~", "\"\<---\\n\>\"", "~~", " ", 
+      RowBox[{"a", ":", " ", 
+       RowBox[{"(", 
+        RowBox[{"\"\<HTTP\>\"", " ", "~~", " ", "___", " ", "~~", " ", "CRLF",
+          " ", "~~", " ", "CRLF"}], ")"}]}]}], " ", ":>", " ", "a"}], "\n", 
+    "\t", "}"}]}], "\n", "]"}]], "Input",
+ CellChangeTimes->{{3.9777775524101477`*^9, 3.977777572782922*^9}},
+ CellLabel->"In[80]:=",
+ CellID->1117833759,ExpressionUUID->"ff4d4745-c3ae-413c-9304-cdc7920fc5c0"],
+
+Cell[BoxData["\<\"HTTP/1.1 101 Switching Protocols\\r\\nupgrade: websocket\\r\
+\\nconnection: Upgrade\\r\\nsec-websocket-accept: \
+PbypX4mOTJMT6YJk82VS/eFtv8Q=\\r\\ndate: Mon, 19 Jan 2026 02:04:40 \
+GMT\\r\\nserver: Fly/970f920f7 (2026-01-16)\\r\\nvia: 1.1 \
+fly.io\\r\\nfly-request-id: 01KF9ZYGS038CCJQAVWMM79ZPD-lhr\\r\\n\\r\\n\"\>"], \
+"Output",
+ CellChangeTimes->{{3.977777558862815*^9, 3.977777573885808*^9}},
+ CellLabel->"Out[80]=",
+ CellID->1468863032,ExpressionUUID->"57f6174c-b4da-4c59-babf-5bd88ebc7dc3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"tmp", "//", "HTTPResponse"}]], "Input",
+ CellChangeTimes->{{3.977777145914332*^9, 3.97777715845851*^9}},
+ CellLabel->"(Dialog) In[69]:=",
+ CellID->822076725,ExpressionUUID->"7bfb17fe-cd80-43d7-b62e-f1cd68de6fdb"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["HTTPResponse",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            GraphicsBox[{
+              RGBColor[0, 
+               NCache[
+                Rational[2, 3], 0.6666666666666666], 0], 
+              DiskBox[{0, 0}], 
+              InsetBox[
+               FormBox[
+                StyleBox["\"200\"", 
+                 Directive[10, 
+                  GrayLevel[1], Bold], StripOnInput -> False], 
+                TraditionalForm], 
+               Scaled[{0.53, 0.48}]]}, ImageSize -> 
+             Dynamic[{
+               Automatic, (3 CurrentValue["FontCapHeight"])/
+                AbsoluteCurrentValue[Magnification]}], Background -> None], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Status: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"OK\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Content type: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"text/html;charset=UTF-8\"", "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            GraphicsBox[{
+              RGBColor[0, 
+               NCache[
+                Rational[2, 3], 0.6666666666666666], 0], 
+              DiskBox[{0, 0}], 
+              InsetBox[
+               FormBox[
+                StyleBox["\"200\"", 
+                 Directive[10, 
+                  GrayLevel[1], Bold], StripOnInput -> False], 
+                TraditionalForm], 
+               Scaled[{0.53, 0.48}]]}, ImageSize -> 
+             Dynamic[{
+               Automatic, (3 CurrentValue["FontCapHeight"])/
+                AbsoluteCurrentValue[Magnification]}], Background -> None], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Status: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"OK\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Content type: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"text/html;charset=UTF-8\"", "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  HTTPResponse[
+   ByteArray[CompressedData["
+1:eJyFVluzqjoS3vNK1foPmafZu1yuBYjXU+shCQFRQRG84MsqhIgoAgKK+OtP
+0H2b2qdmKCgh6U5/X3ebL//eJvPtv758+dLgvnzBU8Mg2CbyV/55tb5xzWaT
+wzQrwl3ouQUF3t4NYw7wIB9g44N6++StpNs88Y60eEuygAMAhAP8sbBewfRj
+Qov/5IDEXlalxStgHqRbW7iD2Zg4A0DwK/iaZuGJiu3OVfj2F8jDwI2CAaCe
+n7vNMiz2TWsIWz2pdrsOjKRAdJdkdABk6gGhBcTWQGwP2h0g8mIbqLr9F2BG
+cFfQbAB0N/vNpl3bdGobDgg1gf+D8hcPLWbLxbQAFvUuWVhUYE5z6mbeHqhZ
+ckkfTpo1V8E8SQqwFv4gmVMvZSyy3znme5fRXjGOcwt+Dx8m8R9Mv7Pg+cHj
+rllI/8hUrJm2++yubboPpnUBLZpdaQa8X3Wsh5tNRFTNAJjMbU3RMLTJY5TT
+NU0+2RjDWyeApYZgoFkouvVLJbRGidLh7cQ8JHd5JlWGDhMV47Nq6VIfQV3W
+Ze3G4TscocBYIujYMFra+twpFejIS9Mck1LQN2sz9iqkbE9GRdeI1828xOZj
+XiblSOGMO6RKyVeGTSrd1iv9rgmGvXEfYwd4/zW2dHXE39Q73DwD6jY5LQ+c
+q/YuvrgMPbF/cMUlPzn1q80dbXSkq6h6woUB+QkdlmQIeQ0ixTblpTPi0h2v
++GRF0pHrJ5uzMzqZoys8SJswdhs3vJsdvJTv62siebmzKrNlte2IetK97t1U
+8y2Ha9jxUN2iRfdw2Cyz6SEItJglFmt3OK2hDs0egrseYZAxkmA5rPnP+Qih
+R640blw6CJmLIYPGYOYqNBcKKnWsw1KFwsInJUHvpcm+fzpPmTNRJqv2vbE7
+c6NkvYFFct/YxprOd26jUax11Hs4a6Xp6MiFyrjNersaDhdWsO2fw/YK8Wh4
+wDHEkGO1/C0yQQg75UiGIQqCDAVEQaZXwsRZucM578nJdSIuWpPT8bJVlxen
+pV24bWsUT+7Qf/CdE6Ic4CLYjyJH3F8nsR85sXF1xCLycfvqnbySlA8aAYJl
+iQ9Q41CwiQOzZB1IysmT4+4HigTjYJg43n9H139Gr4NzkzthtTeqrcza2cxV
+HNZ0TCTER4ygRoJdyZ4j7JdIgKo5v6nVkVyqOJxXIQwlyF3HxWwMd4vhYRGf
+G1lDMGejndcqIYTodEsaR0djr6YMiVPOoRboVZl0G6tVTm98i4Q6d8a3Xiia
+eyznw4OfzhNhPRof9vt13Qvo3LaFWTItWmdJjezrUGnFEl8FsXtKisjRN/qR
+k1LshnfFg0MJpl4kHSNhPd9TvC9bTrhyJmtleQxbPDRnkxyJ+znv7FN15zFU
+6lY9dObcPYA1RgXiy7q9CQgs0VAnC6wpfTK34vYy7ux74VKyohF5P+um0esa
+HZU3FOl95mfSlTve5DMMCWyczRzbrdnQnfiJn98y9cj2qHjR6ifC2GH/SXER
+HZVCWelaiQNHGycb7X7gCQdLXXZNWG4C7QZH0RRe7ivZ66fDxq7tHaT0ymM5
+2VnW1JR654YsepMgnVBzY3YmR7ej6Jzw3l5hvmMtgi7rPLbI1Fxgu+dXGklR
+99pHO2sjVTJthKut9p6dZ0dbGe1burw5q+/a8cCNhWD1HlQNOFs4hRNlDfPj
+47kHEkP+cwfML9sD9YqPf5a4MM8vNPv4n/JRr2IkwItCGhe/77wAQ8DKS3OQ
+sxluRtnGzAQhDuMA+GFA82IAmOIxYfg15xaXjIKiSul3Yfys5YSZZMLnU0Se
+tjY9pWBMqwFYi+220H8FYrsFtmGRP2XAmoC9G/vM5UjZWw4y6vpMM5gybquC
+QWKToGT6VtAYCB2x/xzmljR7omfqNADT8ZMdLV+BPbGuwluLsQ7TPUMQ5vXQ
+JyTWJ0P1qWL987t8z7KkSLwkGvzw+aFK6WUbhR440qr2Zl41YM7eP5cCzCRn
+YQGTwm3o15BjGiRF+ADzxuHklGY0zx/IjKlBOHJL3fi3b1YFOJkZ4Icb9Tni
+ZlEFfLdwQcmyEDPJfhTjwbNiIVi+Y+AlPss3D74mx+c5aGjbs3fhTQACLwCL
+nU28fV21H8zyF+6SBplbe/1smBfOS+KY9dID0OI5/8Kx+jV/2jRdz6Mpq/ts
+W6Vr6TS1R7rdcUbHnri03qlSXHvmxwvH8NaHgSR+BUIfjNz4eZzhxQEvDSS+
+Vvt64TqpA6BE1Xu/y+/6Ir/rgq+1ZZMXmkLn2wt3Dd0BqHnsouotTF449tvM
+6PnCmq8Z+oyzMFb6G0e1+FYP45EJlytd7/Y3M7kZ7bMX7oX7G3XQLEA=
+    "]], <||>, CharacterEncoding -> "UTF-8"],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.977777161559422*^9},
+ CellLabel->"(Dialog) Out[69]=",
+ CellID->1255049265,ExpressionUUID->"b2a93611-a839-4abf-a8db-206596a44592"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Return", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.977777252411416*^9, 3.97777725378598*^9}},
+ CellLabel->"(Dialog) In[70]:=",
+ CellID->1426708183,ExpressionUUID->"c1324817-d464-4227-8679-c8829c7db940"],
+
+Cell[BoxData["tmp"], "Input",
+ CellLabel->"In[77]:=",
+ CellID->1075009257,ExpressionUUID->"f094845a-5582-4cd7-9292-df13099430b6"],
 
 Cell[BoxData[
  TagBox[
@@ -2428,7 +4876,7 @@ Cell[BoxData[
  TaggingRules->{},
  CellTags->"DefaultContent",
  CellID->717218889,ExpressionUUID->"d797f896-f653-4d33-83ce-858a75fd56b6"]
-}, Open  ]]
+}, Closed]]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -2596,6 +5044,7 @@ Cell[BoxData[
               
               TemplateBox[{
                "\"\[RightGuillemet]\"", 
+                
                 "https://resources.wolframcloud.com/PacletRepository/licenses/\
 MIT"}, "HyperlinkURL"]}, "RowDefault"], FontSize -> 12, Editable -> False, 
             StripOnInput -> False]},
@@ -2612,7 +5061,6 @@ MIT"}, "HyperlinkURL"]}, "RowDefault"], FontSize -> 12, Editable -> False,
               
               TemplateBox[{
                "\"\[RightGuillemet]\"", 
-                
                 "https://resources.wolframcloud.com/PacletRepository/licenses/\
 Apache-2.0"}, "HyperlinkURL"]}, "RowDefault"], FontSize -> 12, Editable -> 
             False, StripOnInput -> False]},
@@ -3842,8 +6290,8 @@ connection\n\[FilledSmallSquare] Send emails", "MoreInfoText"], Background ->
                    GrayLevel[0.95], FrameMargins -> 20, FrameStyle -> 
                    GrayLevel[0.9], RoundingRadius -> 5, ImageSize -> {
                     Scaled[0.65], Automatic}]], "MoreInfoText", Deletable -> 
-                 True, CellTags -> {
-                  "SectionMoreInfoDisclosuresExternalServices"}, 
+                 True, 
+                 CellTags -> {"SectionMoreInfoDisclosuresExternalServices"}, 
                  CellMargins -> {{66, 66}, {15, 15}}], 
                 HoldComplete[
                  EvaluationCell[]], "Click for more information"}, 
@@ -4434,8 +6882,8 @@ Cell["Additional information about limitations, issues, etc.", "Text",
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{903, 683.25},
-WindowMargins->{{Automatic, 179.25}, {Automatic, 120.75}},
+WindowSize->{886.5, 1029.75},
+WindowMargins->{{Automatic, 7.5}, {7.5, -91.5}},
 WindowTitle->"WebSocketLink | Definition Notebook",
 DockedCells->{
   Cell[
@@ -4451,281 +6899,9 @@ DockedCells->{
    CellFrameMargins -> {{0, 0}, {2, 2}}, CellFrame -> {{0, 0}, {1, 0}}, 
    CacheGraphics -> False, CellOpen -> Dynamic[
      CurrentValue[
-      EvaluationNotebook[], {TaggingRules, "ToolsOpen"}, True]]], 
-  Cell[
-   BoxData[
-    StyleBox[
-     TagBox[
-      GridBox[{{
-         OverlayBox[{
-           StyleBox[
-            TagBox[
-             DynamicModuleBox[{Typeset`var$$ = False}, 
-              InterpretationBox[
-               StyleBox[
-                PaneSelectorBox[{False -> GridBox[{{
-                    OpenerBox[
-                    Dynamic[Typeset`var$$], Appearance -> Automatic, Enabled -> 
-                    Automatic, AutoAction -> False, ContinuousAction -> 
-                    False], 
-                    StyleBox[
-                    DynamicBox[
-                    ToBoxes[
-                    DateString[
-                    TimeZoneConvert[
-                    DateObject[
-                    3.957738987473619`16.350022138293156*^9, TimeZone -> 
-                    0]], {"MonthName", " ", "DayShort", ", ", "Year", " ", 
-                    "Hour12Short", ":", "Minute", " ", "AMPMLowerCase"}], 
-                    StandardForm], SingleEvaluation -> True, Evaluator -> 
-                    "System"], FontSlant -> Italic, FontColor -> 
-                    GrayLevel[0.5], FontSize -> 0.9 Inherited, StripOnInput -> 
-                    False]}}, GridBoxAlignment -> {"Columns" -> {{Left}}}, 
-                    AutoDelete -> False, 
-                    GridBoxBackground -> {"Columns" -> {{Automatic}}}, 
-                    GridBoxItemSize -> {
-                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
-                    GridBoxSpacings -> {
-                    "Columns" -> {{0.2}}, "Rows" -> {{0.5}}}, 
-                    BaselinePosition -> {1, 1}], True -> GridBox[{{
-                    OpenerBox[
-                    Dynamic[Typeset`var$$], Appearance -> Automatic, Enabled -> 
-                    Automatic, AutoAction -> False, ContinuousAction -> 
-                    False], 
-                    StyleBox[
-                    DynamicBox[
-                    ToBoxes[
-                    DateString[
-                    TimeZoneConvert[
-                    DateObject[
-                    3.957738987473619`16.350022138293156*^9, TimeZone -> 
-                    0]], {"MonthName", " ", "DayShort", ", ", "Year", " ", 
-                    "Hour12Short", ":", "Minute", " ", "AMPMLowerCase"}], 
-                    StandardForm], SingleEvaluation -> True, Evaluator -> 
-                    "System"], FontSlant -> Italic, FontColor -> 
-                    GrayLevel[0.5], FontSize -> 0.9 Inherited, StripOnInput -> 
-                    False]}, {"", 
-                    PaneBox["\"\"", ImageMargins -> 0]}}, 
-                    GridBoxAlignment -> {"Columns" -> {{Left}}}, AutoDelete -> 
-                    False, GridBoxBackground -> {"Columns" -> {{Automatic}}}, 
-                    GridBoxItemSize -> {
-                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
-                    GridBoxSpacings -> {
-                    "Columns" -> {{0.2}}, "Rows" -> {{0.5}}}, 
-                    BaselinePosition -> {1, 1}]}, 
-                 Dynamic[
-                  TrueQ[Typeset`var$$]], Alignment -> Automatic, ImageSize -> 
-                 Automatic, ImageMargins -> 0, BaseStyle -> {}, 
-                 DefaultBaseStyle -> "OpenerView", BaselinePosition -> 
-                 Baseline], Deployed -> False, StripOnInput -> False], 
-               OpenerView[{
-                 Style[
-                  Dynamic[
-                   DateString[
-                    TimeZoneConvert[
-                    DateObject[
-                    3.957738987473619`16.350022138293156*^9, TimeZone -> 
-                    0]], {"MonthName", " ", "DayShort", ", ", "Year", " ", 
-                    "Hour12Short", ":", "Minute", " ", "AMPMLowerCase"}], 
-                   SingleEvaluation -> True, Evaluator -> "System"], 
-                  FontSlant -> Italic, FontColor -> GrayLevel[0.5], FontSize -> 
-                  0.9 Inherited], ""}, False]], DynamicModuleValues -> 
-              Automatic], Setting[#, {0}]& ], ShowContents -> False, 
-            StripOnInput -> False], 
-           StyleBox[
-            DynamicBox[
-             ToBoxes[
-              DateString[
-               TimeZoneConvert[
-                DateObject[
-                3.957738987473619`16.350022138293156*^9, TimeZone -> 0]], {
-               "MonthName", " ", "DayShort", ", ", "Year", " ", "Hour12Short",
-                 ":", "Minute", " ", "AMPMLowerCase"}], StandardForm], 
-             SingleEvaluation -> True, Evaluator -> "System"], FontSlant -> 
-            Italic, FontColor -> GrayLevel[0.5], FontSize -> 0.9 Inherited, 
-            StripOnInput -> False]}, Alignment -> {Right, Baseline}], 
-         "\"   \"", 
-         ItemBox[
-          StyleBox[
-          "\"Found 1 potential issue and 1 suggestion\"", LineBreakWithin -> 
-           Automatic, LineIndent -> 0, StripOnInput -> False], ItemSize -> 
-          Fit, StripOnInput -> False], 
-         StyleBox[
-          ActionMenuBox[
-           FrameBox[
-            TemplateBox[{
-              TagBox[
-               GridBox[{{
-                  TemplateBox[{
-                    TemplateBox[{
-                    PaneBox[
-                    TemplateBox[{
-                    RGBColor[1., 0.4627450980392157, 0.]}, "HintPodIconHint"],
-                     ImageSize -> {12, 12}, ImageSizeAction -> "ShrinkToFit", 
-                    BaselinePosition -> Scaled[0.1]], 
-                    TemplateBox[{1}, "Spacer1"], 
-                    StyleBox[
-                    "1", FontSize -> 14, FontWeight -> Plain, FontColor -> 
-                    GrayLevel[0.25], FontFamily -> "Source Sans Pro", 
-                    StripOnInput -> False]}, "RowDefault"], 
-                    "\"Potential issues found\""}, "PrettyTooltipTemplate"], 
-                  TemplateBox[{
-                    TemplateBox[{
-                    PaneBox[
-                    TemplateBox[{
-                    RGBColor[
-                    0.49019607843137253`, 0.49019607843137253`, 
-                    0.49019607843137253`]}, "HintPodIconHint"], 
-                    ImageSize -> {12, 12}, ImageSizeAction -> "ShrinkToFit", 
-                    BaselinePosition -> Scaled[0.1]], 
-                    TemplateBox[{1}, "Spacer1"], 
-                    StyleBox[
-                    "1", FontSize -> 14, FontWeight -> Plain, FontColor -> 
-                    GrayLevel[0.25], FontFamily -> "Source Sans Pro", 
-                    StripOnInput -> False]}, "RowDefault"], 
-                    "\"Suggestions found\""}, "PrettyTooltipTemplate"]}}, 
-                AutoDelete -> False, 
-                GridBoxItemSize -> {
-                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
-               "Grid"], 
-              GraphicsBox[{
-                GrayLevel[0.4], 
-                AbsoluteThickness[2], 
-                CapForm["Round"], 
-                LineBox[{{-1, 0}, {0, -1}, {1, 0}}]}, {
-               ImageSize -> {13, 9}, BaselinePosition -> Scaled[0.2], 
-                ImagePadding -> {{3, 3}, {3, 3}}, AspectRatio -> Full}]}, 
-             "RowDefault"], DefaultBaseStyle -> "HighlightedInput", 
-            StripOnInput -> False, ImageSize -> {Automatic, 19}, 
-            BaselinePosition -> Baseline, Background -> GrayLevel[1], 
-            FrameStyle -> Dynamic[
-              If[
-               CurrentValue["MouseOver"], 
-               Hue[0.55, 0.82, 0.87], 
-               GrayLevel[0.8]]], FrameMargins -> {{4, 4}, {1, 1}}, 
-            Alignment -> {Center, Baseline}], {TemplateBox[{
-               PaneBox[
-                TemplateBox[{
-                  RGBColor[
-                  0.49019607843137253`, 0.49019607843137253`, 
-                   0.49019607843137253`]}, "HintPodIconHint"], 
-                ImageSize -> {10, 10}, ImageSizeAction -> "ShrinkToFit", 
-                BaselinePosition -> Scaled[0.1]], "\" \"", 
-               "\"New submissions should typically be version 1.0.0\""}, 
-              "RowDefault"] :> DefinitionNotebookClient`WithCurrentNotebook[
-              EvaluationNotebook[], 
-              DefinitionNotebookClient`LoadDefinitionNotebook[
-               "Paclet", DefinitionNotebookClient`$CurrentNotebook]; 
-              DefinitionNotebookClient`PackageScope`setHint[
-               "Suggestion", "Paclet", 
-                DefinitionNotebookClient`$CurrentNotebook, 
-                "2ad51c49-5765-4292-866c-838ff9d3cabb", 594920217, 
-                "InvalidFirstVersion", <|
-                "Current" -> "0.5.0", "Published" -> None, 
-                 "Selection" -> ("Version" -> "0.5.0"), "PublisherID" -> 
-                 "TonyAristeidou", "PacletDirectory" -> 
-                 File["/home/tonya/Working/resource-projects/resource-paclets/\
-resource-paclet-WEBSOCKET-LINK"], "ResourceName" -> "ToneAr/WebSocketLink"|>]; 
-              DefinitionNotebookClient`PackageScope`seekAfter[594920217]; 
-              Null], TemplateBox[{
-               PaneBox[
-                TemplateBox[{
-                  RGBColor[1., 0.4627450980392157, 0.]}, "HintPodIconHint"], 
-                ImageSize -> {10, 10}, ImageSizeAction -> "ShrinkToFit", 
-                BaselinePosition -> Scaled[0.1]], "\" \"", 
-               "\"The paclet publisher ID (ToneAr) does not match the current \
-publisher ID (TonyAristeidou)\""}, "RowDefault"] :> 
-            DefinitionNotebookClient`WithCurrentNotebook[
-              EvaluationNotebook[], 
-              DefinitionNotebookClient`LoadDefinitionNotebook[
-               "Paclet", DefinitionNotebookClient`$CurrentNotebook]; 
-              DefinitionNotebookClient`PackageScope`setHint[
-               "Warning", "Paclet", DefinitionNotebookClient`$CurrentNotebook,
-                 "9b2458c4-fbc2-4b5d-aa29-55be5babe330", 594920217, 
-                "NotCurrentPublisherID", <|
-                "Current" -> "TonyAristeidou", "PublisherID" -> "ToneAr", 
-                 "PublisherSlug" -> "ToneAr", "None" -> None, 
-                 "PacletDirectory" -> 
-                 "/home/tonya/Working/resource-projects/resource-paclets/\
-resource-paclet-WEBSOCKET-LINK"|>]; 
-              DefinitionNotebookClient`PackageScope`seekAfter[594920217]; 
-              Null]}, Appearance -> None], "BoxID" -> "WarningCountButton", 
-          StripOnInput -> False], 
-         TagBox[
-          ButtonBox[
-           TagBox[
-            PaneSelectorBox[{False -> GraphicsBox[{
-                 GrayLevel[
-                  NCache[
-                   Rational[64, 85], 0.7529411764705882]], 
-                 
-                 PolygonBox[{{-0.282842712474619, -0.42426406871192845`}, \
-{-0.42426406871192845`, -0.282842712474619}, {0.282842712474619, 
-                  0.42426406871192845`}, {0.42426406871192845`, 
-                  0.282842712474619}}], 
-                 
-                 PolygonBox[{{0.42426406871192845`, -0.282842712474619}, {
-                  0.282842712474619, -0.42426406871192845`}, \
-{-0.42426406871192845`, 0.282842712474619}, {-0.282842712474619, 
-                  0.42426406871192845`}}]}, ImageSize -> 18, PlotRangePadding -> 
-                0, PlotRange -> 0.7, Background -> None], True -> GraphicsBox[{
-                 GrayLevel[
-                  NCache[
-                   Rational[128, 255], 0.5019607843137255]], 
-                 
-                 PolygonBox[{{-0.282842712474619, -0.42426406871192845`}, \
-{-0.42426406871192845`, -0.282842712474619}, {0.282842712474619, 
-                  0.42426406871192845`}, {0.42426406871192845`, 
-                  0.282842712474619}}], 
-                 
-                 PolygonBox[{{0.42426406871192845`, -0.282842712474619}, {
-                  0.282842712474619, -0.42426406871192845`}, \
-{-0.42426406871192845`, 0.282842712474619}, {-0.282842712474619, 
-                  0.42426406871192845`}}]}, ImageSize -> 18, PlotRangePadding -> 
-                0, PlotRange -> 0.7, Background -> None]}, 
-             Dynamic[
-              CurrentValue["MouseOver"]], ImageSize -> Automatic, 
-             FrameMargins -> 0], 
-            MouseAppearanceTag["LinkHand"]], ButtonFunction :> 
-           With[{DefinitionNotebookClient`Stripes`PackagePrivate`nbo$ = 
-              EvaluationNotebook[]}, 
-             CurrentValue[
-              DefinitionNotebookClient`Stripes`PackagePrivate`nbo$, 
-               DockedCells] = If[
-               TrueQ[
-                MemberQ[
-                 CurrentValue["ModifierKeys"], "Control"]], 
-               DeleteCases[
-                Flatten[{
-                  CurrentValue[
-                  DefinitionNotebookClient`Stripes`PackagePrivate`nbo$, 
-                   DockedCells]}], 
-                Cell[
-                 Blank[], "StripeCell", 
-                 BlankNullSequence[]]], 
-               DeleteCases[
-                Flatten[{
-                  CurrentValue[
-                  DefinitionNotebookClient`Stripes`PackagePrivate`nbo$, 
-                   DockedCells]}], 
-                Condition[
-                 Pattern[DefinitionNotebookClient`Stripes`PackagePrivate`c$, 
-                  Blank[Cell]], 
-                 Not[
-                  FreeQ[
-                  DefinitionNotebookClient`Stripes`PackagePrivate`c$, 
-                   "22df0c8e-613b-4112-807d-6f8b1ac9db57"]]]]]], Appearance -> 
-           None, BoxID -> "22df0c8e-613b-4112-807d-6f8b1ac9db57", Evaluator -> 
-           Automatic, Method -> "Preemptive"], 
-          MouseAppearanceTag["LinkHand"]]}}, 
-       GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}, 
-       AutoDelete -> False, 
-       GridBoxItemSize -> {
-        "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"], 
-     "Text", FontSize -> 12, FontColor -> GrayLevel[0.25], StripOnInput -> 
-     False]], "StripeCell", CellFrameMargins -> {{20, 5}, {2, 2}}, 
-   CellFrame -> {{0, 0}, {1, 0}}, CellFrameColor -> GrayLevel[0.75]]},
-TaggingRules->{
+      EvaluationNotebook[], {TaggingRules, "ToolsOpen"}, True]]]},
+LightDark->"Dark",
+TaggingRules-><|
  "ResourceType" -> "Paclet", "ResourceCreateNotebook" -> True, 
   "TemplateVersion" -> "2023.03.03", "CreationTimestamp" -> 
   3.955708220333013`16.34979923897775*^9, "UpdatedTimestamp" -> 
@@ -4759,16 +6935,17 @@ sS3qvjJ5fCOoLU/EXy0ehgqx/CmuL6Pz9Qh6zwr64bP8nSn6hboEAP362X81KZ2fp4FoF/\
 7oQ5ikkezHpKfcsLNS/K8RfTplXxS0rxX8v54//VoAvRfILkt2/\
 Fu6DuJJG2H9mK2QZ3X1Y8rjKVdsLU11Qbnfn/Mae/TiO1RZHs2bny+6Vwq5Sfi8TnHKi+1+K4NOh"]\
 ]], "DefinitionNotebookFramework" -> "DefinitionNotebookClient", 
-  "RuntimeConfiguration" -> {
+  "RuntimeConfiguration" -> <|
    "Contexts" -> {"PacletResource`", "PacletResource`DefinitionNotebook`"}, 
     "DefaultContentMethod" -> "Tagged", "HintPods" -> True, "LoadingMethod" -> 
     "Paclet", "PacletName" -> "PacletResource", "SourceID" -> 
-    "8f99c2b0ee5e9f24d331c183562e905b4bbb1a6f"}, "ToolsOpen" -> True, 
-  "StatusMessage" -> "", "SubmissionReviewData" -> {"Review" -> False}, 
-  "AutoUpdate" -> True},
+    "8f99c2b0ee5e9f24d331c183562e905b4bbb1a6f"|>, "ToolsOpen" -> True, 
+  "StatusMessage" -> "", "SubmissionReviewData" -> <|"Review" -> False|>, 
+  "AutoUpdate" -> True|>,
 CreateCellID->True,
 DynamicEvaluationTimeout->60,
-FrontEndVersion->"14.2 for Linux x86 (64-bit) (March 16, 2025)",
+Magnification:>0.9 Inherited,
+FrontEndVersion->"15.0 for Linux x86 (64-bit) (November 16, 2025)",
 StyleDefinitions->Notebook[{
    Cell[
     StyleData[StyleDefinitions -> "Default.nb"]], 
@@ -5114,7 +7291,6 @@ VX/aMEEQzrerjFhhelYAzofFB3r8AgApYdcE
                     15.75, 17.25}, {15.75, 5.25}, {6.75, 5.25}, {6.75, 
                     17.25}, {8.25, 17.25}, {8.25, 18.}}, {{9.75, 17.25}, {
                     12.75, 17.25}, {12.75, 16.5}, {9.75, 16.5}}}], 
-                    
                     FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2,
                      0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 
                     0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{8.25, 
@@ -6937,7 +9113,6 @@ h/Fh4QMzDxZ+6PEFAOibv7E=
                 FaceForm[{
                   RGBColor[0.46275, 0.36078, 0.61176], 
                   Opacity[1.]}], 
-                
                 FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
                  0}}}, {{{269.93, 350.12}, {269.93, 275.32}, {205.16, 
                  237.93}, {205.16, 312.72}, {269.93, 350.12}}}]}, {
@@ -8823,6 +10998,7 @@ Mn8D1T+bLHr4qqKuQ8bv8LBZfwwdhGSmFwY76zqghzcABAZ3MA==
           FaceForm[
            GrayLevel[1.]]], 
          StyleBox[{
+           
            FilledCurveBox[{{{0, 2, 0}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {0, 1,
              0}, {0, 1, 0}}}, {{{13., 18.}, {13., 14.5}, {12.99992, 
             14.367367999999999`}, {13.052580000000003`, 14.240146}, {
@@ -10306,18 +12482,18 @@ FpG1n6WfSeLb27c2Volz+/dhBxtxrIPL2Ar/oQtZg16JsQ879Gyxx3vEuygx
         ReleaseHold[#3], 
         Appearance -> {
          "Default" -> 
-          Image[RawArray["UnsignedInteger8",{{{255, 255, 255, 255}, {0, 0, 0, 
-             255}, {255, 255, 255, 255}}, {{0, 0, 0, 255}, {0, 0, 0, 0}, {0, 
+          Image[RawArray["UnsignedInteger8", {{{255, 255, 255, 255}, {0, 0, 0,
+              255}, {255, 255, 255, 255}}, {{0, 0, 0, 255}, {0, 0, 0, 0}, {0, 
              0, 0, 255}}, {{255, 255, 255, 255}, {0, 0, 0, 255}, {255, 255, 
              255, 255}}}], "Byte", ColorSpace -> "RGB", 
             ImageResolution -> {72, 72}, Interleaving -> True], "Hover" -> 
-          Image[RawArray["UnsignedInteger8",{{{255, 255, 255, 255}, {0, 0, 0, 
-             255}, {255, 255, 255, 255}}, {{0, 0, 0, 255}, {0, 0, 0, 0}, {0, 
+          Image[RawArray["UnsignedInteger8", {{{255, 255, 255, 255}, {0, 0, 0,
+              255}, {255, 255, 255, 255}}, {{0, 0, 0, 255}, {0, 0, 0, 0}, {0, 
              0, 0, 255}}, {{255, 255, 255, 255}, {0, 0, 0, 255}, {255, 255, 
              255, 255}}}], "Byte", ColorSpace -> "RGB", 
             ImageResolution -> {72, 72}, Interleaving -> True], "Pressed" -> 
-          Image[RawArray["UnsignedInteger8",{{{255, 255, 255, 255}, {0, 0, 0, 
-             255}, {255, 255, 255, 255}}, {{0, 0, 0, 255}, {0, 0, 0, 0}, {0, 
+          Image[RawArray["UnsignedInteger8", {{{255, 255, 255, 255}, {0, 0, 0,
+              255}, {255, 255, 255, 255}}, {{0, 0, 0, 255}, {0, 0, 0, 0}, {0, 
              0, 0, 255}}, {{255, 255, 255, 255}, {0, 0, 0, 255}, {255, 255, 
              255, 255}}}], "Byte", ColorSpace -> "RGB", 
             ImageResolution -> {72, 72}, Interleaving -> True]}, Method -> 
@@ -10340,18 +12516,18 @@ FpG1n6WfSeLb27c2Volz+/dhBxtxrIPL2Ar/oQtZg16JsQ879Gyxx3vEuygx
           GrayLevel[1.]}, "Highlighted"], ButtonFunction :> Null, 
         Appearance -> {
          "Default" -> 
-          Image[RawArray["UnsignedInteger8",{{{255, 255, 255, 255}, {0, 0, 0, 
-             255}, {255, 255, 255, 255}}, {{0, 0, 0, 255}, {0, 0, 0, 0}, {0, 
+          Image[RawArray["UnsignedInteger8", {{{255, 255, 255, 255}, {0, 0, 0,
+              255}, {255, 255, 255, 255}}, {{0, 0, 0, 255}, {0, 0, 0, 0}, {0, 
              0, 0, 255}}, {{255, 255, 255, 255}, {0, 0, 0, 255}, {255, 255, 
              255, 255}}}], "Byte", ColorSpace -> "RGB", 
             ImageResolution -> {72, 72}, Interleaving -> True], "Hover" -> 
-          Image[RawArray["UnsignedInteger8",{{{255, 255, 255, 255}, {0, 0, 0, 
-             255}, {255, 255, 255, 255}}, {{0, 0, 0, 255}, {0, 0, 0, 0}, {0, 
+          Image[RawArray["UnsignedInteger8", {{{255, 255, 255, 255}, {0, 0, 0,
+              255}, {255, 255, 255, 255}}, {{0, 0, 0, 255}, {0, 0, 0, 0}, {0, 
              0, 0, 255}}, {{255, 255, 255, 255}, {0, 0, 0, 255}, {255, 255, 
              255, 255}}}], "Byte", ColorSpace -> "RGB", 
             ImageResolution -> {72, 72}, Interleaving -> True], "Pressed" -> 
-          Image[RawArray["UnsignedInteger8",{{{255, 255, 255, 255}, {0, 0, 0, 
-             255}, {255, 255, 255, 255}}, {{0, 0, 0, 255}, {0, 0, 0, 0}, {0, 
+          Image[RawArray["UnsignedInteger8", {{{255, 255, 255, 255}, {0, 0, 0,
+              255}, {255, 255, 255, 255}}, {{0, 0, 0, 255}, {0, 0, 0, 0}, {0, 
              0, 0, 255}}, {{255, 255, 255, 255}, {0, 0, 0, 255}, {255, 255, 
              255, 255}}}], "Byte", ColorSpace -> "RGB", 
             ImageResolution -> {72, 72}, Interleaving -> True]}, Method -> 
@@ -11029,7 +13205,6 @@ later."]]]]],
                     With[{RSNB`nb$ = EvaluationNotebook[], 
                     RSNB`$cp$ = $ContextPath}, 
                     Quiet[
-                    
                     Block[{$ContextPath = RSNB`$cp$, 
                     ResourceSystemClient`$\
 AsyncronousResourceInformationUpdates = False, 
@@ -11044,8 +13219,8 @@ AsyncronousResourceInformationUpdates = False,
                     DefinitionNotebookClient`$ButtonCodeID = 
                     341138948110023950; 
                     DefinitionNotebookClient`CheckForUpdates[RSNB`nb$, 
-                    ReleaseHold[DefinitionNotebookClient`$ButtonCode = 
-                    HoldForm[
+                    ReleaseHold[
+                    DefinitionNotebookClient`$ButtonCode = HoldForm[
                     
                     PacletResource`DefinitionNotebook`\
 RefreshNotebookPacletFiles[RSNB`nbo, RSNB`cell]]]], 
@@ -11510,7 +13685,6 @@ directory.\""}, "PacletDirectoryChooserErrorTemplate"]], "AttachedMessage"],
                     "PacletDirectoryChooserErrorTemplate"]], 
                     "AttachedMessage"], "Inline", 
                     RemovalConditions -> {"EvaluatorQuit"}], 
-                    
                     With[{RSNB`nb$ = EvaluationNotebook[], 
                     RSNB`$cp$ = $ContextPath}, 
                     Quiet[
@@ -11610,7 +13784,6 @@ RefreshNotebookPacletFiles[RSNB`nbo, RSNB`cell]]]],
                     If[
                     And[RSNB`nbDir =!= RSNB`oldDir, 
                     MemberQ[$Packages, "PacletResource`DefinitionNotebook`"]], 
-                    
                     With[{RSNB`nb$ = EvaluationNotebook[], 
                     RSNB`$cp$ = $ContextPath}, 
                     Quiet[
@@ -11710,6 +13883,7 @@ directory.\""}, "PacletDirectoryChooserErrorTemplate"]], "AttachedMessage"],
                     Quiet[
                     
                     Block[{$ContextPath = RSNB`$cp$, 
+                    
                     ResourceSystemClient`$\
 AsyncronousResourceInformationUpdates = False, 
                     DefinitionNotebookClient`$ButtonCodeID = None}, 
@@ -11719,7 +13893,8 @@ AsyncronousResourceInformationUpdates = False,
                     CurrentValue[
                     RSNB`nb$, {TaggingRules, "CompatibilityTest"}]], 
                     "KernelSession"]; Needs["DefinitionNotebookClient`"], 
-                    Annotation[DefinitionNotebookClient`$ButtonCodeID = 
+                    Annotation[
+                    DefinitionNotebookClient`$ButtonCodeID = 
                     341138948110023950; 
                     DefinitionNotebookClient`CheckForUpdates[RSNB`nb$, 
                     ReleaseHold[
@@ -12201,7 +14376,6 @@ RefreshNotebookPacletFiles[RSNB`nbo, RSNB`cell]]]],
                     Quiet[
                     
                     Block[{$ContextPath = RSNB`$cp$, 
-                    
                     ResourceSystemClient`$\
 AsyncronousResourceInformationUpdates = False, 
                     DefinitionNotebookClient`$ButtonCodeID = None}, 
@@ -12376,6 +14550,7 @@ GRPf1sw3cDj8VSOm/5G9w5vAHXKt3IZQ/0HDoQHBFwFFwBcEHxR9zQlGcP3o
             FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 
              1, 0}}}, {{{11.5, 8.5156}, {11.5, 6.4876}, {11.5, 5.4026}, {12.5,
               5.8226}, {12.5, 8.5156}, {12., 8.3056}}}], 
+            
             FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0,
                1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
               0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
@@ -12550,8 +14725,8 @@ GRPf1sw3cDj8VSOm/5G9w5vAHXKt3IZQ/0HDoQHBFwFFwBcEHxR9zQlGcP3o
                     StringStartsQ[RSNB`res$, 
                     With[{RSNB`cell$ = First[
                     Cells[
-                    RSNB`nbo, CellStyle -> "PacletDirectoryChooser", 
-                    CellTags -> "PacletManifestPanel"], $Failed]}, 
+                    RSNB`nbo, CellStyle -> "PacletDirectoryChooser", CellTags -> 
+                    "PacletManifestPanel"], $Failed]}, 
                     Replace[{
                     CurrentValue[
                     RSNB`cell$, {TaggingRules, "PacletDirectoryType"}], 
@@ -12605,7 +14780,7 @@ GRPf1sw3cDj8VSOm/5G9w5vAHXKt3IZQ/0HDoQHBFwFFwBcEHxR9zQlGcP3o
    Cell[
     StyleData["AttachedMessage"], Deletable -> True, 
     CellMargins -> {{60, 40}, {15, 5}}]}, Visible -> False, FrontEndVersion -> 
-  "14.2 for Linux x86 (64-bit) (March 16, 2025)", StyleDefinitions -> 
+  "15.0 for Linux x86 (64-bit) (November 16, 2025)", StyleDefinitions -> 
   "PrivateStylesheetFormatting.nb"],
 ExpressionUUID->"9bbb1fba-c088-47cd-8b4a-2bb1baef315a"
 ]

@@ -39,7 +39,8 @@ $icon = Import[
 
 webSocketObjectQ = Function[asc, Or[
 	AllTrue[serverKeys, KeyExistsQ[asc, #]&],
-	AllTrue[connectedClientKeys, KeyExistsQ[asc, #]&]
+	AllTrue[connectedClientKeys, KeyExistsQ[asc, #]&],
+	AllTrue[clientKeys, KeyExistsQ[asc, #]&]
 ]];
 
 
@@ -79,12 +80,7 @@ WebSocketObject /: MakeBoxes[
 				{BoxForm`SummaryItem[{"UUID: ", asc["UUID"]}]},
 				{BoxForm`SummaryItem[{"Address: ", asc["Address"]}]},
 				{BoxForm`SummaryItem[{"Messages: ",
-					Dynamic[
-						If[SocketReadyQ[asc["Socket"]],
-							asc["Messages"]["PushBack", asc["GetMessage"]];
-						];
-						asc["Messages"]["Length"]
-					]
+					Dynamic[asc["Messages"]["Length"]]
 				}]}
 			}
 		];
@@ -162,9 +158,7 @@ WebSocketObject /: (ReadString|Read)[
 	ConfirmAssert[StringContainsQ[assoc["Type"], "WebSocketClient"],
 		"Cannot read from a WebSocketServer object."
 	];
-	If[assoc["Messages"]["Length"] > 0,
-		wso["GetMessage"]
-	]
+	wso["GetMessage"]
 ];
 
 WebSocketObject /: Normal[obj : WebSocketObject[asc: _Association?webSocketObjectQ]] := asc;

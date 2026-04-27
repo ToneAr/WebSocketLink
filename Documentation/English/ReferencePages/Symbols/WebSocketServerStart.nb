@@ -1,0 +1,395 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 15.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     16098,        386]
+NotebookOptionsPosition[     11725,        317]
+NotebookOutlinePosition[     12222,        335]
+CellTagsIndexPosition[     12179,        332]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["WebSocketServerStart", "ObjectName",ExpressionUUID->"78f7158b-0d91-4999-b2a5-a8c78f22fc6c"],
+
+Cell[TextData[{
+ Cell["   ", "ModInfo",ExpressionUUID->"e2ff62cd-5e15-4673-b7d4-c802a33615b8"],
+ Cell[BoxData[
+  TagBox[
+   RowBox[{"WebSocketServerStart", "[", "]"}],
+   HoldForm]], "InlineFormula",ExpressionUUID->
+  "37a6ad56-3590-4e9f-b57b-1002713a7708"],
+ "\[LineSeparator]starts a new WebSocket server on any available port.\n",
+ Cell["   ", "ModInfo",ExpressionUUID->"be3b976c-0556-4d2a-ac18-c1c0d06137dc"],
+ Cell[BoxData[
+  TagBox[
+   RowBox[{"WebSocketServerStart", "[", "port", "]"}],
+   HoldForm]], "InlineFormula",ExpressionUUID->
+  "7b474e82-f203-4aed-b539-d5863435961e"],
+ "\[LineSeparator]starts a new WebSocket server listening on ",
+ Cell[BoxData[
+  TagBox["port",
+   HoldForm]], "InlineFormula",ExpressionUUID->
+  "e6880143-1ad1-496c-8831-9dce40c28a90"],
+ ".\n",
+ Cell["   ", "ModInfo",ExpressionUUID->"4642450b-8605-40cf-a93b-212176ab0f92"],
+ Cell[BoxData[
+  TagBox[
+   RowBox[{"WebSocketServerStart", "[", 
+    RowBox[{"port", ",", 
+     RowBox[{"\"\<TLS\>\"", "\[Rule]", "True"}]}], "]"}],
+   HoldForm]], "InlineFormula",ExpressionUUID->
+  "c62743b2-2421-4b8d-bb7c-5554b9266b4d"],
+ "\[LineSeparator]starts a secure WebSocket server listening on ",
+ Cell[BoxData[
+  TagBox["port",
+   HoldForm]], "InlineFormula",ExpressionUUID->
+  "e4cc060f-cc57-4214-8c5a-5393e0e21aea"],
+ "."
+}], "Usage",ExpressionUUID->"3362ea5c-1a3b-46a4-9755-e08d3a49f6e4"],
+
+Cell["The following options can be given: ", "Notes",ExpressionUUID->"677570a5-b55b-4669-9e86-010768f160de"],
+
+Cell[BoxData[GridBox[{
+   {Cell["   ", "ModInfo",ExpressionUUID->
+     "f92d98db-cd62-4778-8627-1fb27e3d6853"], "\"\<GUID\>\"", 
+    TagBox["\"\<258EAFA5-E914-47DA-95CA-C5AB0DC85B11\>\"",
+     HoldForm], Cell[
+    "WebSocket GUID used when computing the handshake accept key.", 
+     "TableText",ExpressionUUID->"c0644c79-9393-4963-80bc-e1f0c285c6ce"]},
+   {Cell["   ", "ModInfo",ExpressionUUID->
+     "5f4a7e13-2cc4-4b6c-884c-0b028a6ac7d7"], "\"\<Debug\>\"", 
+    TagBox["False",
+     HoldForm], Cell[
+    "Whether to print debug messages for server events.", "TableText",
+     ExpressionUUID->"cc670407-59d0-4deb-963a-ec899b2397e5"]},
+   {Cell["   ", "ModInfo",ExpressionUUID->
+     "2cc9add9-585d-4392-b4ec-3e9c30d3dde0"], 
+    TagBox["OverwriteTarget",
+     HoldForm], 
+    TagBox["True",
+     HoldForm], Cell["\<\
+Whether to close an existing listener on the selected internal listening port.\
+\>", "TableText",ExpressionUUID->"f0e9210e-3ead-4f8f-863b-0b0476696dff"]},
+   {Cell["   ", "ModInfo",ExpressionUUID->
+     "f32662c1-84f3-4e20-93fe-d08e1e3838f7"], "\"\<TLS\>\"", 
+    TagBox["False",
+     HoldForm], Cell["\<\
+Whether to expose the server as a secure WebSocket endpoint using TLS.\
+\>", "TableText",ExpressionUUID->"6376f245-ab8e-4f2e-820e-c2bd5a29e950"]},
+   {Cell["   ", "ModInfo",ExpressionUUID->
+     "82757ab8-e374-401a-9806-c918df45b96e"], "\"\<Certificate\>\"", 
+    TagBox["Automatic",
+     HoldForm], Cell["\<\
+TLS server certificate. Automatic generates an internal self-signed localhost \
+certificate. A path to a PKCS#12/PFX or PEM file, PEM text, or {path, \
+password} can also be supplied.\
+\>", "TableText",ExpressionUUID->"3f42c0da-d630-4436-a774-6a51225dde76"]},
+   {Cell["   ", "ModInfo",ExpressionUUID->
+     "45f719b7-c856-4c3b-bef0-3f34e10c5155"], "\"\<CertificatePassword\>\"", 
+    TagBox["\"\<\>\"",
+     HoldForm], Cell[
+    "Password used when Certificate is a certificate file path.", "TableText",
+     ExpressionUUID->"4c525dad-c496-457a-9418-cabe22ab9d2e"]},
+   {Cell["   ", "ModInfo",ExpressionUUID->
+     "aad1a1cf-870b-41e9-a459-0686ebad2150"], "\"\<HandlerFunctions\>\"", 
+    TagBox[
+     RowBox[{"Association", "[", 
+      RowBox[{
+       RowBox[{"\"\<DataReceived\>\"", "\[Rule]", "Identity"}], ",", 
+       RowBox[{"\"\<ClientConnected\>\"", "\[Rule]", "Identity"}], ",", 
+       RowBox[{"\"\<ClientDisconnected\>\"", "\[Rule]", "Identity"}]}], "]"}],
+     
+     HoldForm], Cell["\<\
+Functions called when data is received, a client connects, or a client \
+disconnects.\
+\>", "TableText",ExpressionUUID->"318f7842-9278-4295-93f8-62efcbe0cb19"]}
+  }]], "3ColumnTableMod",ExpressionUUID->"6b50f0dd-cddd-4018-bc10-\
+ef7725fd80a7"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TagBox[
+   RowBox[{"\"\<TLS\>\"", "\[Rule]", "True"}],
+   HoldForm]], "InlineFormula",ExpressionUUID->
+  "d8d2291b-f966-41d8-9421-4ed24eab3a69"],
+ " starts a WSS endpoint. Plain WebSocket clients should use ",
+ Cell[BoxData["\"\<ws://\>\""], "InlineFormula",ExpressionUUID->
+  "cc0976a1-266f-43cc-9f02-6f722e16aa04"],
+ "; TLS clients should use ",
+ Cell[BoxData["\"\<wss://\>\""], "InlineFormula",ExpressionUUID->
+  "1b7ffa78-bc26-41ca-81c4-174b608a06f4"],
+ "."
+}], "Notes",ExpressionUUID->"f7beb103-d539-485f-a6d1-6f0b2118a875"],
+
+Cell[TextData[{
+ "The automatic TLS certificate is intended for Wolfram-to-Wolfram local \
+testing. ",
+ Cell[BoxData[
+  TagBox["WebSocketConnect",
+   HoldForm]], "InlineFormula",ExpressionUUID->
+  "b1b6ec78-1ee5-450f-8013-4bb37a7f1e06"],
+ " trusts this generated certificate when connecting in the same kernel \
+session."
+}], "Notes",ExpressionUUID->"d11203ed-750c-43c0-9324-483397b3ad27"],
+
+Cell["\<\
+Browser and other external clients must trust the server certificate. For \
+production or public testing, use a CA-trusted certificate. For local browser \
+testing, use a locally trusted development certificate with Subject \
+Alternative Names for localhost.\
+\>", "Notes",ExpressionUUID->"084f00bb-ad5a-4567-9880-552a2c6ff6bc"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["See Also", "SeeAlsoSection",ExpressionUUID->"d2759790-6a70-463f-8fd5-caef73802d1d"],
+
+Cell[TextData[{
+ ButtonBox["WebSocketConnect",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ToneAr/WebSocketLink/ref/WebSocketConnect"],
+ " \[FilledVerySmallSquare] ",
+ ButtonBox["WebSocketObject",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ToneAr/WebSocketLink/ref/WebSocketObject"]
+}], "SeeAlso",ExpressionUUID->"6ecc9265-2d5c-459b-9227-32d5cdabee51"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Examples Initialization", "ExamplesInitializationSection",ExpressionUUID->"5183bd0e-b8f0-4a4e-9541-69f2ea5a2249"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"Needs", "[", "\"\<ToneAr`WebSocketLink`\>\"", "]"}],
+  HoldForm]], "Input",ExpressionUUID->"796f9358-4b55-4dad-9ece-fd21e40c6ff9"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Basic Examples", "PrimaryExamplesSection",ExpressionUUID->"103d5379-9c19-49b4-bd34-6a964ef0f0e7"],
+
+Cell["\<\
+Start a secure WebSocket server with an automatically generated localhost \
+certificate:\
+\>", "ExampleText",ExpressionUUID->"68462294-6ca6-4662-95a7-87c33c4fc2fe"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"server", "=", 
+   RowBox[{"WebSocketServerStart", "[", 
+    RowBox[{"30000", ",", 
+     RowBox[{"\"\<TLS\>\"", "\[Rule]", "True"}]}], "]"}]}],
+  HoldForm]], "Input",ExpressionUUID->"f32cfb89-9fc7-403a-aecd-ae22b252e43d"],
+
+Cell["Connect from a Wolfram client in the same kernel using WSS:", \
+"ExampleText",ExpressionUUID->"1ebb915a-4af3-40bb-9cd7-4fa6f07deb9e"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"client", "=", 
+   RowBox[{"WebSocketConnect", "[", "\"\<wss://localhost:30000\>\"", "]"}]}],
+  HoldForm]], "Input",ExpressionUUID->"c7355605-21a2-4b44-b530-9025b085a63b"],
+
+Cell["\<\
+For browser testing, create or provide a certificate trusted by the browser. \
+One common local-development workflow is mkcert:\
+\>", "ExampleText",ExpressionUUID->"ff56ae07-359b-4258-85e5-419db503eb35"],
+
+Cell["\<\
+mkcert -install
+mkcert -pkcs12 localhost 127.0.0.1 ::1\
+\>", "Program",ExpressionUUID->"55c4e115-c9e1-42f8-8d8f-527edfe95ac1"],
+
+Cell["\<\
+Start the server with a trusted PKCS#12 certificate. Use the password for the \
+generated certificate file; mkcert PKCS#12 files usually use \"changeit\".\
+\>", "ExampleText",ExpressionUUID->"1e4b8952-5dac-4a32-b1ff-8545051851e5"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"server", "=", 
+   RowBox[{"WebSocketServerStart", "[", 
+    RowBox[{"30000", ",", 
+     RowBox[{"\"\<TLS\>\"", "\[Rule]", "True"}], ",", 
+     RowBox[{"\"\<Certificate\>\"", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<localhost+2.p12\>\"", ",", "\"\<changeit\>\""}], 
+       "}"}]}]}], "]"}]}],
+  HoldForm]], "Input",ExpressionUUID->"41fbda14-a4a8-42c7-89df-b86146547cac"],
+
+Cell["\<\
+A browser client can then connect with JavaScript if the certificate is \
+trusted by the browser:\
+\>", "ExampleText",ExpressionUUID->"7335c855-65c7-4b80-93f8-de9cb633e6ac"],
+
+Cell["\<\
+const ws = new WebSocket(\"wss://localhost:30000\");
+ws.onopen = () => ws.send(\"hello from browser\");\
+\>", "Program",ExpressionUUID->"e36f2016-2ccc-4682-9579-0690a38ca87a"],
+
+Cell["Close the client and server when finished:", "ExampleText",ExpressionUUID->"a122394e-35f0-4d27-918e-0290bcb52016"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"Close", "/@", 
+   RowBox[{"{", 
+    RowBox[{"client", ",", "server"}], "}"}]}],
+  HoldForm]], "Input",ExpressionUUID->"3e8c38a1-c4b9-4215-af2a-9997e38670fe"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Metadata", "MetadataSection",ExpressionUUID->"e7fcb1b7-42fb-4d1e-96d0-6925885e1c78"],
+
+Cell[TextData[{
+ "New in: ",
+ Cell["0.9.0", "HistoryData",
+  CellTags->"New",ExpressionUUID->"5bd2d57c-3496-4ac3-b342-20a88b8f9a75"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified",ExpressionUUID->"1686afc2-e384-481f-b2ca-ac8b2068627c"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete",ExpressionUUID->
+  "3eb00273-9288-40a0-899a-b207d532d7e0"]
+}], "History",ExpressionUUID->"ee9f1e76-64dc-42bd-8d18-bc7ea44f40ac"],
+
+Cell[CellGroupData[{
+
+Cell["Categorization", "CategorizationSection",ExpressionUUID->"dccf69bd-aa5e-43e4-bfa9-623ef3eac055"],
+
+Cell["Symbol", "Categorization",
+ CellLabel->
+  "Entity Type",ExpressionUUID->"43580c9d-0252-4a42-9537-363fbd6f8bc4"],
+
+Cell["ToneAr/WebSocketLink", "Categorization",
+ CellLabel->
+  "Paclet Name",ExpressionUUID->"bd48e7bf-343e-4c4d-9fdb-a8ba40738cc8"],
+
+Cell["ToneAr`WebSocketLink`", "Categorization",
+ CellLabel->"Context",ExpressionUUID->"540b28e8-a1a3-4d86-a1e5-69f657ed6b77"],
+
+Cell["ToneAr/WebSocketLink/ref/WebSocketServerStart", "Categorization",
+ CellLabel->"URI",ExpressionUUID->"c48748ee-be01-49e9-94c8-190dfbdbad4f"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",ExpressionUUID->"0732444d-209e-478a-83cb-fc2eb4c63c57"],
+
+Cell["websocket, server, wss, tls, ssl, certificate", "Keywords",ExpressionUUID->"36e68882-6398-4834-9eb4-927cadbdc0c4"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Syntax Templates", "TemplatesSection",ExpressionUUID->"33fbba04-1e10-41f1-8eda-48f0b57ad771"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->
+  "Additional Function \
+Template",ExpressionUUID->"5f3d3abb-a12f-43ce-9639-185390d8e8c3"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->
+  "Arguments Pattern",ExpressionUUID->"483fcde8-de4d-4a3b-91f7-c868d078afa5"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->
+  "Local Variables",ExpressionUUID->"2ecb109e-af98-4186-9e06-edb8cd698935"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->
+  "Color Equal Signs",ExpressionUUID->"1ee8ad73-228b-4487-ab0f-11e13d4f4282"]
+}, Closed]]
+}, Open  ]]
+},
+WindowSize->{900, 700},
+TaggingRules-><|"Paclet" -> "ToneAr/WebSocketLink"|>,
+CellContext->"Global`",
+FrontEndVersion->"15.1 for Linux x86 (64-bit) (April 22, 2026)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStylesExt.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"8f3b7820-8106-414d-affd-e47f08bd7535"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 97, 0, 70, "ObjectName",ExpressionUUID->"78f7158b-0d91-4999-b2a5-a8c78f22fc6c"],
+Cell[676, 24, 1363, 34, 70, "Usage",ExpressionUUID->"3362ea5c-1a3b-46a4-9755-e08d3a49f6e4"],
+Cell[2042, 60, 108, 0, 70, "Notes",ExpressionUUID->"677570a5-b55b-4669-9e86-010768f160de"],
+Cell[2153, 62, 2679, 55, 70, "3ColumnTableMod",ExpressionUUID->"6b50f0dd-cddd-4018-bc10-ef7725fd80a7"],
+Cell[4835, 119, 562, 13, 70, "Notes",ExpressionUUID->"f7beb103-d539-485f-a6d1-6f0b2118a875"],
+Cell[5400, 134, 389, 9, 70, "Notes",ExpressionUUID->"d11203ed-750c-43c0-9324-483397b3ad27"],
+Cell[5792, 145, 338, 5, 70, "Notes",ExpressionUUID->"084f00bb-ad5a-4567-9880-552a2c6ff6bc"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6167, 155, 89, 0, 70, "SeeAlsoSection",ExpressionUUID->"d2759790-6a70-463f-8fd5-caef73802d1d"],
+Cell[6259, 157, 351, 8, 70, "SeeAlso",ExpressionUUID->"6ecc9265-2d5c-459b-9227-32d5cdabee51"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6647, 170, 119, 0, 70, "ExamplesInitializationSection",ExpressionUUID->"5183bd0e-b8f0-4a4e-9541-69f2ea5a2249"],
+Cell[6769, 172, 164, 3, 70, "Input",ExpressionUUID->"796f9358-4b55-4dad-9ece-fd21e40c6ff9"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6970, 180, 103, 0, 70, "PrimaryExamplesSection",ExpressionUUID->"103d5379-9c19-49b4-bd34-6a964ef0f0e7"],
+Cell[7076, 182, 174, 3, 70, "ExampleText",ExpressionUUID->"68462294-6ca6-4662-95a7-87c33c4fc2fe"],
+Cell[7253, 187, 254, 6, 70, "Input",ExpressionUUID->"f32cfb89-9fc7-403a-aecd-ae22b252e43d"],
+Cell[7510, 195, 139, 1, 70, "ExampleText",ExpressionUUID->"1ebb915a-4af3-40bb-9cd7-4fa6f07deb9e"],
+Cell[7652, 198, 204, 4, 70, "Input",ExpressionUUID->"c7355605-21a2-4b44-b530-9025b085a63b"],
+Cell[7859, 204, 213, 3, 70, "ExampleText",ExpressionUUID->"ff56ae07-359b-4258-85e5-419db503eb35"],
+Cell[8075, 209, 136, 3, 70, "Program",ExpressionUUID->"55c4e115-c9e1-42f8-8d8f-527edfe95ac1"],
+Cell[8214, 214, 240, 3, 70, "ExampleText",ExpressionUUID->"1e4b8952-5dac-4a32-b1ff-8545051851e5"],
+Cell[8457, 219, 414, 10, 70, "Input",ExpressionUUID->"41fbda14-a4a8-42c7-89df-b86146547cac"],
+Cell[8874, 231, 183, 3, 70, "ExampleText",ExpressionUUID->"7335c855-65c7-4b80-93f8-de9cb633e6ac"],
+Cell[9060, 236, 185, 3, 70, "Program",ExpressionUUID->"e36f2016-2ccc-4682-9579-0690a38ca87a"],
+Cell[9248, 241, 120, 0, 70, "ExampleText",ExpressionUUID->"a122394e-35f0-4d27-918e-0290bcb52016"],
+Cell[9371, 243, 191, 5, 70, "Input",ExpressionUUID->"3e8c38a1-c4b9-4215-af2a-9997e38670fe"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9599, 253, 90, 0, 70, "MetadataSection",ExpressionUUID->"e7fcb1b7-42fb-4d1e-96d0-6925885e1c78"],
+Cell[9692, 255, 459, 11, 70, "History",ExpressionUUID->"ee9f1e76-64dc-42bd-8d18-bc7ea44f40ac"],
+Cell[CellGroupData[{
+Cell[10176, 270, 102, 0, 70, "CategorizationSection",ExpressionUUID->"dccf69bd-aa5e-43e4-bfa9-623ef3eac055"],
+Cell[10281, 272, 117, 2, 70, "Categorization",ExpressionUUID->"43580c9d-0252-4a42-9537-363fbd6f8bc4"],
+Cell[10401, 276, 131, 2, 70, "Categorization",ExpressionUUID->"bd48e7bf-343e-4c4d-9fdb-a8ba40738cc8"],
+Cell[10535, 280, 125, 1, 70, "Categorization",ExpressionUUID->"540b28e8-a1a3-4d86-a1e5-69f657ed6b77"],
+Cell[10663, 283, 145, 1, 70, "Categorization",ExpressionUUID->"c48748ee-be01-49e9-94c8-190dfbdbad4f"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[10845, 289, 90, 0, 70, "KeywordsSection",ExpressionUUID->"0732444d-209e-478a-83cb-fc2eb4c63c57"],
+Cell[10938, 291, 120, 0, 70, "Keywords",ExpressionUUID->"36e68882-6398-4834-9eb4-927cadbdc0c4"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[11095, 296, 99, 0, 70, "TemplatesSection",ExpressionUUID->"33fbba04-1e10-41f1-8eda-48f0b57ad771"],
+Cell[11197, 298, 133, 3, 70, "Template",ExpressionUUID->"5f3d3abb-a12f-43ce-9639-185390d8e8c3"],
+Cell[11333, 303, 120, 2, 70, "Template",ExpressionUUID->"483fcde8-de4d-4a3b-91f7-c868d078afa5"],
+Cell[11456, 307, 118, 2, 70, "Template",ExpressionUUID->"2ecb109e-af98-4186-9e06-edb8cd698935"],
+Cell[11577, 311, 120, 2, 70, "Template",ExpressionUUID->"1ee8ad73-228b-4487-ab0f-11e13d4f4282"]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

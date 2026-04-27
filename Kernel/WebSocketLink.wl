@@ -1,13 +1,22 @@
-(
-	Get["ToneAr`WebSocketLink`"<>#]
-)& /@ {
-	"Public`",
-	"Private`",
-
-	"Source`Common`",
-	"Source`Frames`",
-	"Source`Client`",
-	"Source`Server`",
-	"Source`Objects`"
-};
+With[{
+		contextPath =
+			Map[
+				StringJoin["Source`", #, "`"]& @* StringDelete[".wl"] @* FileNameTake,
+				FileNames[
+					"*.wl",
+					FileNameJoin[{
+						PacletObject["ToneAr/WebSocketLink"]["Location"],
+						"Kernel", "Source"
+					}]
+				]
+			]
+	},
+	(
+		Get["ToneAr`WebSocketLink`"<>#]
+	)& /@ {
+		"Public`",
+		"Private`",
+		Splice[contextPath]
+	}
+];
 

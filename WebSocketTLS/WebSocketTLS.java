@@ -3,51 +3,77 @@ package websocketlink;
 import javax.net.ssl.*;
 import java.io.*;
 import java.net.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.security.*;
 import java.security.cert.Certificate;
 import java.security.cert.CertificateFactory;
 import java.security.cert.X509Certificate;
 import java.security.spec.PKCS8EncodedKeySpec;
 import java.util.Base64;
+import java.util.Enumeration;
 import java.util.regex.*;
 
 public class WebSocketTLS {
 	static final String DEFAULT_PASSWORD = "websocketlink_tls_internal";
+	static final String HELPER_VERSION = "2026-04-25-1";
 
 	// ---- Certificate / KeyStore ----
 
 	public static KeyStore generateSelfSignedKeyStore(String keytoolPath) throws Exception {
-		File tmp = File.createTempFile("wsl_ks_", ".p12");
-		tmp.deleteOnExit();
-		ProcessBuilder pb = new ProcessBuilder(
-				keytoolPath,
-				"-genkeypair", "-alias", "wsl",
-				"-keyalg", "RSA", "-keysize", "2048",
-				"-validity", "3650",
-				"-keystore", tmp.getAbsolutePath(),
-				"-storepass", DEFAULT_PASSWORD,
-				"-keypass", DEFAULT_PASSWORD,
-				"-dname", "CN=localhost,O=WebSocketLink",
-				"-storetype", "PKCS12");
-		pb.redirectErrorStream(true);
-		Process p = pb.start();
-		byte[] buf = new byte[1024];
-		try (InputStream is = p.getInputStream()) {
-			while (is.read(buf) != -1) {
+		Path tmpDir = Files.createTempDirectory("wsl_ks_");
+		Path tmp = tmpDir.resolve("keystore.p12");
+		try {
+			ProcessBuilder pb = new ProcessBuilder(
+					keytoolPath,
+					"-genkeypair", "-alias", "wsl",
+					"-keyalg", "RSA", "-keysize", "2048",
+					"-validity", "3650",
+					"-keystore", tmp.toString(),
+					"-storepass", DEFAULT_PASSWORD,
+					"-keypass", DEFAULT_PASSWORD,
+					"-dname", "CN=localhost,O=WebSocketLink",
+					"-storetype", "PKCS12");
+			pb.redirectErrorStream(true);
+			Process p = pb.start();
+			StringBuilder output = new StringBuilder();
+			try (java.io.BufferedReader reader = new java.io.BufferedReader(
+					new java.io.InputStreamReader(p.getInputStream()))) {
+				String line;
+				while ((line = reader.readLine()) != null) output.append(line).append("\n");
 			}
+			int exit = p.waitFor();
+			if (exit != 0) {
+				String message = output.toString().trim();
+				throw new Exception(message.isEmpty()
+						? "keytool exited with code " + exit
+						: "keytool exited with code " + exit + ": " + message);
+			}
+			KeyStore ks = KeyStore.getInstance("PKCS12");
+			try (FileInputStream fis = new FileInputStream(tmp.toFile())) {
+				ks.load(fis, DEFAULT_PASSWORD.toCharArray());
+			}
+			return ks;
+		} finally {
+			Files.deleteIfExists(tmp);
+			Files.deleteIfExists(tmpDir);
 		}
-		int exit = p.waitFor();
-		if (exit != 0)
-			throw new Exception("keytool exited with code " + exit);
-		KeyStore ks = KeyStore.getInstance("PKCS12");
-		try (FileInputStream fis = new FileInputStream(tmp)) {
-			ks.load(fis, DEFAULT_PASSWORD.toCharArray());
-		}
-		return ks;
 	}
 
 	public static String getDefaultPassword() {
 		return DEFAULT_PASSWORD;
+	}
+
+	public static String getHelperVersion() {
+		return HELPER_VERSION;
+	}
+
+	public static boolean hasRequiredModuleOpens() {
+		Module javaBase = Object.class.getModule();
+		Module current = WebSocketTLS.class.getModule();
+		return javaBase.isOpen("sun.security.ssl", current)
+				&& javaBase.isOpen("sun.security.pkcs12", current)
+				&& javaBase.isOpen("sun.security.util", current);
 	}
 
 	public static KeyStore loadPKCS12KeyStore(String path, String password) throws Exception {
@@ -108,6 +134,28 @@ public class WebSocketTLS {
 			tms = new TrustManager[]{ new TrustAllCerts() };
 		}
 		ctx.init(null, tms, null);
+		return ctx;
+	}
+
+	public static SSLContext createClientSSLContextWithTrustStore(KeyStore source) throws Exception {
+		KeyStore trustStore = KeyStore.getInstance(KeyStore.getDefaultType());
+		trustStore.load(null, null);
+		Enumeration<String> aliases = source.aliases();
+		int certCount = 0;
+		while (aliases.hasMoreElements()) {
+			Certificate cert = source.getCertificate(aliases.nextElement());
+			if (cert != null) {
+				trustStore.setCertificateEntry("wsl-trusted-" + certCount, cert);
+				certCount++;
+			}
+		}
+		if (certCount == 0)
+			throw new Exception("No certificates found in trusted KeyStore");
+		TrustManagerFactory tmf = TrustManagerFactory.getInstance(
+				TrustManagerFactory.getDefaultAlgorithm());
+		tmf.init(trustStore);
+		SSLContext ctx = SSLContext.getInstance("TLS");
+		ctx.init(null, tmf.getTrustManagers(), null);
 		return ctx;
 	}
 
