@@ -53,10 +53,16 @@ WebSocketServerStart[port_Integer : Automatic, OptionsPattern[]] := Module[{
 			]
 		];
 
-		If[OptionValue[OverwriteTarget],
-			Quiet @ Close @ SelectFirst[Sockets[], Function[wso,
-				wso["DestinationPort"] === listenPort
-			]]
+		If[OptionValue[OverwriteTarget] && IntegerQ[listenPort],
+			With[{
+					existingSocket = SelectFirst[Sockets[], Function[wso,
+						wso["DestinationPort"] === listenPort
+					]]
+				},
+				If[!MissingQ[existingSocket],
+					Quiet[Close[existingSocket]]
+				]
+			]
 		];
 
 		listenerFunction = Function[assoc,
@@ -137,8 +143,8 @@ WebSocketServerStart[port_Integer : Automatic, OptionsPattern[]] := Module[{
 							"UUID" -> client["UUID"],
 							"Socket" -> client,
 							"Messages" -> extBuffer,
-							"GetMessage" :> getMessage[],
-							"SendMessage" :> sendMessage
+							"GetMessage" -> Function[{}, getMessage[]],
+							"SendMessage" -> sendMessage
 						|>;
 						(* Store client in global variable *)
 						Confirm[
@@ -203,7 +209,7 @@ WebSocketServerStart[port_Integer : Automatic, OptionsPattern[]] := Module[{
 				listener["Socket"]["DestinationPort"]
 			],
 			"SSLServerSocket"  -> sslServerSocket,
-			"ConnectedClients" :> connectedClients,
+			"ConnectedClients" -> Function[{}, connectedClients],
 			"HandlerFunctions" -> OptionValue["HandlerFunctions"]
 		|>;
 		server = WebSocketObject[serverObj];

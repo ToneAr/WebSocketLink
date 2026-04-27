@@ -108,9 +108,46 @@ WebSocketFrameImport // ClearAll
 WebSocketFrameImport // Options = {
 	"Masking" -> True
 };
+
+webSocketFrameByteCount[bytes_List] := Module[{
+		lengthByte, payloadByteCount, lengthBytes = 0, maskBytes = 0,
+		headerByteCount, totalByteCount
+	},
+	If[Length[bytes] < 2,
+		Return[Missing["Incomplete"]]
+	];
+	lengthByte = BitAnd[bytes[[2]], 127];
+	If[BitAnd[bytes[[2]], 128] =!= 0,
+		maskBytes = 4
+	];
+	payloadByteCount = Which[
+		lengthByte < 126,
+			lengthByte,
+		lengthByte === 126,
+			lengthBytes = 2;
+			If[Length[bytes] < 4,
+				Return[Missing["Incomplete"]]
+			];
+			FromDigits[bytes[[3 ;; 4]], 256],
+		lengthByte === 127,
+			lengthBytes = 8;
+			If[Length[bytes] < 10,
+				Return[Missing["Incomplete"]]
+			];
+			FromDigits[bytes[[3 ;; 10]], 256]
+	];
+	headerByteCount = 2 + lengthBytes + maskBytes;
+	totalByteCount = headerByteCount + payloadByteCount;
+	If[Length[bytes] < totalByteCount,
+		Missing["Incomplete"],
+		totalByteCount
+	]
+];
+
 WebSocketFrameImport[ frame_ByteArray, OptionsPattern[] ] :=
 	Module[{
 			fin, opcode, isMasked,payloadByteCount, mask, payload,
+			payloadBits,
 			lengthOffset = 0,
 			maskOffset = 0,
 			payloadOffset = 17,
@@ -149,6 +186,10 @@ WebSocketFrameImport[ frame_ByteArray, OptionsPattern[] ] :=
 			maskOffset = 32
 		];
 		payloadOffset += (lengthOffset + maskOffset);
+		payloadBits = If[payloadByteCount === 0,
+			{},
+			bitList[[payloadOffset ;; payloadOffset + 8 payloadByteCount - 1]]
+		];
 		payload =
 			ResourceFunction["BitListToByteArray"] @
 			If[isMasked,
@@ -156,10 +197,10 @@ WebSocketFrameImport[ frame_ByteArray, OptionsPattern[] ] :=
 				Flatten @ Map[Function[block,
 						BitXor[ block, Take[mask, Length @ block] ]
 					],
-					Partition[bitList[[payloadOffset;;]], UpTo[32]]
+					Partition[payloadBits, UpTo[32]]
 				],
 				(* Else just take the payload *)
-				bitList[[ payloadOffset ;; All ]]
+				payloadBits
 			];
 		Switch[opcode,
 			0,

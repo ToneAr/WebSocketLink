@@ -37,11 +37,28 @@ $icon = Import[
 ];
 
 
-webSocketObjectQ = Function[asc, Or[
+webSocketObjectQ[asc_Association] := Or[
 	AllTrue[serverKeys, KeyExistsQ[asc, #]&],
 	AllTrue[connectedClientKeys, KeyExistsQ[asc, #]&],
 	AllTrue[clientKeys, KeyExistsQ[asc, #]&]
-]];
+];
+webSocketObjectQ[_] := False;
+
+webSocketDynamicPropertyKeys = {
+	"ConnectedClients",
+	"GetMessage"
+};
+
+webSocketObjectProperty[asc_Association, prop_] := Module[{
+		value = Lookup[asc, prop, Missing["NotFound", prop]]
+	},
+	If[
+		MemberQ[webSocketDynamicPropertyKeys, prop] &&
+			MatchQ[value, _Function],
+		value[],
+		value
+	]
+];
 
 
 WebSocketObject /: MakeBoxes[
@@ -61,7 +78,10 @@ WebSocketObject /: MakeBoxes[
 								(#["UUID"] =!= asc["UUID"])&
 							];
 							"Inactive",
-							Length[asc["ConnectedClients"]]
+							Length[webSocketObjectProperty[
+								asc,
+								"ConnectedClients"
+							]]
 						]
 					]
 				}]}
@@ -113,7 +133,7 @@ WebSocketObject /: MakeBoxes[
 	];
 
 WebSocketObject[asc: _Association?webSocketObjectQ][prop_] :=
-	Lookup[asc, prop, Missing["NotFound", prop]];
+	webSocketObjectProperty[asc, prop];
 WebSocketObject[asc: _Association?webSocketObjectQ]["Properties"] :=
 	Keys[asc];
 

@@ -1,25 +1,36 @@
+(* ::Package:: *)
 PacletObject[
 	<|
-		"Name" -> "ToneAr/WebSocketLink",
-		"PublisherID" -> "ToneAr",
-		"Version" -> "0.9.0",
+		"Name"           -> "ToneAr/WebSocketLink",
+		"Description"    -> "Wolfram Language WebSocket client and server implementation",
+		"Creator"        -> "Antonis Aristeidou",
+		"License"        -> "MIT",
+		"PublisherID"    -> "ToneAr",
+		"Version"        -> "1.0.0",
 		"WolframVersion" -> "12.2+",
-		"Creator" -> "Antonis Aristeidou",
-		"Publisher" -> "ToneAr",
-		"Description" -> "Wolfram Language WebSocket client and server implementation",
-		"Extensions" -> {
+		"PrimaryContext" -> "ToneAr`WebSocketLink`",
+		"Extensions"     -> {
 			{
 				"Kernel",
-				"Root" -> "Kernel",
-				"Context" -> "ToneAr`WebSocketLink`"
+				"Root"    -> "Kernel",
+				"Context" -> "ToneAr`WebSocketLink`",
+				"Symbols" -> {
+					"ToneAr`WebSocketLink`WebSocketConnect",
+					"ToneAr`WebSocketLink`WebSocketObject",
+					"ToneAr`WebSocketLink`WebSocketServerStart"
+				}
 			},
 			{"Documentation", "Language" -> "English"},
 			{
 				"Asset",
-				"Root" -> "Resources",
-				"Assets" -> {{"logo.svg", "Icons/logo.svg"}}
+				"Root"   -> "Resources",
+				"Assets" -> {
+					{"logo.svg", "Icons/logo.svg"},
+					{"WebSocketLink.wlt", "Tests/WebSocketLink.wlt"}
+				}
 			},
 			{"JLink"}
-		}
+		},
+		"Publisher"      -> "ToneAr"
 	|>
 ]
