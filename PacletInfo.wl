@@ -6,7 +6,7 @@ PacletObject[
 		"Creator"        -> "Antonis Aristeidou",
 		"License"        -> "MIT",
 		"PublisherID"    -> "ToneAr",
-		"Version"        -> "1.0.0",
+		"Version"        -> "1.0.1",
 		"WolframVersion" -> "12.2+",
 		"PrimaryContext" -> "ToneAr`WebSocketLink`",
 		"Extensions"     -> {

@@ -1,11 +1,8 @@
 (* :!CodeAnalysis::BeginBlock:: *)
 (* :!CodeAnalysis::Disable::SuspiciousSessionSymbol:: *)
-BeginPackage["ToneAr`WebSocketLink`FileScope`Server`", {
-	"ToneAr`WebSocketLink`",
-	"ToneAr`WebSocketLink`Private`"
-}];
+BeginPackage["ToneAr`WebSocketLink`", {"ToneAr`WebSocketLink`Private`"}];
 
-Begin["`Private`"];
+Begin["`FileScope`Server`Private`"];
 
 
 (* -----------------------WebSocketServerStart------------------------------
@@ -33,6 +30,7 @@ WebSocketServerStart[port_Integer : Automatic, OptionsPattern[]] := Module[{
 			Identity
 		],
 		connectedClients = <||>,
+		clientBuffers = <||>,
 		serverUUID = CreateUUID[],
 		sslServerSocket = None,
 		listenPort
@@ -69,10 +67,12 @@ WebSocketServerStart[port_Integer : Automatic, OptionsPattern[]] := Module[{
 			Module[{
 					request,headers,key,acceptKey,response,isUpgradeRequest,
 					getMessage, sendMessage, extBuffer, wsAssoc,
+					clientUUID, data, frameByteCount, frameBytes, wsClientObj,
 					guid = OptionValue["GUID"],
 					client = assoc["SourceSocket"]
 				},
 				Enclose[
+					clientUUID = client["UUID"];
 					request = Quiet[ImportString[assoc["Data"],"HTTPRequest"]];
 					headers = request["Headers"];
 					(* Check if it's a WebSocket UPGRADE request *)
@@ -140,7 +140,7 @@ WebSocketServerStart[port_Integer : Automatic, OptionsPattern[]] := Module[{
 						(* Store client for future communication *)
 						wsAssoc = <|
 							"Type" -> "WebSocketClientConnection",
-							"UUID" -> client["UUID"],
+							"UUID" -> clientUUID,
 							"Socket" -> client,
 							"Messages" -> extBuffer,
 							"GetMessage" -> Function[{}, getMessage[]],
@@ -148,28 +148,53 @@ WebSocketServerStart[port_Integer : Automatic, OptionsPattern[]] := Module[{
 						|>;
 						(* Store client in global variable *)
 						Confirm[
-							connectedClients[client["UUID"]] = WebSocketObject @ wsAssoc,
+							connectedClients[clientUUID] = WebSocketObject @ wsAssoc,
 							"Failed to store client"
 						];
+						clientBuffers[clientUUID] = {};
 						OptionValue["HandlerFunctions"]["ClientConnected"] @ <|
 							assoc,
 							wsAssoc
 						|>;
-						debugPrint["Successful connection to: " <> client["UUID"]];
+						debugPrint["Successful connection to: " <> clientUUID];
 						,
 					(* Else - Import WebSocket frame *)
-						With[{
-								data = WebSocketFrameImport[
-									ByteArray @ assoc["DataBytes"]
-								],
-								wsClientObj = connectedClients[client["UUID"]]
-							},
+						wsClientObj = Lookup[
+							connectedClients,
+							clientUUID,
+							Missing["NotConnected"]
+						];
+						If[MissingQ[wsClientObj],
+							Return[]
+						];
+						clientBuffers[clientUUID] = Join[
+							Lookup[clientBuffers, clientUUID, {}],
+							assoc["DataBytes"]
+						];
+						While[
+							!MissingQ[
+								frameByteCount =
+									webSocketFrameByteCount[clientBuffers[clientUUID]]
+							],
+							frameBytes = Take[
+								clientBuffers[clientUUID],
+								frameByteCount
+							];
+							clientBuffers[clientUUID] = Drop[
+								clientBuffers[clientUUID],
+								frameByteCount
+							];
+							data = WebSocketFrameImport[ByteArray @ frameBytes];
 							(* If receiving a CLOSE frame, purge connection to client *)
 							If[MatchQ[data, Null],
-								debugPrint["Closing connection to: " <> client["UUID"]];
+								debugPrint["Closing connection to: " <> clientUUID];
 								connectedClients =
 									KeyDrop[connectedClients,
-										client["UUID"]
+										clientUUID
+									];
+								clientBuffers =
+									KeyDrop[clientBuffers,
+										clientUUID
 									];
 								OptionValue["HandlerFunctions"]["ClientDisconnected"] @ <|
 									assoc,
@@ -180,7 +205,7 @@ WebSocketServerStart[port_Integer : Automatic, OptionsPattern[]] := Module[{
 								Return[]
 							];
 							(* Handle Messages *)
-							debugPrint["New message from: " <> client["UUID"]];
+							debugPrint["New message from: " <> clientUUID];
 							wsClientObj["Messages"][
 								"PushBack", data
 							];
@@ -189,7 +214,7 @@ WebSocketServerStart[port_Integer : Automatic, OptionsPattern[]] := Module[{
 								Normal @ wsClientObj,
 								"Data" -> data
 							|>;
-						];
+						]
 					]
 				]
 			]

@@ -1,64 +1,65 @@
-BeginPackage["ToneAr`WebSocketLink`FileScope`Objects`", {
-	"ToneAr`WebSocketLink`",
-	"ToneAr`WebSocketLink`Private`"
-}];
-Begin["`Private`"];
+BeginPackage["ToneAr`WebSocketLink`", {"ToneAr`WebSocketLink`Private`"}];
 
-serverKeys = {
-	"Type",
-	"Listener",
-	"Socket",
-	"UUID",
-	"Port",
-	"ConnectedClients",
-	"HandlerFunctions"
-};
-connectedClientKeys = {
-	"Type",
-	"UUID",
-	"Socket",
-	"Messages",
-	"GetMessage",
-	"SendMessage"
-};
-clientKeys = {
-	"Type",
-	"UUID",
-	"Socket",
-	"Address",
-	"Messages",
-	"GetMessage",
-	"SendMessage"
-};
+Begin["`FileScope`Objects`Private`"];
 
-$icon = Import[
-	PacletObject["ToneAr/WebSocketLink"]["AssetLocation", "logo.svg"],
-	"Graphics"
-];
+serverKeys =
+	{
+		"Type",
+		"Listener",
+		"Socket",
+		"UUID",
+		"Port",
+		"ConnectedClients",
+		"HandlerFunctions"
+	};
 
 
-webSocketObjectQ[asc_Association] := Or[
-	AllTrue[serverKeys, KeyExistsQ[asc, #]&],
-	AllTrue[connectedClientKeys, KeyExistsQ[asc, #]&],
-	AllTrue[clientKeys, KeyExistsQ[asc, #]&]
-];
+connectedClientKeys =
+	{"Type", "UUID", "Socket", "Messages", "GetMessage", "SendMessage"};
+
+
+clientKeys =
+	{
+		"Type",
+		"UUID",
+		"Socket",
+		"Address",
+		"Messages",
+		"GetMessage",
+		"SendMessage"
+	};
+
+
+$icon =
+	Import[
+		PacletObject["ToneAr/WebSocketLink"]["AssetLocation", "logo.svg"],
+		"Graphics"
+	];
+
+
+webSocketObjectQ[asc_Association] :=
+	Or[
+		AllTrue[serverKeys, KeyExistsQ[asc, #]&],
+		AllTrue[connectedClientKeys, KeyExistsQ[asc, #]&],
+		AllTrue[clientKeys, KeyExistsQ[asc, #]&]
+	];
 webSocketObjectQ[_] := False;
 
-webSocketDynamicPropertyKeys = {
-	"ConnectedClients",
-	"GetMessage"
-};
 
-webSocketObjectProperty[asc_Association, prop_] := Module[{
-		value = Lookup[asc, prop, Missing["NotFound", prop]]
-	},
-	If[
-		MemberQ[webSocketDynamicPropertyKeys, prop] &&
+webSocketDynamicPropertyKeys = {"ConnectedClients", "GetMessage"};
+
+
+webSocketObjectProperty[asc_Association, prop_] :=
+	Module[{
+			value = Lookup[asc, prop, Missing["NotFound", prop]]
+		},
+		If[
+			MemberQ[webSocketDynamicPropertyKeys, prop] &&
 			MatchQ[value, _Function],
-		value[],
-		value
-	]
-];
+			value[],
+			value
+		]
+	];
 
 
 WebSocketObject /: MakeBoxes[
@@ -132,17 +133,19 @@ WebSocketObject /: MakeBoxes[
 		]
 	];
 
-WebSocketObject[asc: _Association?webSocketObjectQ][prop_] :=
+WebSocketObject[asc : _Association?webSocketObjectQ][prop_] :=
 	webSocketObjectProperty[asc, prop];
-WebSocketObject[asc: _Association?webSocketObjectQ]["Properties"] :=
-	Keys[asc];
+WebSocketObject[asc : _Association?webSocketObjectQ]["Properties"] := Keys[asc];
 
 WebSocketObject /: (Close|DeleteObject)[
 	WebSocketObject[assoc : _Association?webSocketObjectQ]
 ] := (
 	Switch[assoc["Type"],
 		"WebSocketClient",
-			BinaryWrite[assoc["Socket"], WebSocketFrameCreate[Close]],
+			BinaryWrite[
+				assoc["Socket"],
+				WebSocketFrameCreate[Close, Masking -> True]
+			],
 		"WebSocketServer",
 			$WebSocketServers = Select[$WebSocketServers, Function[wso,
 				wso["UUID"] =!= assoc["UUID"]
@@ -154,7 +157,7 @@ WebSocketObject /: (Close|DeleteObject)[
 	Close @ assoc["Socket"]
 );
 
-WebSocketObject /: WriteString[
+WebSocketObject /: (WriteString | SendMessage)[
 	wso: WebSocketObject[assoc : _Association?webSocketObjectQ],
 	data_String
 ] := Enclose[

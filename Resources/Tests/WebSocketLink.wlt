@@ -489,6 +489,68 @@ $wsConnected = {}; (* UUIDs from ClientConnected events             *)
 
 $wsDisconnected = {}; (* UUIDs from ClientDisconnected events          *)
 
+$wsRxClient = {}; (* decoded payloads arriving at client DataReceived handler *)
+
+
+(* ---- 5.0  Client handshake buffering ---- *)
+$wsHandshakeWrites = 0;
+
+$wsHandshakeListener = SocketListen[
+	0,
+	Function[
+		assoc,
+		If[$wsHandshakeWrites == 0,
+			Module[{request, headers, key, acceptKey, response},
+				$wsHandshakeWrites++;
+				request = Quiet[ImportString[assoc["Data"], "HTTPRequest"]];
+				headers = request["Headers"];
+				key = Lookup[headers, "sec-websocket-key", ""];
+				acceptKey = Hash[
+					key <> "258EAFA5-E914-47DA-95CA-C5AB0DC85B11",
+					"SHA1",
+					"Base64Encoding"
+				];
+				response = ExportString[
+					HTTPResponse[
+						"",
+						<|
+							"StatusCode" -> 101,
+							"Headers" -> {
+								"Upgrade" -> "websocket",
+								"Connection" -> "Upgrade",
+								"Sec-WebSocket-Accept" -> acceptKey
+							}
+						|>
+					],
+					"HTTPResponse"
+				];
+				BinaryWrite[
+					assoc["SourceSocket"],
+					ByteArray @ Join[
+						ToCharacterCode[response, "UTF-8"],
+						Normal @ WebSocketFrameCreate["handshake-frame"]
+					]
+				]
+			]
+		]
+	]
+]
+
+$wsHandshakeClient = WebSocketConnect[
+	"ws://localhost:" <>
+		ToString[$wsHandshakeListener["Socket"]["DestinationPort"]],
+	"ReadTimeout" -> 2.0
+]
+
+debug["Running: Int-00-Handshake-PreservesTrailingFrame ..."];
+VerificationTest[
+	Read[$wsHandshakeClient],
+	"handshake-frame",
+	TestID -> "Int-00-Handshake-PreservesTrailingFrame"
+]
+
+Close /@ {$wsHandshakeClient, $wsHandshakeListener["Socket"]}
+
 
 $wsServer =
 	WebSocketServerStart[
@@ -547,7 +609,39 @@ VerificationTest[
 $wsClient =
 	WebSocketConnect[
 		"ws://localhost:" <> ToString[$wsTestPort],
-		"ReadTimeout" -> 2.0
+		"ReadTimeout" -> 2.0,
+		HandlerFunctions -> <|
+			"DataReceived" -> Function[
+				event,
+				Module[{messageType},
+					AppendTo[
+						$wsRxClient,
+						<|
+							"Data" -> event["Data"],
+							"FrameData" ->
+								WebSocketFrameImport[event["DataByteArray"]]
+						|>
+					];
+					messageType = Replace[
+						event["Data"],
+						{
+							text_String :> Quiet @ Check[
+								Lookup[
+									ImportString[text, "RawJSON"],
+									"msg",
+									Missing["NotFound"]
+								],
+								Missing["NotJSON"]
+							],
+							_ :> Missing["NotText"]
+						}
+					];
+					If[messageType === "ping",
+						event["SendMessage"][<|"msg" -> "pong"|>]
+					]
+				]
+			]
+		|>
 	]
 
 (* WebSocketConnect performs the HTTP upgrade synchronously; by the time it
@@ -632,8 +726,8 @@ VerificationTest[
 	TestID -> "Int-14-ClientToServer-JSON"
 ]
 
-(* Send three messages with 0.15 s gaps to prevent TCP frame coalescing;
-   the server's SocketListen handler decodes one frame per event. *)
+(* Send three messages with gaps to assert ordinary sequential delivery;
+   packed frame delivery is covered below. *)
 $wsRxServer = {}
 
 WriteString[$wsClient, "a"]
@@ -652,6 +746,26 @@ VerificationTest[
 	TestID -> "Int-15-ClientToServer-Sequential"
 ]
 
+(* Multiple frames can arrive in the same socket event. *)
+$wsRxServer = {}
+
+BinaryWrite[
+	$wsClient["Socket"],
+	ByteArray @ Join[
+		Normal @ WebSocketFrameCreate["packed-a", Masking -> True],
+		Normal @ WebSocketFrameCreate["packed-b", Masking -> True]
+	]
+]
+
+Pause[0.25]
+
+debug["Running: Int-15b-ClientToServer-CoalescedFrames ..."];
+VerificationTest[
+	$wsRxServer,
+	{"packed-a", "packed-b"},
+	TestID -> "Int-15b-ClientToServer-CoalescedFrames"
+]
+
 (* ---- 5.4  Server → Client messaging ---- *)
 $wsSrvConn = First[Values[$wsServer["ConnectedClients"]]]
 
@@ -664,6 +778,38 @@ VerificationTest[
 	Read[$wsClient],
 	"reply",
 	TestID -> "Int-16-ServerToClient-Text"
+]
+
+debug["Running: Int-16b-ClientHandler-ReceivesDecodedFrame ..."];
+VerificationTest[
+	{
+		Last[$wsRxClient]["Data"],
+		Last[$wsRxClient]["FrameData"]
+	},
+	{"reply", "reply"},
+	TestID -> "Int-16b-ClientHandler-ReceivesDecodedFrame"
+]
+
+(* Rocket.Chat-style application pings are text frames, not WebSocket Ping
+   control frames. The client callback can reply through SendMessage. *)
+$wsRxServer = {}
+
+$wsSrvConn["SendMessage"][<|"msg" -> "ping"|>]
+
+Pause[0.25]
+
+debug["Running: Int-16c-ClientHandler-CanReplyToJSONPing ..."];
+VerificationTest[
+	ImportString[First[$wsRxServer, "{}"], "RawJSON"],
+	<|"msg" -> "pong"|>,
+	TestID -> "Int-16c-ClientHandler-CanReplyToJSONPing"
+]
+
+debug["Running: Int-16d-ClientRead-StillSeesJSONPing ..."];
+VerificationTest[
+	ImportString[Read[$wsClient], "RawJSON"],
+	<|"msg" -> "ping"|>,
+	TestID -> "Int-16d-ClientRead-StillSeesJSONPing"
 ]
 
 (* Multiple server → client messages *)
@@ -686,6 +832,23 @@ VerificationTest[
 	Read[$wsClient],
 	"second",
 	TestID -> "Int-18-ServerToClient-Sequential-Second"
+]
+
+BinaryWrite[
+	$wsSrvConn["Socket"],
+	ByteArray @ Join[
+		Normal @ WebSocketFrameCreate["packed-first"],
+		Normal @ WebSocketFrameCreate["packed-second"]
+	]
+]
+
+Pause[0.15]
+
+debug["Running: Int-18b-ServerToClient-CoalescedFrames ..."];
+VerificationTest[
+	{Read[$wsClient], Read[$wsClient]},
+	{"packed-first", "packed-second"},
+	TestID -> "Int-18b-ServerToClient-CoalescedFrames"
 ]
 
 (* ---- 5.5  Ping frame handling ---- *)
